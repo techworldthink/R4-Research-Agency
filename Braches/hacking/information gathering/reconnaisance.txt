@@ -1,0 +1,5 @@
+domain name information   - who is lookup
+ip address - ping command
+hosting details      - ip2location.com
+ip adress ranges - arin
+history of website  - archive.org
