@@ -1,0 +1,37 @@
+body{
+    background: black;
+}
+.maincontent{
+background:black;
+
+}
+.mainbody{
+    background: black;
+    color: white;
+    margin-top: 1em;
+    align-items: center;
+}
+.dive{
+    margin:2em;
+}
+
+.inner{
+    background: rgba(255,255,255,.9);
+    border-radius: 2em;
+}
+.boxin{
+    padding:1em;
+    
+}
+.listclass{
+    margin-left: 2em;
+}
+dt, dd {
+     display: inline; }
+
+dt{
+    color: red;
+}
+.green{
+    color: green;
+}
