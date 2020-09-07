@@ -4,10 +4,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="library/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Linux</title>
 </head>
 <body>
-    <header>
+    <button onclick="openNav()" id="myBtn" title="Go to top">
+        <i class="fa fa-align-justify"></i>
+    </button>
+       <!-- side navbar-->
+      
+       <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../../index.html">Main </a>
+        <a href="#home">Home </a>
+        <a href="#linux">Linux </a>
+        <a href="#file">File </a>
+        <a href="#directory">Directory</a>
+        <a href="#">Permission</a>
+      </div>
+       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; LINUX   </span>
+      
+   <!--END    navbar -->
+
+    <!-- header-->
+    <header id="home">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -22,7 +43,13 @@
             </div>
           </div>
     </header>
-    <section class="maincontent">
+    <!-- END  header -->
+
+
+
+
+
+    <section class="maincontent" id="linux">
         <div class="mainbody">
             <h1 style="text-align:center">LINUX</h1> 
             <div class="dive">
@@ -105,7 +132,7 @@
             </div>
     </div>
 
-    <div class="row boxin">
+    <div class="row boxin" id="file">
         <div class="col-lg-12">
             <div class="inner">
                 <h5 class="text-center">FILE MANAGEMENT</h5>
@@ -149,18 +176,224 @@
                      </dd>
                 </dl>
 
+                <h5 class="text-center">Metacharacters</h5>
 
+                <dl class="listclass">
+                    <dd>
+                        
+                         <b class="red">ls ch*.doc</b> − Displays all the files, the names of which start with ch and end with .doc<br>
+ 
+                         <b class="red">ls *.doc</b> − Display all the files ending with just .doc<br>
+ 
 
+                     </dd>
+                </dl>
+
+                <h5 class="text-center">Hidden Files</h5>
+
+                <dl class="listclass">
+                    <dd>
+                        
+                        An invisible file is one, the first character of which is the dot or the period character (.). Unix programs (including the shell) use most of these files to store configuration information.
+
+                       <br> Some common examples of the hidden files include the files −
+                        
+                        <br><b>.profile</b> − The Bourne shell ( sh) initialization script
+                        
+                      <br> <b>.kshrc</b>  − The Korn shell ( ksh) initialization script
+                        
+                        <br><b>.cshrc</b> − The C shell ( csh) initialization script
+                        
+                       <br><b>.rhosts </b> − The remote shell configuration file<br>
+ 
+                       <b class="red">ls -a</b> − list the invisible files<br>
+                       <b class="red">ls --all</b> − list the invisible files<br>
+                       <i class="green">Single dot (.) </i>− This represents the current directory.<br>
+
+                       <i class="green">Double dot (..)</i>  − This represents the parent directory.    
+ 
+
+                     </dd>
+                </dl>
 
             </div>
         </div>
 
     </div>
+
+    <div class="row boxin">
+
+        <div class="col-md-6 ">
+            <div class="inner">
+                <dl class="listclass">
+                    <dt>vi filename</dt>
+                    <dd>(vi editor to create ordinary files)</dd>
+                    <br>
+                    <dt class="green">i</dt>
+                    <dd>(for insert)</dd>
+                    <br>
+                    <dt class="green">Esc</dt>
+                    <dd>(come out of the edit mode)</dd>
+                    <br>
+                    <dt class="green">:wq</dt>
+                    <dd>(write and quite)</dd>
+                    <br>
+                    <dt class="green">:q!</dt>
+                    <dd>(just quite)</dd>
+                    <br>
+   
+                    
+                </dl>
+            </div>    
+        </div>
+
+        <div class="col-md-6">
+            <div class="inner">
+                <dl class="listclass">
+                    <dt>touch sample</dt>
+                    <dd>( create sample file)</dd>
+                    <br>
+                    <dt>cat> sample</dt>
+                    <dd>(write to sample)</dd>
+                    <br>
+                    <dt>cat sample</dt>
+                    <dd>(see content)</dd>
+                    <br>
+                    <dt>cd</dt>
+                    <dd>(change directory)</dd>
+                    <br>
+                    <dt>exit</dt>
+                    <dd>(close terminal)</dd>
+          
+                </dl>
+             </div>
+        </div>
+    </div>
+
+    <div class="row boxin">
+        <div class="col-md-6">
+            <div class="inner">
+                <dl class="listclass">
+                    <dt>cat -b filename</dt>
+                    <dd>( display the line numbers)</dd>
+                    <br>
+                    <dt>wc filename</dt>
+                    <dd>(Counting Words in a File)</dd>
+                    <i class="green"><br>2  19 103 filename</i>
+                    <br>
+                   <b>First Column</b>  − total number of lines in the file.<br>
+
+                   <b>Second Column</b>  − total number of words in the file.
+
+                   <br> <b>Third Column</b> − number of bytes in the file.
+
+                   <br><b>Fourth Column</b>  − Represents the file name.
+                   
+              
+
+          
+                </dl>
+             </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="inner">
+                <dl class="listclass">
+                    <dt>wc filename1 filename2</dt>
+                    <dd>(information about multiple files )</dd>
+                    <br>
+                    <dt>cp source_file destination_file</dt>
+                    <dd>( copying)</dd>
+                    <br>
+                    <dt>mv old_file new_file</dt>
+                    <dd>(rename)</dd>
+                    <br>
+                    <dt>rm filename</dt>
+                    <dd>(delete file)</dd>
+                    <br>
+                    <dt>rm filename1 filename2 filename3</dt>
+                    <dd>(delete files)</dd>
+                    <br>
+                    <dt>rm -i filename</dt>
+                    <dd>(-i for confirmation)</dd>
+                    <br>
+                    <dt></dt>
+                    <dd></dd>
+                    <br>
+            
+          
+                </dl>
+             </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="row boxin" id="directory">
+        <div class="col-lg-12">
+            <div class="inner">
+                <h5 class="text-center">Unix / Linux - Directory Management</h5>
+                <dl class="listclass">
+                    <dt>cd ~</dt>
+                    <dd>(home directory) </dd>  
+                    <br>
+                    <dt>cd ~username</dt>
+                    <dd>(go in any other user's home directory) </dd>  
+                    <br>
+                    <dt>cd -</dt>
+                    <dd>(go in your last directory) </dd>  
+                    <br>
+                    <dt>cd /home</dt>
+                    <dd>(pathname is absolute , relation to root)</dd>  
+                    <br>
+                    <dt>cd Desktop</dt>
+                    <dd>(pathname is relative)</dd>  
+                    <br>
+                    <dt>pwd</dt>
+                    <dd>(current working directory)</dd>  
+                    <br>
+
+                    <dt>mkdir dirname</dt>
+                    <dd>(create directories)</dd>  
+                    <br>
+                    <dt>mkdir -p /tmp/amrood/test</dt>
+                    <dd>(creates all the required parent directories)</dd>  
+                    <br>
+                    <dt>rmdir dirname</dt>
+                    <dd>(To remove a directory)</dd>  
+                    <br>
+                    <dt>cd dirname</dt>
+                    <dd>(Changing Directories)</dd>  
+                    <br>
+                    <dt>cd ../</dt>
+                    <dd>(backward directory)</dd>  
+                    <br>
+
+                    <dt>mv mydir yourdir</dt>
+                    <dd>(Renaming Directories)</dd>  
+                    <br>
+                    <dt>cd ./Desktop</dt>
+                    <dd>(. represents current directory)</dd>  
+                    <br>
+        
+                </dl>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
     </div>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="library/javascript.js"></script>
 </body>
 </html>
