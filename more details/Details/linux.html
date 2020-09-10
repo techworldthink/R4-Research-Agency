@@ -1,47 +1,51 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="library/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Linux</title>
 </head>
+
 <body>
     <button onclick="openNav()" id="myBtn" title="Go to top">
         <i class="fa fa-align-justify"></i>
     </button>
-       <!-- side navbar-->
-      
-       <div id="mySidenav" class="sidenav">
+    <!-- side navbar-->
+
+    <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="../../index.html">Main </a>
         <a href="#home">Home </a>
         <a href="#linux">Linux </a>
         <a href="#file">File </a>
         <a href="#directory">Directory</a>
-        <a href="#">Permission</a>
-      </div>
-       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; LINUX   </span>
-      
-   <!--END    navbar -->
+        <a href="#permission">Permission</a>
+        <a href="#environment">Environment</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; LINUX </span>
+
+    <!--END    navbar -->
 
     <!-- header-->
     <header id="home">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img src="images/linux.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/linux.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/linux.png" class="d-block w-100" alt="...">
-              </div>
+                <div class="carousel-item active">
+                    <img src="images/linux.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/linux.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/linux.png" class="d-block w-100" alt="...">
+                </div>
             </div>
-          </div>
+        </div>
     </header>
     <!-- END  header -->
 
@@ -51,24 +55,31 @@
 
     <section class="maincontent" id="linux">
         <div class="mainbody">
-            <h1 style="text-align:center">LINUX</h1> 
+            <h1 style="text-align:center">LINUX</h1>
             <div class="dive">
-                <p>Linux is a family of open source Unix-like 
-                    operating systems based on the Linux kernel, 
-                    an operating system kernel first released on 
-                    September 17, 1991, by Linus Torvalds. Linux 
+                <p>Linux is a family of open source Unix-like
+                    operating systems based on the Linux kernel,
+                    an operating system kernel first released on
+                    September 17, 1991, by Linus Torvalds. Linux
                     is typically packaged in a Linux distribution.</p>
-                    <p>The computer programs that allocate the system resources and coordinate all the details of the computer's internals is called the operating system or the kernel.<br>
+                <p>The computer programs that allocate the system resources and coordinate all the details of the
+                    computer's internals is called the operating system or the kernel.<br>
 
-                        Users communicate with the kernel through a program known as the shell. The shell is a command line interpreter; it translates commands entered by the user and converts them into a language that is understood by the kernel.
-                        
-                        <br> >> Unix was originally developed in 1969 by a group of AT&T employees Ken Thompson, Dennis Ritchie, Douglas McIlroy, and Joe Ossanna at Bell Labs.
-                        
-                        <br>>> There are various Unix variants available in the market. Solaris Unix, AIX, HP Unix and BSD are a few examples. Linux is also a flavor of Unix which is freely available.
-                        
-                        <br> >> Several people can use a Unix computer at the same time; hence Unix is called a multiuser system.
-                        
-                       <br> >> A user can also run multiple programs at the same time; hence Unix is a multitasking environment.</p>
+                    Users communicate with the kernel through a program known as the shell. The shell is a command line
+                    interpreter; it translates commands entered by the user and converts them into a language that is
+                    understood by the kernel.
+
+                    <br> >> Unix was originally developed in 1969 by a group of AT&T employees Ken Thompson, Dennis
+                    Ritchie, Douglas McIlroy, and Joe Ossanna at Bell Labs.
+
+                    <br>>> There are various Unix variants available in the market. Solaris Unix, AIX, HP Unix and BSD
+                    are a few examples. Linux is also a flavor of Unix which is freely available.
+
+                    <br> >> Several people can use a Unix computer at the same time; hence Unix is called a multiuser
+                    system.
+
+                    <br> >> A user can also run multiple programs at the same time; hence Unix is a multitasking
+                    environment.</p>
             </div>
         </div>
     </section>
@@ -104,20 +115,24 @@
                         <dt>w</dt>
                         <dd>( quick summary of every user logged into a computer)</dd>
                     </dl>
-                </div>    
+                </div>
             </div>
 
             <div class="col-md-6">
                 <div class="inner">
                     <dl class="listclass">
+                        <dt>passwd</dt>
+                        <dd>(change password)</dd>
+                        <br>
                         <dt>halt</dt>
                         <dd>(Brings the system down immediately)</dd>
                         <br>
                         <dt>init 0</dt>
-                        <dd>(Powers off the system using predefined scripts to synchronize and clean up the system prior to shutting down)</dd>
+                        <dd>(Powers off the system using predefined scripts to synchronize and clean up the system prior
+                            to shutting down)</dd>
                         <br>
                         <dt>init 6</dt>
-                        <dd>(Reboots the system by shutting it down completely and then restarting it)</dd>
+                        <dd>(Reboots)</dd>
                         <br>
                         <dt>poweroff</dt>
                         <dd>(Shuts down the system by powering off)</dd>
@@ -128,272 +143,692 @@
                         <dt>shutdown</dt>
                         <dd>(Shuts down the system)</dd>
                     </dl>
-                 </div>
-            </div>
-    </div>
-
-    <div class="row boxin" id="file">
-        <div class="col-lg-12">
-            <div class="inner">
-                <h5 class="text-center">FILE MANAGEMENT</h5>
-                <dl class="listclass">
-                    <dt>ls -l</dt><br>
-                    <dd>
-                       <i class="green">drwxrwxr-x      2       amrood      amrood      4096    Dec 25 09:59    Desktop </i>  <br><br>
-                        <b>First Column</b> − Represents the file type and the permission given on the file. Below is the description of all type of files.<br>
-
-                        <b>Second Column</b> − Represents the number of memory blocks taken by the file or directory.<br>
-
-                        <b>Third Column</b> − Represents the owner of the file. This is the Unix user who created this file.<br>
-
-                        <b>Fourth Column</b> − Represents the group of the owner. Every Unix user will have an associated group.<br>
-
-                        <b>Fifth Column</b> − Represents the file size in bytes.<br>
-
-                        <b>Sixth Column</b> − Represents the date and the time when this file was created or modified for the last time.<br>
-
-                        <b>Seventh Column</b> − Represents the file or the directory name.
-                    </dd>
-                </dl>
-
-                <h5 class="text-center">Prefix & Description</h5>
-                <dl class="listclass">
-                    <dd>
-                        
-                         <b>-</b> − Regular file, such as an ASCII text file, binary executable, or hard link.<br>
- 
-                         <b>b</b> − Block special file. Block input/output device file such as a physical hard drive.<br>
- 
-                         <b>c</b> − Character special file. Raw input/output device file such as a physical hard drive.<br>
- 
-                         <b>d</b> − Directory file that contains a listing of other files and directories.<br>
- 
-                         <b>l</b> − Symbolic link file. Links on any regular file..<br>
- 
-                         <b>p</b> − Named pipe. A mechanism for interprocess communications.<br>
- 
-                         <b>s</b> − Socket used for interprocess communication.
-                     </dd>
-                </dl>
-
-                <h5 class="text-center">Metacharacters</h5>
-
-                <dl class="listclass">
-                    <dd>
-                        
-                         <b class="red">ls ch*.doc</b> − Displays all the files, the names of which start with ch and end with .doc<br>
- 
-                         <b class="red">ls *.doc</b> − Display all the files ending with just .doc<br>
- 
-
-                     </dd>
-                </dl>
-
-                <h5 class="text-center">Hidden Files</h5>
-
-                <dl class="listclass">
-                    <dd>
-                        
-                        An invisible file is one, the first character of which is the dot or the period character (.). Unix programs (including the shell) use most of these files to store configuration information.
-
-                       <br> Some common examples of the hidden files include the files −
-                        
-                        <br><b>.profile</b> − The Bourne shell ( sh) initialization script
-                        
-                      <br> <b>.kshrc</b>  − The Korn shell ( ksh) initialization script
-                        
-                        <br><b>.cshrc</b> − The C shell ( csh) initialization script
-                        
-                       <br><b>.rhosts </b> − The remote shell configuration file<br>
- 
-                       <b class="red">ls -a</b> − list the invisible files<br>
-                       <b class="red">ls --all</b> − list the invisible files<br>
-                       <i class="green">Single dot (.) </i>− This represents the current directory.<br>
-
-                       <i class="green">Double dot (..)</i>  − This represents the parent directory.    
- 
-
-                     </dd>
-                </dl>
-
+                </div>
             </div>
         </div>
 
-    </div>
+        <div class="row boxin" id="file">
+            <div class="col-lg-12">
+                <div class="inner">
+                    <h5 class="text-center">FILE MANAGEMENT</h5>
+                    <dl class="listclass">
+                        <dt>ls -l</dt><br>
+                        <dd>
+                            <i class="green">drwxrwxr-x 2 amrood amrood 4096 Dec 25 09:59 Desktop </i> <br><br>
+                            <b>First Column</b> − Represents the file type and the permission given on the file. Below
+                            is the description of all type of files.<br>
 
-    <div class="row boxin">
+                            <b>Second Column</b> − Represents the number of memory blocks taken by the file or
+                            directory.<br>
 
-        <div class="col-md-6 ">
-            <div class="inner">
-                <dl class="listclass">
-                    <dt>vi filename</dt>
-                    <dd>(vi editor to create ordinary files)</dd>
-                    <br>
-                    <dt class="green">i</dt>
-                    <dd>(for insert)</dd>
-                    <br>
-                    <dt class="green">Esc</dt>
-                    <dd>(come out of the edit mode)</dd>
-                    <br>
-                    <dt class="green">:wq</dt>
-                    <dd>(write and quite)</dd>
-                    <br>
-                    <dt class="green">:q!</dt>
-                    <dd>(just quite)</dd>
-                    <br>
-   
-                    
-                </dl>
-            </div>    
+                            <b>Third Column</b> − Represents the owner of the file. This is the Unix user who created
+                            this file.<br>
+
+                            <b>Fourth Column</b> − Represents the group of the owner. Every Unix user will have an
+                            associated group.<br>
+
+                            <b>Fifth Column</b> − Represents the file size in bytes.<br>
+
+                            <b>Sixth Column</b> − Represents the date and the time when this file was created or
+                            modified for the last time.<br>
+
+                            <b>Seventh Column</b> − Represents the file or the directory name.
+                        </dd>
+                    </dl>
+
+                    <h5 class="text-center">Prefix & Description</h5>
+                    <dl class="listclass">
+                        <dd>
+
+                            <b>-</b> − Regular file, such as an ASCII text file, binary executable, or hard link.<br>
+
+                            <b>b</b> − Block special file. Block input/output device file such as a physical hard
+                            drive.<br>
+
+                            <b>c</b> − Character special file. Raw input/output device file such as a physical hard
+                            drive.<br>
+
+                            <b>d</b> − Directory file that contains a listing of other files and directories.<br>
+
+                            <b>l</b> − Symbolic link file. Links on any regular file..<br>
+
+                            <b>p</b> − Named pipe. A mechanism for interprocess communications.<br>
+
+                            <b>s</b> − Socket used for interprocess communication.
+                        </dd>
+                    </dl>
+
+                    <h5 class="text-center">Metacharacters</h5>
+
+                    <dl class="listclass">
+                        <dd>
+
+                            <b class="red">ls ch*.doc</b> − Displays all the files, the names of which start with ch and
+                            end with .doc<br>
+
+                            <b class="red">ls *.doc</b> − Display all the files ending with just .doc<br>
+
+
+                        </dd>
+                    </dl>
+
+                    <h5 class="text-center">Hidden Files</h5>
+
+                    <dl class="listclass">
+                        <dd>
+
+                            An invisible file is one, the first character of which is the dot or the period character
+                            (.). Unix programs (including the shell) use most of these files to store configuration
+                            information.
+
+                            <br> Some common examples of the hidden files include the files −
+
+                            <br><b>.profile</b> − The Bourne shell ( sh) initialization script
+
+                            <br> <b>.kshrc</b> − The Korn shell ( ksh) initialization script
+
+                            <br><b>.cshrc</b> − The C shell ( csh) initialization script
+
+                            <br><b>.rhosts </b> − The remote shell configuration file<br>
+
+                            <b class="red">ls -a</b> − list the invisible files<br>
+                            <b class="red">ls --all</b> − list the invisible files<br>
+                            <i class="green">Single dot (.) </i>− This represents the current directory.<br>
+
+                            <i class="green">Double dot (..)</i> − This represents the parent directory.
+
+
+                        </dd>
+                    </dl>
+
+                </div>
+            </div>
+
         </div>
 
-        <div class="col-md-6">
-            <div class="inner">
-                <dl class="listclass">
-                    <dt>touch sample</dt>
-                    <dd>( create sample file)</dd>
-                    <br>
-                    <dt>cat> sample</dt>
-                    <dd>(write to sample)</dd>
-                    <br>
-                    <dt>cat sample</dt>
-                    <dd>(see content)</dd>
-                    <br>
-                    <dt>cd</dt>
-                    <dd>(change directory)</dd>
-                    <br>
-                    <dt>exit</dt>
-                    <dd>(close terminal)</dd>
-          
-                </dl>
-             </div>
-        </div>
-    </div>
+        <div class="row boxin">
 
-    <div class="row boxin">
-        <div class="col-md-6">
-            <div class="inner">
-                <dl class="listclass">
-                    <dt>cat -b filename</dt>
-                    <dd>( display the line numbers)</dd>
-                    <br>
-                    <dt>wc filename</dt>
-                    <dd>(Counting Words in a File)</dd>
-                    <i class="green"><br>2  19 103 filename</i>
-                    <br>
-                   <b>First Column</b>  − total number of lines in the file.<br>
+            <div class="col-md-6 ">
+                <div class="inner">
+                    <dl class="listclass">
+                        <dt>vi filename</dt>
+                        <dd>(vi editor to create ordinary files)</dd>
+                        <br>
+                        <dt class="green">i</dt>
+                        <dd>(for insert)</dd>
+                        <br>
+                        <dt class="green">Esc</dt>
+                        <dd>(come out of the edit mode)</dd>
+                        <br>
+                        <dt class="green">:wq</dt>
+                        <dd>(write and quite)</dd>
+                        <br>
+                        <dt class="green">:q!</dt>
+                        <dd>(just quite)</dd>
+                        <br>
 
-                   <b>Second Column</b>  − total number of words in the file.
 
-                   <br> <b>Third Column</b> − number of bytes in the file.
+                    </dl>
+                </div>
+            </div>
 
-                   <br><b>Fourth Column</b>  − Represents the file name.
-                   
-              
+            <div class="col-md-6">
+                <div class="inner">
+                    <dl class="listclass">
+                        <dt>touch sample</dt>
+                        <dd>( create sample file)</dd>
+                        <br>
+                        <dt>cat> sample</dt>
+                        <dd>(write to sample)</dd>
+                        <br>
+                        <dt>cat sample</dt>
+                        <dd>(see content)</dd>
+                        <br>
+                        <dt>cd</dt>
+                        <dd>(change directory)</dd>
+                        <br>
+                        <dt>exit</dt>
+                        <dd>(close terminal)</dd>
 
-          
-                </dl>
-             </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="inner">
-                <dl class="listclass">
-                    <dt>wc filename1 filename2</dt>
-                    <dd>(information about multiple files )</dd>
-                    <br>
-                    <dt>cp source_file destination_file</dt>
-                    <dd>( copying)</dd>
-                    <br>
-                    <dt>mv old_file new_file</dt>
-                    <dd>(rename)</dd>
-                    <br>
-                    <dt>rm filename</dt>
-                    <dd>(delete file)</dd>
-                    <br>
-                    <dt>rm filename1 filename2 filename3</dt>
-                    <dd>(delete files)</dd>
-                    <br>
-                    <dt>rm -i filename</dt>
-                    <dd>(-i for confirmation)</dd>
-                    <br>
-                    <dt></dt>
-                    <dd></dd>
-                    <br>
-            
-          
-                </dl>
-             </div>
+                    </dl>
+                </div>
+            </div>
         </div>
 
+        <div class="row boxin">
+            <div class="col-md-6">
+                <div class="inner">
+                    <dl class="listclass">
+                        <dt>cat -b filename</dt>
+                        <dd>( display the line numbers)</dd>
+                        <br>
+                        <dt>wc filename</dt>
+                        <dd>(Counting Words in a File)</dd>
+                        <i class="green"><br>2 19 103 filename</i>
+                        <br>
+                        <b>First Column</b> − total number of lines in the file.<br>
 
-    </div>
+                        <b>Second Column</b> − total number of words in the file.
+
+                        <br> <b>Third Column</b> − number of bytes in the file.
+
+                        <br><b>Fourth Column</b> − Represents the file name.
 
 
 
 
-    <div class="row boxin" id="directory">
-        <div class="col-lg-12">
-            <div class="inner">
-                <h5 class="text-center">Unix / Linux - Directory Management</h5>
-                <dl class="listclass">
-                    <dt>cd ~</dt>
-                    <dd>(home directory) </dd>  
-                    <br>
-                    <dt>cd ~username</dt>
-                    <dd>(go in any other user's home directory) </dd>  
-                    <br>
-                    <dt>cd -</dt>
-                    <dd>(go in your last directory) </dd>  
-                    <br>
-                    <dt>cd /home</dt>
-                    <dd>(pathname is absolute , relation to root)</dd>  
-                    <br>
-                    <dt>cd Desktop</dt>
-                    <dd>(pathname is relative)</dd>  
-                    <br>
-                    <dt>pwd</dt>
-                    <dd>(current working directory)</dd>  
-                    <br>
+                    </dl>
+                </div>
+            </div>
 
-                    <dt>mkdir dirname</dt>
-                    <dd>(create directories)</dd>  
-                    <br>
-                    <dt>mkdir -p /tmp/amrood/test</dt>
-                    <dd>(creates all the required parent directories)</dd>  
-                    <br>
-                    <dt>rmdir dirname</dt>
-                    <dd>(To remove a directory)</dd>  
-                    <br>
-                    <dt>cd dirname</dt>
-                    <dd>(Changing Directories)</dd>  
-                    <br>
-                    <dt>cd ../</dt>
-                    <dd>(backward directory)</dd>  
-                    <br>
+            <div class="col-md-6">
+                <div class="inner">
+                    <dl class="listclass">
+                        <dt>wc filename1 filename2</dt>
+                        <dd>(information about multiple files )</dd>
+                        <br>
+                        <dt>cp source_file destination_file</dt>
+                        <dd>( copying)</dd>
+                        <br>
+                        <dt>mv old_file new_file</dt>
+                        <dd>(rename)</dd>
+                        <br>
+                        <dt>rm filename</dt>
+                        <dd>(delete file)</dd>
+                        <br>
+                        <dt>rm filename1 filename2 filename3</dt>
+                        <dd>(delete files)</dd>
+                        <br>
+                        <dt>rm -i filename</dt>
+                        <dd>(-i for confirmation)</dd>
+                        <br>
+                        <dt></dt>
+                        <dd></dd>
+                        <br>
 
-                    <dt>mv mydir yourdir</dt>
-                    <dd>(Renaming Directories)</dd>  
+
+                    </dl>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="row boxin" id="directory">
+            <div class="col-lg-12">
+                <div class="inner">
+                    <h5 class="text-center">Unix / Linux - Directory Management</h5>
+                    <dl class="listclass">
+                        <dt>cd ~</dt>
+                        <dd>(home directory) </dd>
+                        <br>
+                        <dt>cd ~username</dt>
+                        <dd>(go in any other user's home directory) </dd>
+                        <br>
+                        <dt>cd -</dt>
+                        <dd>(go in your last directory) </dd>
+                        <br>
+                        <dt>cd /home</dt>
+                        <dd>(pathname is absolute , relation to root)</dd>
+                        <br>
+                        <dt>cd Desktop</dt>
+                        <dd>(pathname is relative)</dd>
+                        <br>
+                        <dt>pwd</dt>
+                        <dd>(current working directory)</dd>
+                        <br>
+
+                        <dt>mkdir dirname</dt>
+                        <dd>(create directories)</dd>
+                        <br>
+                        <dt>mkdir -p /tmp/amrood/test</dt>
+                        <dd>(creates all the required parent directories)</dd>
+                        <br>
+                        <dt>rmdir dirname</dt>
+                        <dd>(To remove a directory)</dd>
+                        <br>
+                        <dt>cd dirname</dt>
+                        <dd>(Changing Directories)</dd>
+                        <br>
+                        <dt>cd ../</dt>
+                        <dd>(backward directory)</dd>
+                        <br>
+
+                        <dt>mv mydir yourdir</dt>
+                        <dd>(Renaming Directories)</dd>
+                        <br>
+                        <dt>cd ./Desktop</dt>
+                        <dd>(. represents current directory)</dd>
+                        <br>
+
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="row boxin" id="permission">
+            <div class="col-lg-12">
+                <div class="inner">
                     <br>
-                    <dt>cd ./Desktop</dt>
-                    <dd>(. represents current directory)</dd>  
+                    <h5 class="text-center">Unix / Linux - File Permission / Access Modes</h5>
+                    <ul>
+                        <li class="cyan">Owner permissions</li>
+                        <li class="cyan">Group permissions</li>
+                        <li class="cyan">Other (world) permissions</li>
+                    </ul>
+
+                    <ul>
+                        <i class="green"><mark>-rwxr-xr--</mark> 1 amrood users 1024 Nov 2 00:10 myfile</i><br><br>
+                        <li class="cyan">1 file / Directory</li>
+                        <li class="cyan">2,3,4 Owner permissions</li>
+                        <li class="cyan">5,6,7 Group permissions</li>
+                        <li class="cyan">8,9,10 Other (world) permissions</li>
+                    </ul>
                     <br>
-        
-                </dl>
+                    <h6 class="text-center">File Access Modes</h6>
+                    <ul>
+                        <li><b class="cyan">r</b> - Read</li>
+                        <li><b class="cyan">w</b> - Write</li>
+                        <li><b class="cyan">x</b> - Executable</li>
+
+                    </ul>
+                    <br>
+                    <h6 class="text-center">Changing Permissions</h6>
+
+                    <ul>
+                        <b class="red">chmod</b>
+                        <li><b class="cyan">+</b> - Adds the designated permission(s)</li>
+                        <li><b class="cyan">-</b> - Removes the designated permission(s)</li>
+                        <li><b class="cyan">=</b> - Sets the designated permission(s)</li>
+
+                    </ul>
+
+                    <ul>
+                        <b class="red">eg : chmod u+wx filename</b><br>
+                        <b class="red">eg : chmod o+wx,u-x,g = rx testfile</b><br><br>
+
+                        <li><b class="red">o</b> - Other</li>
+                        <li><b class="red">g</b> - Group</li>
+                        <li><b class="red">u</b> - Owner</li>
+
+                    </ul>
+
+                    <h6 class="text-center">Using chmod with Absolute Permissions</h6><br>
+                    <table class="tableper text-center">
+                        <tbody>
+                            <tr>
+                                <th>Number</th>
+                                <th>Octal permission representation</th>
+                                <th>Ref</th>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>No permission </td>
+                                <td>--- </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Execute permission </td>
+                                <td>--x </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Write permission </td>
+                                <td>-w- </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Execute and write permission </td>
+                                <td>-wx </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Read permission </td>
+                                <td>r-- </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Read and execute permission </td>
+                                <td>r-x </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Read and write permission </td>
+                                <td>rw- </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>All permissions </td>
+                                <td>rwx </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="red">eg : chmod <mark>755</mark> testfile</td>
+                            </tr>
+                        </tbody>
+                    </table> <br>
+                    <h6 class="text-center">Changing Owners and Groups</h6><br>
+                    <dl class="listclass">
+                        <dd>While creating an account on Unix, it assigns a owner ID and a group ID to each user</dd>
+                        <br>
+                        <dt>chown user filelist</dt>
+                        <dd>"change owner"</dd><br>
+                        <dt>chgrp group filelist</dt>
+                        <dd>"change group"</dd><br>
+                        <dd>NOTE − The super user, root, has the unrestricted capability to change the ownership of any
+                            file but normal users can change the ownership of only those files that they own.</dd><br>
+                    </dl>
+                    <h6 class="text-center">SUID and SGID File Permission</h6><br>
+                    <dl class="listclass">
+                        <p>Often when a command is executed, it will have to
+                            be executed with special privileges in order to accomplish its task.
+                            <br> As an example, when you change your password with the <b class="cyan">passwd</b>
+                            command, your new password
+                            is stored in the file <b class="cyan">/etc/shadow</b>.
+
+                            <br>As a regular user, you do not have read or write access to this file
+                            for security reasons, but when you change your password, you need to
+                            have the write permission to this file. This means that the passwd
+                            program has to give you additional permissions so that you can write to the file
+                            /etc/shadow.
+
+                            <br>Additional permissions are given to programs via a mechanism known as the
+                            Set <b class="cyan">User ID (SUID)</b> and Set <b class="cyan">Group ID (SGID)</b> bits.
+
+                            <br> When you execute a program that has the SUID bit enabled, you inherit the
+                            permissions of that program's owner. Programs that do not have the SUID bit
+                            set are run with the permissions of the user who started the program.
+
+                            <br> This is the case with SGID as well. Normally, programs execute with your
+                            group permissions, but instead your group will be changed just for this
+                            program to the group owner of the program.
+
+
+                            <br> The SUID and SGID bits will appear as the letter <b class="cyan">"s"</b> if the
+                            permission
+                            is available. The SUID <b class="cyan">"s"</b> bit will be located in the permission bits
+                            where
+                            the owners’ execute permission normally resides.<br>
+
+                            <b class="red"> $ ls -l /usr/bin/passwd<br>
+                                -r-sr-xr-x 1 root bin 19031 Feb 7 13:47 /usr/bin/passwd*</b><br>
+
+                            Shows that the SUID bit is set and that the command is owned by the root. A capital letter S
+                            in the execute position instead of a lowercase s indicates that the execute bit is not set.
+
+                            <br>If the sticky bit is enabled on the directory, files can only be removed if you are one
+                            of the following users −
+
+                            <br><b class="cyan">1. The owner of the sticky directory</b>
+                            <br><b class="cyan">2. The owner of the file being removed</b>
+                            <br><b class="cyan">3. The super user, root</b>
+                        </p>
+                        <br>
+                        <dt>chmod ug+s dirname</dt>
+                        <dd>(To set the SUID and SGID bits) </dd>
+                    </dl>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row boxin" id="environment">
+            <div class="col-lg-12">
+                <div class="inner">
+                    <br>
+                    <h5 class="text-center">Unix / Linux - Environment</h5>
+                    <dl class="listclass">
+                        <dt>$TEST="Unix Programming"<br>
+                            $echo $TEST</dt><br>
+                        <p></p>
+                        <h6 class="text-center">The .profile File</h6>
+                        <br>
+                        <p>The file /etc/profile is maintained by the system administrator of your Unix machine and
+                            contains shell initialization information required by all users on a system.
+
+                            <br>The file .profile is under your control. You can add as much shell customization
+                            information as you want to this file. The minimum set of information that you need to
+                            configure includes −
+
+                        <ul>
+                            <li class="cyan">The type of terminal you are using. </li>
+                            <li class="cyan"> A list of directories in which to locate the commands.</li>
+                            <li class="cyan">A list of variables affecting the look and feel of your terminal. </li>
+
+                        </ul>
+                        <br> You can check your .profile available in your home directory. Open it using the vi editor
+                        and check all the variables set for your environment.</p>
+                        <br>
+                        <h6 class="text-center">Setting the Terminal Type</h6>
+                        <p>Usually, the type of terminal you are using is automatically configured by either the login
+                            or getty programs. Sometimes, the auto configuration process guesses your terminal
+                            incorrectly.
+
+                            If your terminal is set incorrectly, the output of the commands might look strange, or you
+                            might not be able to interact with the shell properly.
+
+                            To make sure that this is not the case, most users set their terminal to the lowest common
+                            denominator in the following way</p>
+
+                        <b class="red">TERM=vt100</b><br>
+                        <h6 class="text-center">Setting the PATH</h6>
+                        <p>When you type any command on the command prompt, the shell has to locate the command before
+                            it can be executed.
+
+                            The PATH variable specifies the locations in which the shell should look for commands.
+                            Usually the Path variable is set as follows</p>
+                        <b class="red">PATH=/bin:/usr/bin</b><br>
+                        <p>Here, each of the individual entries separated by the colon character (:) are directories. If
+                            you request the shell to execute a command and it cannot find it in any of the directories
+                            given in the PATH variable, a message similar to the following appears −</p>
+                        <b class="red">$hello<br>
+                            hello: not found<br>
+                            $</b><br>
+                        <h6 class="text-center"><b class="cyan">PS1</b> and <b class="cyan">PS2</b> Variables</h6>
+                        <p>The characters that the shell displays as your command prompt are stored in the variable PS1.
+                            You can change this variable to be anything you want. As soon as you change it, it'll be
+                            used by the shell from that point on.
+
+                            For example, if you issued the command </p>
+
+                        <b class="red">$PS1='=>'<br>
+                            =><br>
+                            =><br>
+                            =><br></b><br>
+
+                        <b class="red">=>PS1="[\u@\h \w]\$"<br>
+                            [root@ip-72-167-112-17 /var/www/tutorialspoint/unix]$<br>
+                            [root@ip-72-167-112-17 /var/www/tutorialspoint/unix]$<br>
+                        </b><br>
+                        <table class="tableper text-center">
+                            <tbody>
+                                <tr>
+                                    <th>Escape Sequence</th>
+                                    <th> Description</th>
+                                </tr>
+                                <tr>
+                                    <td>\t</td>
+                                    <td>Current time, expressed as HH:MM:SS </td>
+                                </tr>
+                                <tr>
+                                    <td>\d</td>
+                                    <td>Current date, expressed as Weekday Month Date </td>
+                                </tr>
+                                <tr>
+                                    <td>\n</td>
+                                    <td>Newline </td>
+                                </tr>
+                                <tr>
+                                    <td>\s</td>
+                                    <td>Current shell environment </td>
+                                </tr>
+                                <tr>
+                                    <td>\W</td>
+                                    <td>Working directory </td>
+                                </tr>
+                                <tr>
+                                    <td>\w</td>
+                                    <td>Full path of the working directory </td>
+                                </tr>
+                                <tr>
+                                    <td>\u</td>
+                                    <td>Current user’s username </td>
+                                </tr>
+                                <tr>
+                                    <td>\h</td>
+                                    <td>Hostname of the current machine </td>
+                                </tr>
+                                <tr>
+                                    <td>\#</td>
+                                    <td>Command number of the current command. Increases when a new command is entered
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>\$</td>
+                                    <td>If the effective UID is 0 (that is, if you are logged in as root), end the
+                                        prompt with the # character; otherwise, use the $ sign </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <br>
+                        <p>You can make the change yourself every time you log in, or you can have the change made
+                            automatically in PS1 by adding it to your .profile file.
+
+                            <br> When you issue a command that is incomplete, the shell will display a secondary prompt
+                            and wait for you to complete the command and hit Enter again.
+
+                            <br>The default <b class="cyan">secondary prompt </b> is > (the greater than sign), but can
+                            be changed by re-defining the PS2 shell variable −
+
+                            <br>Following is the example which uses the default secondary prompt </p>
+                        <b class="red">$ echo "this is a<br>
+                            > test"<br>
+                            this is a<br>
+                            test<br>
+                            $</b><br>
+
+                        <p>The example given below re-defines PS2 with a customized prompt −</p>
+                        <b class="red">$ PS2="secondary prompt->"<br>
+                            $ echo "this is a<br>
+                            secondary prompt->test"<br>
+                            this is a<br>
+                            test<br>
+                            $ </b><br>
+                        <h6 class="text-center">Environment Variables </h6><br>
+
+                        <table class="tableper text-center">
+                            <tbody>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th> Description</th>
+                                </tr>
+                                <tr>
+                                    <td>DISPLAY</td>
+                                    <td>Contains the identifier for the display that X11 programs should use by default.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>HOME</td>
+                                    <td>Indicates the home directory of the current user: the default argument for the
+                                        cd built-in command. </td>
+                                </tr>
+                                <tr>
+                                    <td>IFS</td>
+                                    <td>Indicates the Internal Field Separator that is used by the parser for word
+                                        splitting after expansion. </td>
+                                </tr>
+                                <tr>
+                                    <td>LANG</td>
+                                    <td>LANG expands to the default system locale; LC_ALL can be used to override this.
+                                        For example, if its value is pt_BR, then the language is set to (Brazilian)
+                                        Portuguese and the locale to Brazil. </td>
+                                </tr>
+                                <tr>
+                                    <td>LD_LIBRARY_PATH</td>
+                                    <td>A Unix system with a dynamic linker, contains a colonseparated list of
+                                        directories that the dynamic linker should search for shared objects when
+                                        building a process image after exec, before searching in any other directories.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PATH</td>
+                                    <td>Indicates the search path for commands. It is a colon-separated list of
+                                        directories in which the shell looks for commands. </td>
+                                </tr>
+                                <tr>
+                                    <td>PWD</td>
+                                    <td>Indicates the current working directory as set by the cd command. </td>
+                                </tr>
+                                <tr>
+                                    <td>RANDOM</td>
+                                    <td>Generates a random integer between 0 and 32,767 each time it is referenced </td>
+                                </tr>
+                                <tr>
+                                    <td>SHLVL</td>
+                                    <td>Increments by one each time an instance of bash is started. This variable is
+                                        useful for determining whether the built-in exit command ends the current
+                                        session.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TERM</td>
+                                    <td>Refers to the display type.</td>
+                                </tr>
+                                <tr>
+                                    <td>TZ</td>
+                                    <td>Refers to Time zone. It can take values like GMT, AST, etc.</td>
+                                </tr>
+                                <tr>
+                                    <td>UID</td>
+                                    <td>Expands to the numeric user ID of the current user, initialized at the shell
+                                        startup.</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <br>
+                        <p>Following is the sample example showing few environment variables − </p>
+                        <b class="red">
+                            $ echo $HOME<br>
+                            /root<br>
+                            ]$ echo $DISPLAY<br>
+                            <br>
+                            $ echo $TERM<br>
+                            xterm<br>
+                            $ echo $PATH<br>
+                            /usr/local/bin:/bin:/usr/bin:/home/amrood/bin:/usr/local/bin<br>
+                            $
+                        </b><br>
+
+
+
+
+                    </dl>
+                </div>
             </div>
         </div>
 
 
-    </div>
-
-
 
     </div>
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<script src="library/javascript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="library/javascript.js"></script>
 </body>
+
 </html>
