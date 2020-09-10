@@ -1,11 +1,20 @@
 body{
     background: black;
     color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
+html{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .maincontent{
 background:black;
-
 }
+
 .mainbody{
     background: black;
     color: white;
@@ -22,6 +31,7 @@ background:black;
     border-radius: 2em;
 }
 .boxin{
+ 
     padding:1em;
     
 }
@@ -42,6 +52,7 @@ dt{
 }
 b{
     color: cyan;
+   
 }
 .cyan{
   color: cyan;
