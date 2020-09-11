@@ -38,6 +38,16 @@ background:black;
 .listclass{
     margin-left: 2em;
 }
+h5{
+  color: black;
+  background-color: white;
+  border-radius: 1em;
+}
+h6{
+  background-color: 	 #006666;
+  border-radius: 2em;
+  height:auto ;
+}
 dt, dd {
      display: inline; }
 

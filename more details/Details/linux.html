@@ -26,6 +26,7 @@
         <a href="#directory">Directory</a>
         <a href="#permission">Permission</a>
         <a href="#environment">Environment</a>
+        <a href="#Pipes and Filters"> Pipes and Filters</a>
     </div>
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; LINUX </span>
 
@@ -176,7 +177,7 @@
                         </dd>
                     </dl>
 
-                    <h5 class="text-center">Prefix & Description</h5>
+                    <h6 class="text-center">Prefix & Description</h5>
                     <dl class="listclass">
                         <dd>
 
@@ -198,7 +199,7 @@
                         </dd>
                     </dl>
 
-                    <h5 class="text-center">Metacharacters</h5>
+                    <h6 class="text-center">Metacharacters</h5>
 
                     <dl class="listclass">
                         <dd>
@@ -212,7 +213,7 @@
                         </dd>
                     </dl>
 
-                    <h5 class="text-center">Hidden Files</h5>
+                    <h6 class="text-center">Hidden Files</h5>
 
                     <dl class="listclass">
                         <dd>
@@ -806,6 +807,57 @@
                             $
                         </dt><br>
                     </dl>
+                </div>
+            </div>
+        </div>
+        <div class="row boxin" id="Pipes and Filters">
+            <div class="col-lg-12">
+                <div class="inner">
+                    <h5 class="text-center">Unix / Linux - Pipes and Filters</h5>
+                    <dl class="listclass">
+                        <p>You can connect two commands together so that the output from one program becomes the input of the next program. Two or more commands connected in this way form a pipe.
+
+                            To make a pipe, put a vertical bar (<b class="cyan">|</b>) on the command line between two commands. </p>
+                        
+                        <h6 class="text-center">The grep command </h6>
+                        <dt>grep pattern file(s)</dt>
+                        <dd>(search certain pattern) </dd>
+                        <br>
+                        <dt>ls -l | grep "Aug"</dt>
+                        <br>
+                        
+                    </dl>
+                    <table class="tableper text-center">
+                        <tbody>
+                    
+                            <tr>
+                                <th>Option</th>
+                                <th> Description</th>
+                            </tr>
+                            <tr>
+                                <td>-v</td>
+                                <td>Prints all lines that do not match pattern. </td>
+                            </tr>
+                            <tr>
+                                <td>-n</td>
+                                <td>Prints the matched line and its line number. </td>
+                            </tr>
+                            <tr>
+                                <td>-l</td>
+                                <td>Prints only the names of files with matching lines (letter "l") </td>
+                            </tr>
+                            <tr>
+                                <td>-c</td>
+                                <td>Prints only the count of matching lines. </td>
+                            </tr>
+                            <tr>
+                                <td>-i</td>
+                                <td>Matches either upper or lowercase. </td>
+                            </tr>
+                      
+                            
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
