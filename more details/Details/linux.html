@@ -792,21 +792,21 @@
 
                             </tbody>
                         </table>
-
                         <br>
                         <p>Following is the sample example showing few environment variables − </p>
-                        <dt class="red">
-                            $ echo $HOME<br>
-                            /root<br>
-                            ]$ echo $DISPLAY<br>
-                            <br>
-                            $ echo $TERM<br>
-                            xterm<br>
-                            $ echo $PATH<br>
-                            /usr/local/bin:/bin:/usr/bin:<br>/home/amrood/bin:/usr/local/bin<br>
-                            $
-                        </dt><br>
+                        <p class="red">        $ echo $HOME<br>
+                    /root<br>
+                    ]$ echo $DISPLAY<br>
+                    
+                    $ echo $TERM<br>
+                    xterm<br>
+                    $ echo $PATH<br>
+                     /usr/local/bin:/bin:/usr/bin: /home/amrood/bin:/usr/local/bin</p><br>
                     </dl>
+              
+                            
+                        
+                  
                 </div>
             </div>
         </div>
@@ -858,6 +858,49 @@
                             
                         </tbody>
                     </table>
+<br>
+                    <dl class="listclass"><h6 class="text-center">The sort Command </h6>
+                    <b class="red">sort text</b></dl>
+
+                    <table class="tableper text-center">
+                        <tbody>
+                    
+                            <tr>
+                                <th>Option</th>
+                                <th> Description</th>
+                            </tr>
+                            <tr>
+                                <td>-n</td>
+                                <td>Sorts numerically (example: 10 will sort after 2), ignores blanks and tabs. </td>
+                            </tr>
+                            <tr>
+                                <td>-r</td>
+                                <td>Reverses the order of sort. </td>
+                            </tr>
+                            <tr>
+                                <td>-f</td>
+                                <td>Sorts upper and lowercase together. </td>
+                            </tr>
+                            <tr>
+                                <td>+x</td>
+                                <td>Ignores first x fields when sorting. </td>
+                            </tr>          
+                        </tbody>
+                    </table>
+                    <br>
+                    <dl class="listclass">
+
+                        <dt>
+                            ls -l | grep "Aug" | sort +4n
+                        </dt>
+                    </dl>
+                    <br>
+                    <dl class="listclass"><h6 class="text-center">The pg and more Commands </h6>
+                        <b class="red">ls -l | more</b>
+                        <b class="red">ls -l | grep "Aug" | sort +4n | more</b></dl>
+
+
+
                 </div>
             </div>
         </div>
