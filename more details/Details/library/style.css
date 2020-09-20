@@ -27,7 +27,7 @@ background:black;
 }
 
 .inner{
-    background: rgba(255,255,255,.9);
+   
     background: rgba(204, 204, 204, 0.1);
     border-radius: 2em;
 }
@@ -60,6 +60,9 @@ dt{
 }
 .red{
     color: red;
+}
+.yellow{
+  color: yellow;
 }
 b{
     color: cyan;
@@ -147,3 +150,20 @@ th,td,tr{
       #myBtn:hover {
         background-color: #555; /* Add a dark-grey background on hover */
       }
+
+      .none{
+        font-style: normal;
+      }
+
+
+
+      .inner-debian{
+     
+        background: rgba(204, 204, 204, 0.1);
+        border-radius: 2em;
+      }
+      .boxin-debian{
+        
+        padding:1em;
+        
+    }
