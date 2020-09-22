@@ -26,6 +26,8 @@
             <a href="#install">Install </a>
             <a href="#node-dh_make">Node-dh_make </a>
             <a href="#npm2deb">Npm2deb -lxc</a>
+            <a href="#lxc">lxc Install</a>
+            <a href="#diaspora">Diaspora</a>
 
         </div>
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; LINUX </span>
@@ -72,9 +74,9 @@
                         <div class="transparant">
                             <h5 class="text-center">Debian Unstable Install </h5>
                             <dl class="listclass">
-                                <dt>sudo apt install schroot debootstrap </dt><br>
-                                <dt>sudo debootstrap sid /srv/chroot/debian-sid </dt><br>
-                                <dt>sudo nano /etc/schroot/chroot.d/debian-sid </dt><br><br>
+                                <dt><i class="white none">$</i> sudo apt install schroot debootstrap </dt><br>
+                                <dt><i class="white none">$</i> sudo debootstrap sid /srv/chroot/debian-sid </dt><br>
+                                <dt><i class="white none">$</i> sudo nano /etc/schroot/chroot.d/debian-sid </dt><br><br>
                                 <dd> <i class="yellow">paste this</i><br>
                                     <b class="yellow">///////////////////////////////////////////////////</b><br>
                                     # schroot chroot definitions.<br>
@@ -99,8 +101,8 @@
                                         <b class="yellow">///////////////////////////////////////////////////</b><br>
 
                                         <b class="green">login use this command</b><br>
-                                <dt> sudo schroot -c debian-sid</dt><br>
-                                <dt> schroot -c debian-sid
+                                <dt><i class="white none">$</i> sudo schroot -c debian-sid</dt><br>
+                                <dt><i class="white none">$</i> schroot -c debian-sid
                                 </dt><br>
                                 <b class="yellow">......................................................</b><br>
                                 <a href="https://wiki.debian.org/Packaging/Pre-Requisites">For more info click here </a>
@@ -183,9 +185,10 @@
                         <div class="transparant">
                             <h5 class="text-center">Npm2Deb - lxc </h5>
                             <dl class="listclass">
-                                <dt>apt-get install lxc </dt><br>
-                                <dt>lxc-create -n deb-sid -t download -- --dist debian --release sid </dt><br>
-                                <dt>vim ~/.bashrc </dt><br>
+                                <dt><i class="white none">$</i> apt-get install lxc </dt><br>
+                                <dt><i class="white none">$</i> lxc-create -n deb-sid -t download -- --dist debian
+                                    --release sid </dt><br>
+                                <dt><i class="white none">$</i> vim ~/.bashrc </dt><br>
                                 <b class="yellow none-b">paste this in variables section</b>
                                 <b class="yellow">......................................................</b><br>
                                 <p>
@@ -196,15 +199,143 @@
                                     alias clean='fakeroot debian/rules clean'<br>
                                 </p>
                                 <b class="yellow">......................................................</b><br>
-                                <dt>apt-get install lxc </dt><br>
-                                <dt>apt-get install lxc </dt><br>
-                                <dt>apt-get install lxc </dt><br>
+                                <dt><i class="white none">$</i> source ~/.bashrc </dt><br>
+                                <dt><i class="white none">$</i> sudo apt-get install npm2deb </dt><br>
+                                <dt><i class="white none">$</i> apt-get install lxc </dt><br>
+                            </dl>
+                            <ul class="listclass">
+                                <li class="yellow">Prooject start</li>
+                                <li><i class="red none">mkdir</i> packaging </li>
+                                <li><i class="red none">cd </i>packaging/ </li>
+                                <li><i class="red none">wget</i> <a
+                                        href="https://github.com/sindresorhus/pretty-ms/archive/v7.0.0.tar.gz">link
+                                        here</a> </li>
+                                <li><i class="red none">npm2deb create </i> pretty-ms </li>
+                                <li class="yellow">use lintian and correct errors</li>
 
-
+                            </ul>
+                            <dl class="listclass">
+                                <b class="yellow">......................................................</b><br>
+                                <a href="https://wiki.debian.org/Javascript/Nodejs/Npm2Deb">For more info click here
+                                </a>
+                                <br>
+                                <b class="yellow">......................................................</b><br><br>
                             </dl>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row boxin-debian" id="lxc">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center"> lxc Install</h5>
+                            <dl class="listclass">
+                                <dt class="none-b"><i class="white none">$</i> sudo apt-get install lxc </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> sudo apt-get install lxc lxctl
+                                    lxc-templates </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> sudo apt-get install -qy libvirt-clients
+                                    libvirt-daemon-system iptables ebtables dnsmasq-base # if libvirt-client is not
+                                    available, try libvirt-bin </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> systemctl status libvirtd </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> systemctl start libvirtd <i
+                                        class="none yellow">(not started)</i> </dt><br>
+                                <b class="yellow">......................................................</b><br>
+                                <a href="https://wiki.debian.org/Javascript/Nodejs/Npm2Deb">For more info click here
+                                </a>
+                                <br>
+                                <b class="yellow">......................................................</b><br><br>
+                            </dl>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row boxin-debian" id="diaspora">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center"> Diaspora</h5>
+                            <dl class="listclass">
+                                <dt class="none-b"><i class="white none">$</i> sudo lxc-create -n diaspora -t download
+                                    -- --dist debian --release sidc </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> sudo apt install openssh-server </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> sudo lxc-start -n diaspora </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> sudo lxc-attach -n diaspora </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> dpkg-reconfigure locales </dt><br>
+                                <p class="cyan">
+
+                                    select this one (en_IN.UTF-8 && C.UTF-8 )
+
+                                </p>
+                                <dt class="none-b"><i class="white none">$</i> vim /etc/apt/sources.list </dt><br>
+                                <b class="yellow none-b">paste this </b>
+                                <b class="yellow">......................................................</b><br>
+                                <p class="cyan">
+                                    deb http://deb.debian.org/debian buster-backports main contrib non-free<br>
+                                    deb-src http://deb.debian.org/debian buster-backports main contrib non-free
+
+                                </p>
+                                <b class="yellow">......................................................</b><br>
+
+                                <dt class="none-b"><i class="white none">$</i> apt update && apt -t buster-backports
+                                    install diaspora-installer </dt><br>
+                                <p class="cyan">
+                                    hostname: diaspora.lxc<br>
+                                    https : disable
+
+
+                                </p>
+                                <dt class="none-b"><i class="white none">$</i> /etc/init.d/diaspora status </dt><br>
+                                <p class="yellow"> if not start try this</p>
+                                <dt class="none-b"><i class="white none">$</i> /etc/init.d/diaspora start </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> curl -v --unix-socket
+                                    /run/diaspora/diaspora.sock http://diaspora.lxc/ </dt><br>
+                                <p class="yellow"> (if not work no problem manually start unicom)
+                                </p>
+                            </dl>
+
+                            <ul class="listclass">
+                                <li class="yellow">(Manually starting unicorn)</li>
+                                <li><i class="red none">cd /usr/share/diaspora </i> </li>
+                                <li><i class="red none">. /etc/diaspora.conf </i> </li>
+                                <li><i class="red none"> sudo -u diaspora -E -H bin/bundle exec unicorn -c
+                                        config/unicorn.rb</i> </li>
+
+
+                            </ul>
+                            <dl class="listclass">
+                                <p class="yellow"> On your host machine (eg : ubuntu (type command in terminal))</p>
+                                <dt class="none-b"><i class="white none">$</i> sudo cat /etc/hosts </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> sudo vim /etc/hosts </dt><br>
+                                <p class="cyan"> (insert this to hosts file)<br>
+                                    10.0.3.69 diaspora.lxc<br>
+                                    
+                                    (enter in browser)<br>
+                                    http://diaspora.lxc/podmin<br>
+                                    </p>
+
+                                <b class="yellow">......................................................</b><br>
+                                <a href="https://wiki.debian.org/Diaspora/testing">For more info click here
+                                </a>
+                                <br>
+                                <a href="https://wiki.debian.org/SourcesList">For more info click here
+                                </a>
+                                <br>
+                                <a href="https://gist.github.com/ChristopherA/680b4eeeeb6e9e4c7fc59c010a23b6cd">For more info click here
+                                </a>
+                                <br>
+                                <b class="yellow">......................................................</b><br><br>
+                            </dl>
+
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
