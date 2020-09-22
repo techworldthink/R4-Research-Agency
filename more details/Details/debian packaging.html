@@ -25,6 +25,7 @@
             <a href="#debian">Debian </a>
             <a href="#install">Install </a>
             <a href="#node-dh_make">Node-dh_make </a>
+            <a href="#npm2deb">Npm2deb -lxc</a>
 
         </div>
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; LINUX </span>
@@ -142,22 +143,70 @@
 
                                 <li class="yellow">Additional changes need</li>
                                 <li><i class="red none">vim</i> debian/install</li>
-                                <li>index.js usr/share/nodejs/pretty-ms </li>
+                                <li class="cyan">index.js usr/share/nodejs/pretty-ms </li>
                                 <li><i class="red none">vim</i> debian/control</li>
-                                <li>change architecture any -> all</li>
-                                <li>change homepage <a href="https://github.com/sindresorhus/pretty-ms">link here</a>
-                                </li>
-                                <li><i class="red none">vim</i> debian/copyright</li>
-                                <li><a href="https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/">
-                                    format is available in the website
-                                    </a>
+                                <li class="cyan">change architecture any -> all</li>
+                                <li class="cyan">change homepage <a
+                                        href="https://github.com/sindresorhus/pretty-ms">link here</a>
                                 </li>
 
+                                <li><i class="red none">vim</i> debian/rules</li>
+                                <li class="cyan">#first line </li>
+                                <li class="cyan">%: </li>
+                                <li class="cyan">dh $@ </li>
+                                <li><i class="red none">vim</i> debian/copyright</li>
+                                <li><a href="https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/">
+                                        format is available in the website
+                                    </a>
+                                </li>
+                                <br>
+                                <li class="yellow">Error Correction</li>
+                                <li><i class="red none">apt-get install lintian</i></li>
+                                <li><i class="red none">lintian</i></li>
+                                <li><i class="cyan none">N - normal</i></li>
+                                <li><i class="cyan none">E - Error</i></li>
+                                <li><i class="cyan none">W - Warning</i></li>
+
+                                <b class="yellow">......................................................</b><br>
+                                <a href="https://wiki.debian.org/SimplePackagingTutorial">For more info click here </a>
+                                <br>
+                                <b class="yellow">......................................................</b><br><br>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="row boxin-debian" id="npm2deb">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">Npm2Deb - lxc </h5>
+                            <dl class="listclass">
+                                <dt>apt-get install lxc </dt><br>
+                                <dt>lxc-create -n deb-sid -t download -- --dist debian --release sid </dt><br>
+                                <dt>vim ~/.bashrc </dt><br>
+                                <b class="yellow none-b">paste this in variables section</b>
+                                <b class="yellow">......................................................</b><br>
+                                <p>
+                                    export DEBEMAIL=your@email.domain <br>
+                                    export DEBFULLNAME='Your Name'<br>
+                                    alias lintian='lintian -iIEcv --pedantic --color auto'<br>
+                                    alias git-import-dsc='git-import-dsc --author-is-committer --pristine-tar'<br>
+                                    alias clean='fakeroot debian/rules clean'<br>
+                                </p>
+                                <b class="yellow">......................................................</b><br>
+                                <dt>apt-get install lxc </dt><br>
+                                <dt>apt-get install lxc </dt><br>
+                                <dt>apt-get install lxc </dt><br>
+
+
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
