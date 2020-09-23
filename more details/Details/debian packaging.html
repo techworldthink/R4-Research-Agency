@@ -23,7 +23,7 @@
             <a href="../../index.html">Main </a>
             <a href="#home">Home </a>
             <a href="#debian">Debian </a>
-            <a href="#install">Install </a>
+            <a href="#install">Install-schroot </a>
             <a href="#node-dh_make">Node-dh_make </a>
             <a href="#npm2deb">Npm2deb -lxc</a>
             <a href="#lxc">lxc Install</a>
@@ -101,9 +101,11 @@
                                         <b class="yellow">///////////////////////////////////////////////////</b><br>
 
                                         <b class="green">login use this command</b><br>
-                                <dt><i class="white none">$</i> sudo schroot -c debian-sid</dt><br>
-                                <dt><i class="white none">$</i> schroot -c debian-sid
-                                </dt><br>
+                                <dt><i class="white none">$</i> sudo schroot -c debian-sid   <i
+                                    class="none yellow">(to start)</i> </dt><br>
+                                <dt><i class="white none">$</i> schroot -c debian-sid<i
+                                    class="none yellow">(to start)</i> 
+                                </dt> <br>
                                 <b class="yellow">......................................................</b><br>
                                 <a href="https://wiki.debian.org/Packaging/Pre-Requisites">For more info click here </a>
                                 <br>
@@ -201,7 +203,7 @@
                                 <b class="yellow">......................................................</b><br>
                                 <dt><i class="white none">$</i> source ~/.bashrc </dt><br>
                                 <dt><i class="white none">$</i> sudo apt-get install npm2deb </dt><br>
-                                <dt><i class="white none">$</i> apt-get install lxc </dt><br>
+                               
                             </dl>
                             <ul class="listclass">
                                 <li class="yellow">Prooject start</li>
@@ -209,7 +211,7 @@
                                 <li><i class="red none">cd </i>packaging/ </li>
                                 <li><i class="red none">wget</i> <a
                                         href="https://github.com/sindresorhus/pretty-ms/archive/v7.0.0.tar.gz">link
-                                        here</a> </li>
+                                        here</a> <i class="cyan">(not needed for npm2deb)</i></li>
                                 <li><i class="red none">npm2deb create </i> pretty-ms </li>
                                 <li class="yellow">use lintian and correct errors</li>
 
@@ -240,8 +242,14 @@
                                 <dt class="none-b"><i class="white none">$</i> systemctl status libvirtd </dt><br>
                                 <dt class="none-b"><i class="white none">$</i> systemctl start libvirtd <i
                                         class="none yellow">(not started)</i> </dt><br>
+
+                                        <dt class="none-b"><i class="white none">$</i> sudo lxc-create -n debian-sid -t download -- --dist debian --release sid </dt><br>
+                                        <dt class="none-b"><i class="white none">$</i> sudo lxc-start -n debian-sid     <i
+                                            class="none yellow">(to start)</i>  </dt><br>
+                                        <dt class="none-b"><i class="white none">$</i> sudo lxc-attach -n debian-sid     <i
+                                            class="none yellow">(to attach)</i> </dt><br>   
                                 <b class="yellow">......................................................</b><br>
-                                <a href="https://wiki.debian.org/Javascript/Nodejs/Npm2Deb">For more info click here
+                                <a href="https://wiki.debian.org/Packaging/Pre-Requisites">For more info click here
                                 </a>
                                 <br>
                                 <b class="yellow">......................................................</b><br><br>
@@ -261,7 +269,7 @@
                             <h5 class="text-center"> Diaspora</h5>
                             <dl class="listclass">
                                 <dt class="none-b"><i class="white none">$</i> sudo lxc-create -n diaspora -t download
-                                    -- --dist debian --release sidc </dt><br>
+                                    -- --dist debian --release sid </dt><br>
                                 <dt class="none-b"><i class="white none">$</i> sudo apt install openssh-server </dt><br>
                                 <dt class="none-b"><i class="white none">$</i> sudo lxc-start -n diaspora </dt><br>
                                 <dt class="none-b"><i class="white none">$</i> sudo lxc-attach -n diaspora </dt><br>
