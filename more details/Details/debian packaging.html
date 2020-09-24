@@ -26,8 +26,9 @@
             <a href="#install">Install-schroot </a>
             <a href="#node-dh_make">Node-dh_make </a>
             <a href="#npm2deb">Npm2deb </a>
-            <a href="#encon">Envi. Con. </a>
+            <a href="#encon">Environment </a>
             <a href="#lxc">lxc Install</a>
+            <a href="#git">git</a>
             <a href="#diaspora">Diaspora</a>
 
         </div>
@@ -102,10 +103,10 @@
                                         <b class="yellow">///////////////////////////////////////////////////</b><br>
 
                                         <b class="green">login use this command</b><br>
-                                <dt><i class="white none">$</i> sudo schroot -c debian-sid   <i
-                                    class="none yellow">(to start)</i> </dt><br>
-                                <dt><i class="white none">$</i> schroot -c debian-sid<i
-                                    class="none yellow">(to start)</i> 
+                                <dt><i class="white none">$</i> sudo schroot -c debian-sid <i class="none yellow">(to
+                                        start)</i> </dt><br>
+                                <dt><i class="white none">$</i> schroot -c debian-sid<i class="none yellow">(to
+                                        start)</i>
                                 </dt> <br>
                                 <b class="yellow">......................................................</b><br>
                                 <a href="https://wiki.debian.org/Packaging/Pre-Requisites">For more info click here </a>
@@ -189,9 +190,9 @@
                             <h5 class="text-center">Npm2Deb </h5>
                             <dl class="listclass">
                                 <dt><i class="white none">$</i> sudo apt-get install npm2deb <br></dt>
-                                </dl>
+                            </dl>
                             <ul class="listclass">
-                               
+
                                 <li class="yellow">Project start</li>
                                 <li><i class="red none">mkdir</i> packaging </li>
                                 <li><i class="red none">cd </i>packaging/ </li>
@@ -220,7 +221,7 @@
                         <div class="transparant">
                             <h5 class="text-center">Environment Configuration </h5>
                             <dl class="listclass">
-                             
+
                                 <dt><i class="white none">$</i> vim ~/.bashrc </dt><br>
                                 <b class="yellow none-b">paste this in variables section</b><br>
                                 <b class="yellow">......................................................</b><br>
@@ -233,8 +234,8 @@
                                 </p>
                                 <b class="yellow">......................................................</b><br>
                                 <dt><i class="white none">$</i> source ~/.bashrc </dt><br>
-                                
-                               
+
+
                             </dl>
                             <dl class="listclass">
                                 <b class="yellow">......................................................</b><br>
@@ -264,23 +265,101 @@
                                 <dt class="none-b"><i class="white none">$</i> systemctl start libvirtd <i
                                         class="none yellow">(not started)</i> </dt><br>
 
-                                        <dt class="none-b"><i class="white none">$</i> sudo lxc-create -n debian-sid -t download -- --dist debian --release sid </dt><br>
-                                        <dt class="none-b"><i class="white none">$</i> sudo lxc-start -n debian-sid     <i
-                                            class="none yellow">(to start)</i>  </dt><br>
-                                        <dt class="none-b"><i class="white none">$</i> sudo lxc-attach -n debian-sid     <i
-                                            class="none yellow">(to attach)</i> </dt><br>   
+                                <dt class="none-b"><i class="white none">$</i> sudo lxc-create -n debian-sid -t download
+                                    -- --dist debian --release sid </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> sudo lxc-start -n debian-sid <i
+                                        class="none yellow">(to start)</i> </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> sudo lxc-attach -n debian-sid <i
+                                        class="none yellow">(to attach)</i> </dt><br>
                                 <b class="yellow">......................................................</b><br>
                                 <a href="https://wiki.debian.org/Packaging/Pre-Requisites">For more info click here
                                 </a>
                                 <br>
                                 <b class="yellow">......................................................</b><br><br>
                             </dl>
-
-
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div class="row boxin-debian" id="git">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center"> git track</h5>
+                            <dl class="listclass">
+                                <dt class="none-b"> <i class="none cyan"> create project before make any change do it
+                                        first</i></dt><br>
+                                <dt class="none-b"><i class="none cyan"> (got to the directory that contain .dsc
+                                        file)</i></dt><br>
+                                <dt class="none-b"><i class="white none">$</i> rm -rf node-pretty-ms </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> gbp import-dsc --pristine-tar <i
+                                        class="none white">node-pretty-ms_7.0.0-1.dsc</i> </dt><br>
+
+
+                               
+                                <dt class="none-b"><i class="none yellow"> error: found (unknown system group
+                                        'Debian-exim')</i></dt><br>
+                                <dt class="none-b"> <i class="white none">$</i> sudo vim <i class="none white">
+                                        /var/lib/dpkg/statoverride</i></dt><br>
+                                <a href=" https://askubuntu.com/questions/335538/unknown-user-in-statoverride-file
+                                ">for reference
+                                </a>
+                                <br>
+                                <dt class="none-b"> <i class="none cyan"> default mirror site is : </i></dt><br>
+                                <dt class="none-b"> <i class="none white"> deb.debian.org</i></dt><br>
+
+                            
+
+
+                                <dt class="none-b"><i class="white none">$</i>cd <i class="white none"> node-pretty-ms
+                                    </i> </dt><br>
+
+                                <dt class="none-b"><i class="white none">$</i>git tag -d <i class="white none">
+                                        debian/7.0.0-1 </i> </dt><br>
+                                <dt class="none-b"><i class="white none">$</i>dpkg-source -b . </dt><br>
+                                <dt class="none-b"><i class="white none">$</i>dpkg-buildpackage
+                                </dt><br>
+
+
+                            
+                                <dt class="none-b"><i class="none yellow"> error: Unmet build dependencies: pkg-js-tools</i></dt><br>
+                                <dt class="none-b"> <i class="white none">$</i> sudo apt-get install pkg-js-tools </dt><br>
+
+                                <dt class="none-b"> <i class="none cyan"> if any problem correct it then </i></dt><br>
+                           
+                                <dt class="none-b"><i class="white none">$</i>dpkg-buildpackage
+                                </dt><br>
+
+                                <dt class="none-b"><i class="white none">$</i>git status
+                                </dt><br>
+                                <dt class="none-b"><i class="white none">$</i>git add <i class="white none">debian/file_name</i>
+                                </dt><br>
+                                <dt class="none-b"><i class="white none">$</i>git commit -m "in debian/rules file updated"
+                                </dt><br>
+                                <dt class="none-b"><i class="white none">$</i>lintian
+
+                                </dt><br>
+
+  <dt class="none-b"> <i class="none white">or</i></dt><br>
+
+  <dt class="none-b"><i class="white none">$</i>lintian <i class="none white">../node-pretty-ms_7.0.1-1_amd64.changes </i>
+
+  </dt><br>
+
+  <dt class="none-b"> <i class="none cyan"> resolve problems and  build then add the file and commit the changes  </i></dt><br>
+
+
+                                <b class="yellow">......................................................</b><br>
+                                <a href="https://wiki.debian.org/Javascript/Nodejs/Npm2Deb#Import_your_package_to_git">For
+                                    more info click here
+                                </a>
+                                <br>
+                                <b class="yellow">......................................................</b><br><br>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="row boxin-debian" id="diaspora">
@@ -301,7 +380,7 @@
 
                                 </p>
                                 <dt class="none-b"><i class="white none">$</i> vim /etc/apt/sources.list </dt><br>
-                                <b class="yellow none-b">paste this </b>
+                                <b class="yellow none-b">paste this </b><br>
                                 <b class="yellow">......................................................</b><br>
                                 <p class="cyan">
                                     deb http://deb.debian.org/debian buster-backports main contrib non-free<br>
@@ -342,10 +421,10 @@
                                 <dt class="none-b"><i class="white none">$</i> sudo vim /etc/hosts </dt><br>
                                 <p class="cyan"> (insert this to hosts file)<br>
                                     10.0.3.69 diaspora.lxc<br>
-                                    
+
                                     (enter in browser)<br>
                                     http://diaspora.lxc/podmin<br>
-                                    </p>
+                                </p>
 
                                 <b class="yellow">......................................................</b><br>
                                 <a href="https://wiki.debian.org/Diaspora/testing">For more info click here
@@ -354,7 +433,8 @@
                                 <a href="https://wiki.debian.org/SourcesList">For more info click here
                                 </a>
                                 <br>
-                                <a href="https://gist.github.com/ChristopherA/680b4eeeeb6e9e4c7fc59c010a23b6cd">For more info click here
+                                <a href="https://gist.github.com/ChristopherA/680b4eeeeb6e9e4c7fc59c010a23b6cd">For more
+                                    info click here
                                 </a>
                                 <br>
                                 <b class="yellow">......................................................</b><br><br>
