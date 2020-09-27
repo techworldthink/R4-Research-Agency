@@ -178,3 +178,13 @@ tr {
 .white{
     color:white;
 }
+
+.bg-cyan{
+  background-color: 	 #006666;
+  border-radius: 2em;
+  height: auto;
+  padding: .25em;
+}
+p{
+  text-align: justify;
+}

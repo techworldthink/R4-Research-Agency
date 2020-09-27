@@ -271,6 +271,9 @@
                                         class="none yellow">(to start)</i> </dt><br>
                                 <dt class="none-b"><i class="white none">$</i> sudo lxc-attach -n debian-sid <i
                                         class="none yellow">(to attach)</i> </dt><br>
+                                <dt class="none-b">  <i
+                                            class="none cyan">var/lib/lxc     --  lxc directory</i> </dt><br>
+
                                 <b class="yellow">......................................................</b><br>
                                 <a href="https://wiki.debian.org/Packaging/Pre-Requisites">For more info click here
                                 </a>
@@ -297,7 +300,7 @@
                                         class="none white">node-pretty-ms_7.0.0-1.dsc</i> </dt><br>
 
 
-                               
+
                                 <dt class="none-b"><i class="none yellow"> error: found (unknown system group
                                         'Debian-exim')</i></dt><br>
                                 <dt class="none-b"> <i class="white none">$</i> sudo vim <i class="none white">
@@ -309,7 +312,7 @@
                                 <dt class="none-b"> <i class="none cyan"> default mirror site is : </i></dt><br>
                                 <dt class="none-b"> <i class="none white"> deb.debian.org</i></dt><br>
 
-                            
+
 
 
                                 <dt class="none-b"><i class="white none">$</i>cd <i class="white none"> node-pretty-ms
@@ -322,32 +325,38 @@
                                 </dt><br>
 
 
-                            
-                                <dt class="none-b"><i class="none yellow"> error: Unmet build dependencies: pkg-js-tools</i></dt><br>
-                                <dt class="none-b"> <i class="white none">$</i> sudo apt-get install pkg-js-tools </dt><br>
+
+                                <dt class="none-b"><i class="none yellow"> error: Unmet build dependencies:
+                                        pkg-js-tools</i></dt><br>
+                                <dt class="none-b"> <i class="white none">$</i> sudo apt-get install pkg-js-tools </dt>
+                                <br>
 
                                 <dt class="none-b"> <i class="none cyan"> if any problem correct it then </i></dt><br>
-                           
+
                                 <dt class="none-b"><i class="white none">$</i>dpkg-buildpackage
                                 </dt><br>
 
                                 <dt class="none-b"><i class="white none">$</i>git status
                                 </dt><br>
-                                <dt class="none-b"><i class="white none">$</i>git add <i class="white none">debian/file_name</i>
+                                <dt class="none-b"><i class="white none">$</i>git add <i
+                                        class="white none">debian/file_name</i>
                                 </dt><br>
-                                <dt class="none-b"><i class="white none">$</i>git commit -m "in debian/rules file updated"
+                                <dt class="none-b"><i class="white none">$</i>git commit -m "in debian/rules file
+                                    updated"
                                 </dt><br>
                                 <dt class="none-b"><i class="white none">$</i>lintian
 
                                 </dt><br>
 
-  <dt class="none-b"> <i class="none white">or</i></dt><br>
+                                <dt class="none-b"> <i class="none white">or</i></dt><br>
 
-  <dt class="none-b"><i class="white none">$</i>lintian <i class="none white">../node-pretty-ms_7.0.1-1_amd64.changes </i>
+                                <dt class="none-b"><i class="white none">$</i>lintian <i
+                                        class="none white">../node-pretty-ms_7.0.1-1_amd64.changes </i>
 
-  </dt><br>
+                                </dt><br>
 
-  <dt class="none-b"> <i class="none cyan"> resolve problems and  build then add the file and commit the changes  </i></dt><br>
+                                <dt class="none-b"> <i class="none cyan"> resolve problems and build then add the file
+                                        and commit the changes </i></dt><br>
 
 
                                 <b class="yellow">......................................................</b><br>
@@ -356,7 +365,49 @@
                                 </a>
                                 <br>
                                 <b class="yellow">......................................................</b><br><br>
+                                <b class="white bg-cyan">NOW PUSH THE PROJECT TO SALSA </b>
                             </dl>
+
+                            <ul class="listclass">
+                                <p>Command line instructions.
+
+                                    You can also upload existing files from your computer using the instructions below.
+                                    Create an account in <a link="https://salsa.debian.org/public"> salsa</a> then create new project.
+                                     </p>
+                                <li class="yellow">Git global setup</li>
+                                <li><i class="red none">git config --global user.name "user-name"</i> </li>
+                                <li><i class="red none">git config --global user.email "mail@example.com"</i> </li>
+                               
+                               
+                                <li class="yellow">Create a new repository</li>
+                                <li><i class="red none">git clone <a href="https://salsa.debian.org/Jobin/pretty-ms.git">link </a></i> </li>
+                                <li><i class="red none">cd pretty-ms</i> </li>
+                                <li><i class="red none">touch README.md</i> </li>
+                                <li><i class="red none">git add README.md</i> </li>
+                                <li><i class="red none">git commit -m "add README"</i> </li>
+                                <li><i class="red none">git push -u origin master</i> </li>
+
+                                <li class="yellow">Push an existing folder</li>
+                                <li><i class="red none">cd existing_folder</i> </li>
+                                <li><i class="red none">git init</i> </li>
+                                <li><i class="red none">git remote add origin <a href="https://salsa.debian.org/Jobin/pretty-ms.git">link </a></i> </li>
+                                <li><i class="red none">git add .</i> </li>
+                                <li><i class="red none">git commit -m "Initial commit"</i> </li>
+                                <li><i class="red none">git push -u origin master</i> </li>
+
+                                <li class="yellow">Push an existing Git repository</li>
+                                <li><i class="red none">cd existing_repo</i> </li>
+                                <li><i class="red none">git remote rename origin old-origin</i> </li>
+                                <li><i class="red none">git remote add origin <a href="https://salsa.debian.org/Jobin/pretty-ms.git">link </a></i> </li>
+                                <li><i class="red none">git push -u origin --all</i> </li>
+                                <li><i class="red none">git push -u origin --tags</i> </li>
+     
+
+                                <b class="yellow">......................................................</b><br>
+                                <a href="https://salsa.debian.org/public">For more info click here </a>
+                                <br>
+                                <b class="yellow">......................................................</b><br><br>
+                            </ul>
                         </div>
                     </div>
                 </div>
