@@ -533,10 +533,9 @@
                                         <i><i class="yellow none">S:</i> sudo apt install --reinstall sbuild  </i><br>
 
                                         <i><i class="red none">P:</i>: /srv/chroot/unstable-amd64-sbuild is not empty </i><br>
-                                        <i><i class="yellow none">S:</i> 	delete unstable-amd64-sbuild 	/srv/chroot/unstable-amd64-sbuild
-                                    then <br>
-                                    newgrp sbuild<br>
-                                    re run
+                                        <i><i class="yellow none">S:</i> 	
+                                    /srv/chroot/unstable-amd64-sbuild delete ചെയ്തതിനു് ശേഷം  കൂടാതെ /etc/schroot/chroot.d/unstable-amd64* കൂടി delete ചെയ്യണം. ശേഷം  sbuild-createchroot ആണു് കൊടുക്കേണ്ടതു്. 
+                                   
                              </i><br>
 
                              <i><i class="red none">P:</i> can't find module pkg-js-tools </i><br>
@@ -548,6 +547,8 @@
                                         <dt class="none-b"><i class="white none">$</i> sudo apt install apt-file
                                         </dt><br>
                                         <dt class="none-b"><i class="white none">$</i> sudo apt-file update
+                                        </dt><br>
+                                        <dt class="none-b"><i class="white none">$</i> sudo apt-file find file_name
                                         </dt><br>
 
                                 <b class="yellow">......................................................</b><br>
