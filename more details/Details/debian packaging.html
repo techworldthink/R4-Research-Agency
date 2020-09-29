@@ -27,8 +27,9 @@
             <a href="#node-dh_make">Node-dh_make </a>
             <a href="#npm2deb">Npm2deb </a>
             <a href="#encon">Environment </a>
-            <a href="#lxc">lxc Install</a>
-            <a href="#git">git</a>
+            <a href="#lxc">Lxc Install</a>
+            <a href="#git">Git</a>
+            <a href="#sbuild">Sbuild</a>
             <a href="#diaspora">Diaspora</a>
 
         </div>
@@ -271,8 +272,7 @@
                                         class="none yellow">(to start)</i> </dt><br>
                                 <dt class="none-b"><i class="white none">$</i> sudo lxc-attach -n debian-sid <i
                                         class="none yellow">(to attach)</i> </dt><br>
-                                <dt class="none-b">  <i
-                                            class="none cyan">var/lib/lxc     --  lxc directory</i> </dt><br>
+                                <dt class="none-b"> <i class="none cyan">var/lib/lxc -- lxc directory</i> </dt><br>
 
                                 <b class="yellow">......................................................</b><br>
                                 <a href="https://wiki.debian.org/Packaging/Pre-Requisites">For more info click here
@@ -372,15 +372,17 @@
                                 <p>Command line instructions.
 
                                     You can also upload existing files from your computer using the instructions below.
-                                    Create an account in <a link="https://salsa.debian.org/public"> salsa</a> then create new project.
-                                     </p>
+                                    Create an account in <a link="https://salsa.debian.org/public"> salsa</a> then
+                                    create new project.
+                                </p>
                                 <li class="yellow">Git global setup</li>
                                 <li><i class="red none">git config --global user.name "user-name"</i> </li>
                                 <li><i class="red none">git config --global user.email "mail@example.com"</i> </li>
-                               
-                               
+
+
                                 <li class="yellow">Create a new repository</li>
-                                <li><i class="red none">git clone <a href="https://salsa.debian.org/Jobin/pretty-ms.git">link </a></i> </li>
+                                <li><i class="red none">git clone <a
+                                            href="https://salsa.debian.org/Jobin/pretty-ms.git">link </a></i> </li>
                                 <li><i class="red none">cd pretty-ms</i> </li>
                                 <li><i class="red none">touch README.md</i> </li>
                                 <li><i class="red none">git add README.md</i> </li>
@@ -390,7 +392,8 @@
                                 <li class="yellow">Push an existing folder</li>
                                 <li><i class="red none">cd existing_folder</i> </li>
                                 <li><i class="red none">git init</i> </li>
-                                <li><i class="red none">git remote add origin <a href="https://salsa.debian.org/Jobin/pretty-ms.git">link </a></i> </li>
+                                <li><i class="red none">git remote add origin <a
+                                            href="https://salsa.debian.org/Jobin/pretty-ms.git">link </a></i> </li>
                                 <li><i class="red none">git add .</i> </li>
                                 <li><i class="red none">git commit -m "Initial commit"</i> </li>
                                 <li><i class="red none">git push -u origin master</i> </li>
@@ -398,10 +401,11 @@
                                 <li class="yellow">Push an existing Git repository</li>
                                 <li><i class="red none">cd existing_repo</i> </li>
                                 <li><i class="red none">git remote rename origin old-origin</i> </li>
-                                <li><i class="red none">git remote add origin <a href="https://salsa.debian.org/Jobin/pretty-ms.git">link </a></i> </li>
+                                <li><i class="red none">git remote add origin <a
+                                            href="https://salsa.debian.org/Jobin/pretty-ms.git">link </a></i> </li>
                                 <li><i class="red none">git push -u origin --all</i> </li>
                                 <li><i class="red none">git push -u origin --tags</i> </li>
-     
+
 
                                 <b class="yellow">......................................................</b><br>
                                 <a href="https://salsa.debian.org/public">For more info click here </a>
@@ -496,6 +500,72 @@
                     </div>
                 </div>
 
+            </div>
+
+            <div class="row boxin-debian" id="sbuild">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center"> Sbuild - build Package </h5>
+                            <dl class="listclass">
+                                <dt class="none-b"><i class="white none">$</i> sudo apt-get install sbuild schroot debootstrap </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> sudo sbuild-adduser jobin
+                          </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> cp /usr/share/doc/sbuild/examples/example.sbuildrc /home/jobin/.sbuildrc </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> sudo apt install apt-cacher-ng </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> newgrp sbuild   <i
+                                        class="none yellow">(or logout then login again)</i> </dt><br>
+
+                                <dt class="none-b"><i class="white none">$</i> sudo auto-apt-proxy sbuild-createchroot --include=eatmydata,ccache,gnupg,auto-apt-proxy unstable /srv/chroot/unstable-amd64-sbuild http://deb.debian.org/debian </dt><br>
+                                <dt class="none-b"><i class="white none">$</i>  <i
+                                        class="none yellow">(go to packaging directory that contain debian folder)</i> </dt><br>
+                                <dt class="none-b"><i class="white none">$</i> sudo sbuild -A -d unstable <i
+                                        class="none yellow"></i> </dt><br>
+                              
+
+
+                                        <b class="green-l">......................................................</b><br>
+                                        <b class="cyan none-b">Problems & Solutions</b><br>
+                                        <i><i class="red none">P:</i> command not found :  auto-apt-proxy </i><br>
+                                        <i><i class="yellow none">S:</i> sudo apt-get install auto-apt-proxy  </i><br>
+
+                                        <i><i class="red none">P:</i> if sbuild install problem occure </i><br>
+                                        <i><i class="yellow none">S:</i> sudo apt install --reinstall sbuild  </i><br>
+
+                                        <i><i class="red none">P:</i>: /srv/chroot/unstable-amd64-sbuild is not empty </i><br>
+                                        <i><i class="yellow none">S:</i> 	delete unstable-amd64-sbuild 	/srv/chroot/unstable-amd64-sbuild
+                                    then <br>
+                                    newgrp sbuild<br>
+                                    re run
+                             </i><br>
+
+                             <i><i class="red none">P:</i> can't find module pkg-js-tools </i><br>
+                             <i><i class="yellow none">S:</i> sudo apt-get install pkg-js-tools  </i><br>
+
+                                        <b class="green-l">......................................................</b><br><br>
+
+                                        <b class="cyan none-b">sometimes need this</b><br>
+                                        <dt class="none-b"><i class="white none">$</i> sudo apt install apt-file
+                                        </dt><br>
+                                        <dt class="none-b"><i class="white none">$</i> sudo apt-file update
+                                        </dt><br>
+
+                                <b class="yellow">......................................................</b><br>
+                                <b class="cyan none-b">Reference</b><br>
+                                <a href="https://wiki.debian.org/Packaging/sbuild">Packaging sbuild
+                                </a><br>
+                                <a href="https://wiki.debian.org/sbuild">sbuild
+                                </a><br>
+                                <a href="https://wiki.debian.org/AptCacherNg">AptCacherNg
+                                </a><br>
+                                <a href="https://askubuntu.com/questions/335538/unknown-user-in-statoverride-file">unknown-user-in-statoverride-file
+                                </a>
+                                <br>
+                                <b class="yellow">......................................................</b><br><br>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
