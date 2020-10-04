@@ -1,0 +1,277 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link href="library/debian-style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <title>Debian Packaging</title>
+</head>
+
+<body>
+    <div class="body-full">
+
+
+        <button onclick="openNav()" id="myBtn" title="Go to top">
+            <i class="fa fa-align-justify"></i>
+        </button>
+
+
+
+    
+
+
+        <!-- side navbar-->
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../../index.html">Main </a>
+            <a href="#home">Home </a>
+            <a href="#wiki">Node-wiki </a>
+            <a href="#diaspora">Diaspora</a>
+            <a href="debian packaging.html">Back</a>
+        </div>
+        <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; LINUX
+        </span>
+
+        <!--END    navbar -->
+
+        <!-- header-->
+        <header id="home">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/debian.png" class="d-block w-100" alt="..." />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/debian.png" class="d-block w-100" alt="..." />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/debian.png" class="d-block w-100" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END  header -->
+
+        <section class="maincontent" id="debian">
+            <div class="mainbody">
+                <h1 style="text-align: center; font-size: 1.5em">DEBIAN PACKAGING</h1>
+                <div class="dive">
+                    <p>
+                        A Debian "package", or a Debian archive file, contains the
+                        executable files, libraries, and documentation associated with a
+                        particular suite of program or set of related programs. Normally,
+                        a Debian archive file has a filename that ends in .
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="row boxin-debian" id="wiki">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">Node പ്രൊജക്റ്റ്‌ പാക്കേജ് ചെയ്യാം</h5>
+                            <dl class="listclass">
+                                <p>
+                                    <i class="yellow none">O</i> ഒരു പ്രൊജക്റ്റ്‌ ഡെബിയൻ
+                                    പാക്കേജിങ് ചെയ്യുന്നതിന് മുന്നോടിയായുള്ള ഒരുക്കങ്ങൾ <br />
+                                    <i class="yellow none">O</i> ആദ്യമായി വികിയിൽ അക്കൗണ്ട്
+                                    തുടങ്ങുക wiki.debian.org <br />
+                                    <i class="yellow none">O</i>ഒരു പക്ഷെ അക്കൗണ്ട് തുടങ്ങാൻ
+                                    കഴിഞ്ഞില്ലെങ്കിൽ അവർക്ക് ഇമെയിൽ അയച്ചു പരിഹരിക്കാം <br />
+                                    <br />
+                                    <i class="cyan none">#</i> Step1 <br />
+                                    <i class="yellow none">O</i> ഒരു പുതിയ പേജ് തുടങ്ങണം അതിനായി
+                                    ഒരു ഫയൽ path റെഡി ആക്കണം എന്നിട്ട് ബ്രൗസറിൽ പേസ്റ്റ്
+                                    ചെയ്യുക. തുറന്നു വരുന്ന ജാലകത്തിൽ എഡിറ്റ്‌ ഓപ്ഷൻ ഉണ്ടാകും.
+                                    അതിൽ ക്ലിക്ക് ചെയ്യുക
+                                    <br />eg:https://wiki.debian.org/Javascript/Nodejs/Tasks/project-name
+                                    <br />
+                                    <i class="yellow none">O</i> ഇനി പേജ് എഡിറ്റ്‌ ചെയ്യേണ്ടത്
+                                    നേരിട്ടല്ല മറിച്ചു ഒരു പൈത്തൻ ഫയൽ ഉപയോഗിച്ചാണ് <br />
+                                    <i class="yellow none">O</i> അതിനായ് ഇ കോഡ് ഉപയോഗിക്കാം<br />
+                                </p>
+                                <p></p>
+                                <div class="p-trans">
+                                    <i class="red none">$</i> sudo apt install npm npm2deb tree
+                                    curl liburi-perl ca-certificates <br />
+                                    <i class="red none">$</i> curl -OO
+                                    https://salsa.debian.org/js-team/js-task-wiki-edit/raw/master/{bug-check,js_task_edit}.py
+                                    <br />
+                                    <i class="red none">$</i> LC_ALL=C.UTF-8 python3
+                                    js_task_edit.py ws <br />
+                                </div><br>
+                                <p>
+                                    <i class="yellow none">O</i>ഇനി ഏതു പ്രോജെക്ടിന്റെ ആണോ
+                                    അതിന്റെ package.json ഫയൽ ഡൌൺലോഡ് ചെയ്യുക എന്നിട്ട് ഇ
+                                    കമ്മാൻഡ് അടിക്കുക . പാക്കേജിന്റെ പേര് കൊടുക്കാൻ മറക്കരുത്
+                                    <br /><br />
+                                </p>
+                                <div class="p-trans">
+                                    <i class="red none">$</i> LC_ALL=C.UTF-8 python3
+                                    js_task_edit.py --file package.json <br />
+                                </div><br>
+                                <p>
+                                    <i class="yellow none">O</i> ഇത് കുറച്ചു സമയം എടുക്കുന്ന
+                                    പരിപാടി ആണ് ആയതിനാൽ സാധാരണ ഒരു സെർവെറിൽ ആണ് ഇങ്ങനെ ചെയ്യാൻ
+                                    ഇടുന്നത് <br />
+                                    <i class="yellow none">O</i> js_task_page ഇൽ കിട്ടുന്ന
+                                    ഡാറ്റാ കോപ്പി ചെയ്ത് വികിയിലെ എഡിറ്റ്‌ കൊടുത്ത് അവിടെ
+                                    പേസ്റ്റ് ചെയ്ത് സേവ് ചെയ്യുക <br />
+                                    <i class="yellow none">O</i> ഇനി പാക്കേജ് ചെയ്യാതെ ഉള്ള
+                                    ഡിപെൻഡൻസി ഡെബിയൻ കോളം ഒഴിഞ്ഞു കിടക്കുന്നതാണ്. അവ ഓരോന്നായി
+                                    പാക്കേജ് ചെയ്യുക <br />
+
+
+                                </p>
+
+                                <b class="yellow">......................................................</b><br />
+                                <a href="https://wiki.debian.org/Javascript/Nodejs/Tasks#edit">For more info click here
+                                </a><br>
+                                <b class="yellow">......................................................</b><br /><br />
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row boxin-debian" id="diaspora">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">Diaspora</h5>
+                            <dl class="listclass">
+                                <dt class="none-b">
+                                    <i class="white none">$</i> sudo lxc-create -n diaspora -t
+                                    download -- --dist debian --release sid
+                                </dt>
+                                <br />
+                                <dt class="none-b">
+                                    <i class="white none">$</i> sudo apt install openssh-server
+                                </dt>
+                                <br />
+                                <dt class="none-b">
+                                    <i class="white none">$</i> sudo lxc-start -n diaspora
+                                </dt>
+                                <br />
+                                <dt class="none-b">
+                                    <i class="white none">$</i> sudo lxc-attach -n diaspora
+                                </dt>
+                                <br />
+                                <dt class="none-b">
+                                    <i class="white none">$</i> dpkg-reconfigure locales
+                                </dt>
+                                <br />
+                                <p class="cyan">select this one (en_IN.UTF-8 && C.UTF-8 )</p>
+                                <dt class="none-b">
+                                    <i class="white none">$</i> vim /etc/apt/sources.list
+                                </dt>
+                                <br />
+                                <b class="yellow none-b">paste this </b><br />
+                                <b class="yellow">......................................................</b><br />
+                                <p class="cyan">
+                                    deb http://deb.debian.org/debian buster-backports main
+                                    contrib non-free<br />
+                                    deb-src http://deb.debian.org/debian buster-backports main
+                                    contrib non-free
+                                </p>
+                                <b class="yellow">......................................................</b><br />
+
+                                <dt class="none-b">
+                                    <i class="white none">$</i> apt update && apt -t
+                                    buster-backports install diaspora-installer
+                                </dt>
+                                <br />
+                                <p class="cyan">
+                                    hostname: diaspora.lxc<br />
+                                    https : disable
+                                </p>
+                                <dt class="none-b">
+                                    <i class="white none">$</i> /etc/init.d/diaspora status
+                                </dt>
+                                <br />
+                                <p class="yellow">if not start try this</p>
+                                <dt class="none-b">
+                                    <i class="white none">$</i> /etc/init.d/diaspora start
+                                </dt>
+                                <br />
+                                <dt class="none-b">
+                                    <i class="white none">$</i> curl -v --unix-socket
+                                    /run/diaspora/diaspora.sock http://diaspora.lxc/
+                                </dt>
+                                <br />
+                                <p class="yellow">
+                                    (if not work no problem manually start unicom)
+                                </p>
+                            </dl>
+
+                            <ul class="listclass">
+                                <li class="yellow">(Manually starting unicorn)</li>
+                                <li><i class="red none">cd /usr/share/diaspora </i></li>
+                                <li><i class="red none">. /etc/diaspora.conf </i></li>
+                                <li>
+                                    <i class="red none">
+                                        sudo -u diaspora -E -H bin/bundle exec unicorn -c
+                                        config/unicorn.rb</i>
+                                </li>
+                            </ul>
+                            <dl class="listclass">
+                                <p class="yellow">
+                                    On your host machine (eg : ubuntu (type command in
+                                    terminal))
+                                </p>
+                                <dt class="none-b">
+                                    <i class="white none">$</i> sudo cat /etc/hosts
+                                </dt>
+                                <br />
+                                <dt class="none-b">
+                                    <i class="white none">$</i> sudo vim /etc/hosts
+                                </dt>
+                                <br />
+                                <p class="cyan">
+                                    (insert this to hosts file)<br />
+                                    10.0.3.69 diaspora.lxc<br />
+
+                                    (enter in browser)<br />
+                                    http://diaspora.lxc/podmin<br />
+                                </p>
+
+                                <b class="yellow">......................................................</b><br />
+                                <a href="https://wiki.debian.org/Diaspora/testing">For more info click here
+                                </a>
+                                <br />
+                                <a href="https://wiki.debian.org/SourcesList">For more info click here
+                                </a>
+                                <br />
+                                <a href="https://gist.github.com/ChristopherA/680b4eeeeb6e9e4c7fc59c010a23b6cd">For more
+                                    info click here
+                                </a>
+                                <br />
+                                <b class="yellow">......................................................</b><br /><br />
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="library/javascript.js"></script>
+</body>
+
+</html>

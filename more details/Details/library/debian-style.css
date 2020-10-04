@@ -148,6 +148,22 @@ tr {
   background-color: #555; /* Add a dark-grey background on hover */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .none{
   font-style: normal;
 }
@@ -190,4 +206,9 @@ p{
 }
 .green-l{
   color: rgb(3, 252, 48);
+}
+
+.p-trans{
+  background:rgba(250, 250, 250, 0.4);
+  color: black;
 }
