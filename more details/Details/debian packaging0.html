@@ -13,16 +13,9 @@
 
 <body>
     <div class="body-full">
-
-
         <button onclick="openNav()" id="myBtn" title="Go to top">
             <i class="fa fa-align-justify"></i>
         </button>
-
-
-
-    
-
 
         <!-- side navbar-->
 
@@ -31,6 +24,7 @@
             <a href="../../index.html">Main </a>
             <a href="#home">Home </a>
             <a href="#wiki">Node-wiki </a>
+            <a href="#repacking">Repacking </a>
             <a href="#diaspora">Diaspora</a>
             <a href="debian packaging.html">Back</a>
         </div>
@@ -90,8 +84,10 @@
                                     <i class="yellow none">O</i> ഒരു പുതിയ പേജ് തുടങ്ങണം അതിനായി
                                     ഒരു ഫയൽ path റെഡി ആക്കണം എന്നിട്ട് ബ്രൗസറിൽ പേസ്റ്റ്
                                     ചെയ്യുക. തുറന്നു വരുന്ന ജാലകത്തിൽ എഡിറ്റ്‌ ഓപ്ഷൻ ഉണ്ടാകും.
-                                    അതിൽ ക്ലിക്ക് ചെയ്യുക
-                                    <br />eg: <a href="https://wiki.debian.org/Javascript/Nodejs/Tasks/project-name"> link </a>
+                                    അതിൽ ക്ലിക്ക് ചെയ്യുക <br />eg:
+                                    <a href="https://wiki.debian.org/Javascript/Nodejs/Tasks/project-name">
+                                        link
+                                    </a>
                                     <br />
                                     <i class="yellow none">O</i> ഇനി പേജ് എഡിറ്റ്‌ ചെയ്യേണ്ടത്
                                     നേരിട്ടല്ല മറിച്ചു ഒരു പൈത്തൻ ഫയൽ ഉപയോഗിച്ചാണ് <br />
@@ -106,7 +102,8 @@
                                     <br />
                                     <i class="red none">$</i> LC_ALL=C.UTF-8 python3
                                     js_task_edit.py ws <br />
-                                </div><br>
+                                </div>
+                                <br />
                                 <p>
                                     <i class="yellow none">O</i>ഇനി ഏതു പ്രോജെക്ടിന്റെ ആണോ
                                     അതിന്റെ package.json ഫയൽ ഡൌൺലോഡ് ചെയ്യുക എന്നിട്ട് ഇ
@@ -116,7 +113,8 @@
                                 <div class="p-trans">
                                     <i class="red none">$</i> LC_ALL=C.UTF-8 python3
                                     js_task_edit.py --file package.json <br />
-                                </div><br>
+                                </div>
+                                <br />
                                 <p>
                                     <i class="yellow none">O</i> ഇത് കുറച്ചു സമയം എടുക്കുന്ന
                                     പരിപാടി ആണ് ആയതിനാൽ സാധാരണ ഒരു സെർവെറിൽ ആണ് ഇങ്ങനെ ചെയ്യാൻ
@@ -127,13 +125,65 @@
                                     <i class="yellow none">O</i> ഇനി പാക്കേജ് ചെയ്യാതെ ഉള്ള
                                     ഡിപെൻഡൻസി ഡെബിയൻ കോളം ഒഴിഞ്ഞു കിടക്കുന്നതാണ്. അവ ഓരോന്നായി
                                     പാക്കേജ് ചെയ്യുക <br />
-
-
                                 </p>
 
                                 <b class="yellow">......................................................</b><br />
                                 <a href="https://wiki.debian.org/Javascript/Nodejs/Tasks#edit">For more info click here
-                                </a><br>
+                                </a><br />
+                                <b class="yellow">......................................................</b><br /><br />
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row boxin-debian" id="repacking">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">Re-Packing</h5>
+                            <dl class="listclass">
+                                <p><i class="cyan none">#</i> Step1 <br /></p>
+                                <p> edit debian/watch file <br>
+
+                                    add this<br>
+                                    <b class="yellow">....................</b><br></p>
+                                <div class="p-trans">
+                                    repacksuffix=+dfsg,\ <br>
+                                    repack,compression=xz,\ <br></div>
+                                <p> <b class="yellow">....................</b></p>
+
+                                <p><i class="cyan none">#</i> Step2 <br /></p>
+
+                                <p> edit debian/copyright file <br>
+
+                                    add this<br>
+                                    <b class="yellow">....................</b><br></p>
+                                <div class="p-trans">
+                                    Files-Excluded:<br>
+                                    folder_name<br>
+                                    docs/file_name</div><br>
+                                <p> <b class="yellow">....................</b></p>
+
+
+                                <p><i class="cyan none">#</i> Step3 <br /></p>
+
+                                <div class="p-trans-re ">
+                                   <p class="red"> uscan  --download-current-version<br>
+                                    git stash<br>
+                                    clean<br>
+                                    ls ../ <br>
+                                    gbp import-orig --pristine-tar ../node-chance_1.1.7+dfsg.orig.tar.xz  <br>
+                                    git stash apply <br>
+                                    git restore debian/watch <br>
+                                    git restore debian/copyright <br>
+                                    dpkg-buildpackage <br>
+                                    lintian <br></p>
+
+                                </div>
+                                <b class="yellow">......................................................</b><br />
+                                <a href=" https://wiki.debian.org/Javascript/Repacking">For more info click here
+                                </a><br />
                                 <b class="yellow">......................................................</b><br /><br />
                             </dl>
                         </div>

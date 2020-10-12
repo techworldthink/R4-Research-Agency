@@ -211,4 +211,12 @@ p{
 .p-trans{
   background:rgba(250, 250, 250, 0.4);
   color: black;
+  padding: 1em;
+}
+
+.p-trans-re{
+  background:rgba(0, 0, 0, 0.4);
+  color: black;
+  padding: 1em;
+  border: 1px solid white;
 }
