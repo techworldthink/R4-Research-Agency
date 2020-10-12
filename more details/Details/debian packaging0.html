@@ -144,30 +144,25 @@
                             <h5 class="text-center">Re-Packing</h5>
                             <dl class="listclass">
                                 <p><i class="cyan none"># Step1</i> <br /></p>
-                                <p> edit debian/watch file <br>
-
-                                    add this<br>
-                                    <br></p>
+                                <p class="yellow"> Edit debian/watch file (add this lines)</p>
                                 <div class="p-trans">
                                     repacksuffix=+dfsg,\ <br>
                                     repack,compression=xz,\ <br></div>
-                                <p> </p>
+                              <br>
 
-                                <b class="white">......................................................</b><br><br>
+                
+                                <p><i class="cyan none"># Step2</i> <br /></p>
 
-                                <p><i class="cyan none"># Step2</i>  <br /></p>
+                                <p class="yellow"> Edit debian/copyright file ( add this)
 
-                                <p> edit debian/copyright file <br>
-
-                                    add this
-                                    </p>
+                                   
+                                </p>
                                 <div class="p-trans">
                                     Files-Excluded:<br>
                                     folder_name<br>
                                     docs/file_name</div><br>
-                                <p> </p>
+                              
 
-<b class="white">......................................................</b><br><br>
                                 <p><i class="cyan none"># Step3 </i> <br /></p>
 
                                 <div class="p-trans-re ">
@@ -178,10 +173,10 @@
                                         clean<br>
                                         ls ../ <br>
                                         gbp import-orig --pristine-tar ../node-chance_1.1.7+dfsg.orig.tar.xz <br>
-                                       </p>
+                                    </p>
 
                                 </div><br>
-                                <p>edit changelog file</p>
+                                <p class="yellow">Edit changelog file</p>
                                 <div class="p-trans"> node-chance (1.1.7+dfsg-1) UNRELEASED; urgency=low </div><br>
                                 <div class="p-trans-re ">
                                     <p class="red"> dpkg-buildpackage <br>
