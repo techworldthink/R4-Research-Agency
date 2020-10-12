@@ -127,10 +127,10 @@
                                     പാക്കേജ് ചെയ്യുക <br />
                                 </p>
 
-                                <b class="yellow">......................................................</b><br />
+                                <b class="yellow">......................................................</b><br>
                                 <a href="https://wiki.debian.org/Javascript/Nodejs/Tasks#edit">For more info click here
                                 </a><br />
-                                <b class="yellow">......................................................</b><br /><br />
+                                <b class="yellow">......................................................</b><br>
                             </dl>
                         </div>
                     </div>
@@ -143,48 +143,55 @@
                         <div class="transparant">
                             <h5 class="text-center">Re-Packing</h5>
                             <dl class="listclass">
-                                <p><i class="cyan none">#</i> Step1 <br /></p>
+                                <p><i class="cyan none"># Step1</i> <br /></p>
                                 <p> edit debian/watch file <br>
 
                                     add this<br>
-                                    <b class="yellow">....................</b><br></p>
+                                    <br></p>
                                 <div class="p-trans">
                                     repacksuffix=+dfsg,\ <br>
                                     repack,compression=xz,\ <br></div>
-                                <p> <b class="yellow">....................</b></p>
+                                <p> </p>
 
-                                <p><i class="cyan none">#</i> Step2 <br /></p>
+                                <b class="white">......................................................</b><br><br>
+
+                                <p><i class="cyan none"># Step2</i>  <br /></p>
 
                                 <p> edit debian/copyright file <br>
 
-                                    add this<br>
-                                    <b class="yellow">....................</b><br></p>
+                                    add this
+                                    </p>
                                 <div class="p-trans">
                                     Files-Excluded:<br>
                                     folder_name<br>
                                     docs/file_name</div><br>
-                                <p> <b class="yellow">....................</b></p>
+                                <p> </p>
 
-
-                                <p><i class="cyan none">#</i> Step3 <br /></p>
+<b class="white">......................................................</b><br><br>
+                                <p><i class="cyan none"># Step3 </i> <br /></p>
 
                                 <div class="p-trans-re ">
-                                   <p class="red"> uscan  --download-current-version<br>
-                                    git stash<br>
-                                    clean<br>
-                                    ls ../ <br>
-                                    gbp import-orig --pristine-tar ../node-chance_1.1.7+dfsg.orig.tar.xz  <br>
-                                    git stash apply <br>
-                                    git restore debian/watch <br>
-                                    git restore debian/copyright <br>
-                                    dpkg-buildpackage <br>
-                                    lintian <br></p>
+                                    <p class="red"> uscan --download-current-version<br>
+                                        git add deian/copyright<br>
+                                        git add debian/watch<br>
+                                        git commit -m "repacking"<br>
+                                        clean<br>
+                                        ls ../ <br>
+                                        gbp import-orig --pristine-tar ../node-chance_1.1.7+dfsg.orig.tar.xz <br>
+                                       </p>
 
+                                </div><br>
+                                <p>edit changelog file</p>
+                                <div class="p-trans"> node-chance (1.1.7+dfsg-1) UNRELEASED; urgency=low </div><br>
+                                <div class="p-trans-re ">
+                                    <p class="red"> dpkg-buildpackage <br>
+                                        lintian <br></p>
                                 </div>
-                                <b class="yellow">......................................................</b><br />
+
+                                <b class="yellow">......................................................</b><br>
                                 <a href=" https://wiki.debian.org/Javascript/Repacking">For more info click here
                                 </a><br />
-                                <b class="yellow">......................................................</b><br /><br />
+                                <b class="yellow">......................................................</b><br>
                             </dl>
                         </div>
                     </div>
