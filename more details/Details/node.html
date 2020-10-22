@@ -1,0 +1,199 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="library/node.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Nodejs</title>
+</head>
+
+<body>
+    <div class="body-full">
+        <button onclick="openNav()" id="myBtn" title="Go to top">
+            <i class="fa fa-align-justify"></i>
+        </button>
+        <!-- side navbar-->
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../../index.html">Main </a>
+            <a href="#home">Home </a>
+
+
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Nodejs </span>
+
+        <!--END    navbar -->
+
+        <!-- header-->
+        <header id="home">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/node.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/node.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/node.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END  header -->
+
+        <section class="maincontent" id="debian">
+            <div class="mainbody">
+                <h1 style="text-align:center;font-size:1.5em">NODE JS</h1>
+                <div class="dive">
+                    <p>
+                        Node.js is an open-source, cross-platform, back-end, JavaScript runtime environment that
+                        executes JavaScript code outside a web browser.
+                        <br> Original author: Ryan Dahl<br>
+                        License: MIT license<br>
+                        Initial release: May 27, 2009; 11 years ago<br>
+                        Operating system: z/OS, Linux, macOS, Microsoft Windows, SmartOS, FreeBSD, OpenBSD, IBM AIX<br>
+                        Written in: C, C++, JavaScript<br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container">
+
+            <div class="row boxin-debian" id="">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">Stage Study - 1 </h5>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2">Installation </th>
+                                        <th>Start </th>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td colspan="2">npx express-generator --hbs<br>
+                                            npm install<br>
+                                            npm install nodemon -g<br>
+                                            npm install express-handlebars<br>
+                                         </td>
+                                        <td>node bin/www</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Views </th>
+                                        <th>Views/layout</th>
+                                        <th>Views/partials</th>
+                                    </tr>
+                                    <tr>
+                                        <td>layout <br> partial <br> index.hbs <br> error.hbs</td>
+                                        <td>layout.hbs </td>
+                                        <td>admin-header.hbs <br> user-header.hbs </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>index.hbs </th>
+                                        <th>index.js</th>
+                                        <th>layout.hbs</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        section part
+                                        </td>
+                                        <td>res.render('index', {admin:true}); </td>
+                                        <td>{{#if admin}}     <br> 
+                                            {{>admin-header}}<br>
+                                            {{else}}<br>
+                                            {{>user-header}}<br>
+                                            {{/if}}<br>
+                                            {{{body}}}<br>
+                                         </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>admin-header.hbs </th>
+                                        <th>user-header.hbs</th>
+                                        <th>app.js</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        section part
+                                        </td>
+                                        <td>Navbar for Admin </td>
+                                        <td>
+                                            app.engine(<br>
+                                                'hbs',hbs({<br>
+                                                    extname:'hbs',<br>
+                                                    defaultLayout:'layout',<br>
+                                                    layoutsDir:__dirname +'/views/layout/',<br>
+                                                    partialsDir:__dirname +'/views/partials/'<br>
+                                                }));
+                                         </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row boxin-debian" id="npm2deb">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">Npm2Deb </h5>
+                            <dl class="listclass">
+                                <dt><i class="white none">$</i> sudo apt-get install npm2deb <br></dt>
+                            </dl>
+                            <ul class="listclass">
+
+                                <li class="yellow">Project start</li>
+                                <li><i class="red none">mkdir</i> packaging </li>
+                                <li><i class="red none">cd </i>packaging/ </li>
+                                <li><i class="red none">wget</i> <a
+                                        href="https://github.com/sindresorhus/pretty-ms/archive/v7.0.0.tar.gz">link
+                                        here</a> <i class="cyan">(not needed for npm2deb)</i></li>
+                                <li><i class="red none">npm2deb create </i> pretty-ms </li>
+                                <li class="yellow">use lintian and correct errors</li>
+
+                            </ul>
+                            <dl class="listclass">
+                                <b class="yellow">......................................................</b><br>
+                                <a href="https://wiki.debian.org/Javascript/Nodejs/Npm2Deb">For more info click here
+                                </a>
+                                <br>
+                                <b class="yellow">......................................................</b><br><br>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="library/javascript.js"></script>
+</body>
+
+</html>
