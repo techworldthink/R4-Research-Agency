@@ -75,13 +75,13 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <th colspan="2">Installation </th>
+                                        <th>Installation </th>
                                         <th>Start </th>
 
                                     </tr>
                                     <tr>
 
-                                        <td colspan="2">npx express-generator --hbs<br>
+                                        <td>npx express-generator --hbs<br>
                                             npm install<br>
                                             npm install nodemon -g<br>
                                             npm install express-handlebars<br>
@@ -92,23 +92,34 @@
                                     <tr>
                                         <th>Views </th>
                                         <th>Views/layout</th>
-                                        <th>Views/partials</th>
+                                       
                                     </tr>
                                     <tr>
                                         <td>layout <br> partial <br> index.hbs <br> error.hbs</td>
                                         <td>layout.hbs </td>
-                                        <td>admin-header.hbs <br> user-header.hbs </td>
+                                    
                                     </tr>
 
                                     <tr>
+                                        
+                                        <th>Views/partials</th>
                                         <th>index.hbs </th>
+                                    </tr>
+                                    <tr>
+                                       
+                                        <td>admin-header.hbs <br> user-header.hbs </td>
+                                        <td>
+                                            section part
+                                            </td>
+                                    </tr>
+
+                                    <tr>
+                                        
                                         <th>index.js</th>
                                         <th>layout.hbs</th>
                                     </tr>
                                     <tr>
-                                        <td>
-                                        section part
-                                        </td>
+                                       
                                         <td>res.render('index', {admin:true}); </td>
                                         <td>{{#if admin}}     <br> 
                                             {{>admin-header}}<br>
@@ -122,14 +133,23 @@
                                     <tr>
                                         <th>admin-header.hbs </th>
                                         <th>user-header.hbs</th>
-                                        <th>app.js</th>
+                                        
                                     </tr>
                                     <tr>
                                         <td>
                                         section part
                                         </td>
                                         <td>Navbar for Admin </td>
-                                        <td>
+                                   
+                                    </tr>
+
+                                    <tr>
+                                        
+                                        <th colspan="2">app.js</th>
+                                    </tr>
+                                    <tr>
+                                       
+                                        <td  colspan="2">
                                             app.engine(<br>
                                                 'hbs',hbs({<br>
                                                     extname:'hbs',<br>
