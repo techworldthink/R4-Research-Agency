@@ -85,80 +85,186 @@
                                         <td>npx express-generator --hbs<br>
                                             npm install<br>
                                             npm install nodemon -g<br>
-                                            npm install express-handlebars<br>
-                                         </td>
+                                            npm install express-handlebars<br><br>
+                                            npm install express-fileupload<br>
+                                        </td>
                                         <td>node bin/www</td>
                                     </tr>
 
                                     <tr>
                                         <th>Views </th>
                                         <th>Views/layout</th>
-                                       
+
                                     </tr>
                                     <tr>
                                         <td>layout <br> partial <br> index.hbs <br> error.hbs</td>
                                         <td>layout.hbs </td>
-                                    
+
                                     </tr>
 
                                     <tr>
-                                        
+
                                         <th>Views/partials</th>
                                         <th>index.hbs </th>
                                     </tr>
                                     <tr>
-                                       
+
                                         <td>admin-header.hbs <br> user-header.hbs </td>
                                         <td>
                                             section part
-                                            </td>
+                                        </td>
                                     </tr>
 
                                     <tr>
-                                        
+
                                         <th>index.js</th>
                                         <th>layout.hbs</th>
                                     </tr>
                                     <tr>
-                                       
+
                                         <td>res.render('index', {admin:true}); </td>
-                                        <td>{{#if admin}}     <br> 
+                                        <td>{{#if admin}} <br>
                                             {{>admin-header}}<br>
                                             {{else}}<br>
                                             {{>user-header}}<br>
                                             {{/if}}<br>
                                             {{{body}}}<br>
-                                         </td>
+                                        </td>
                                     </tr>
 
                                     <tr>
                                         <th>admin-header.hbs </th>
                                         <th>user-header.hbs</th>
-                                        
+
                                     </tr>
                                     <tr>
                                         <td>
-                                        section part
+                                            section part
                                         </td>
                                         <td>Navbar for Admin </td>
-                                   
+
                                     </tr>
 
                                     <tr>
-                                        
+
                                         <th colspan="2">app.js</th>
                                     </tr>
                                     <tr>
-                                       
-                                        <td  colspan="2">
+
+                                        <td colspan="2">
                                             app.engine(<br>
-                                                'hbs',hbs({<br>
-                                                    extname:'hbs',<br>
-                                                    defaultLayout:'layout',<br>
-                                                    layoutsDir:__dirname +'/views/layout/',<br>
-                                                    partialsDir:__dirname +'/views/partials/'<br>
-                                                }));
-                                         </td>
+                                            'hbs',hbs({<br>
+                                            extname:'hbs',<br>
+                                            defaultLayout:'layout',<br>
+                                            layoutsDir:__dirname +'/views/layout/',<br>
+                                            partialsDir:__dirname +'/views/partials/'<br>
+                                            }));
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row boxin-debian" id="stage1">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">Stage Study - 2 </h5>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Views </th>
+                                        <th>routes </th>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>admin<br>
+                                            user<br>
+                                            layout<br>
+                                            partials<br>
+                                        </td>
+
+                                        <td>
+                                            admin.js<br>
+                                            user.js
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>views/admin </th>
+                                        <th>views/user</th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>add-product.hbs <br> view-products.hbs</td>
+                                        <td>error.hbs<br> index.hbs </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <th>Views/partials</th>
+                                        <th>views/layout </th>
+                                    </tr>
+                                    <tr>
+
+                                        <td>admin-header.hbs <br> user-header.hbs </td>
+                                        <td>
+                                            section part
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+
+                                        <th>add-product.hbs</th>
+                                        <th>view-products.hbs</th>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            <form action="/admin/add-product" method="post"
+                                                enctype="multipart/form-data">
+                                        </td>
+                                        <td> {{#each products}}
+                                            .......
+                              
+                                             {{/each}}
+                                    </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>admin-header.hbs </th>
+                                        <th>user-header.hbs</th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            admin-header section
+                                        </td>
+                                        <td>user header section </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <th colspan="2">app.js</th>
+                                    </tr>
+                                    <tr>
+
+                                        <td colspan="2">
+                                            var hbs=require('express-handlebars')<br>
+                                            var fileUpload=require('express-fileupload')<br>
+                                            app.use(fileUpload())<br>
+
+
+
+                                        </td>
                                     </tr>
 
 
