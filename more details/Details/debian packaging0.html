@@ -26,6 +26,7 @@
             <a href="#wiki">Node-wiki </a>
             <a href="#repacking">Repacking </a>
             <a href="#diaspora">Diaspora</a>
+            <a href="#locale">Locale Config</a>
             <a href="debian packaging.html">Back</a>
         </div>
         <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; Debian Packaging
@@ -187,6 +188,35 @@
                                 <a href=" https://wiki.debian.org/Javascript/Repacking">For more info click here
                                 </a><br />
                                 <b class="yellow">......................................................</b><br>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row boxin-debian" id="locale">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">Locale Configuration</h5>
+                            <dl class="listclass">
+                              <p> 
+                                locale<br>
+                                ...........................................<br>
+                                apt-get update<br>
+                                apt-get install -y locales<br>
+                                sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen<br>
+                                locale-gen<br>
+                                echo "export LC_ALL=en_US.UTF-8" >> ~/.bashrc<br>
+                                echo "export LANG=en_US.UTF-8" >> ~/.bashrc<br>
+                                echo "export LANGUAGE=en_US.UTF-8" >> ~/.bashrc<br>
+                                .....................................<br>
+                                apt-get clean && apt-get update<br>
+                                apt-get install locales<br>
+                                locale-gen en_US.UTF-8<br>
+                                
+                              </p>
                             </dl>
                         </div>
                     </div>
