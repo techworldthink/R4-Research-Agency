@@ -176,9 +176,35 @@
                                         gbp import-orig --pristine-tar ../node-chance_1.1.7+dfsg.orig.tar.xz <br>
                                     </p>
 
-                                </div><br>
+                                </div>
+                                <br>
+                                <p><i class="cyan none"># Step4 </i> <br /></p>
                                 <p class="yellow">Edit changelog file</p>
                                 <div class="p-trans"> node-chance (1.1.7+dfsg-1) UNRELEASED; urgency=low </div><br>
+                                <div class="p-trans-re ">
+                                    <p class="red"> dpkg-buildpackage <br>
+                                        lintian <br></p>
+                                </div>
+
+                                <br>
+                                <p><i class="cyan none"># Step5 </i> <br /></p>
+                                <p class="yellow">Regenerate files that excluded</p>
+                                <p class="yellow">Add the files in this directory debian/nodejs/build</p>
+                                <div class="p-trans"> uglifyjs.terser chance.js --source-map -o dist/chance.min.js<br>
+                                    uglifyjs.terser chance.js --source-map -o docs/chance.min.js </div><br>
+                                <div class="p-trans-re ">
+                                    <p class="red"> dpkg-buildpackage <br>
+                                        lintian <br></p>
+                                </div>
+
+                                <br>
+                                <p><i class="cyan none"># Step6 </i> <br /></p>
+                                <p class="yellow">Remove that files before next build</p>
+                                <p class="yellow">Add the files in this directory debian/clean</p>
+                                <div class="p-trans">  rm dist/chance.min.js<br>
+                                    rm dist/chance.min.js.map<br>
+                                    rm docs/chance.min.js<br>
+                                    rm docs/chance.min.js.map<br> </div><br>
                                 <div class="p-trans-re ">
                                     <p class="red"> dpkg-buildpackage <br>
                                         lintian <br></p>
