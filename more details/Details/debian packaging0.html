@@ -27,6 +27,8 @@
             <a href="#repacking">Repacking </a>
             <a href="#diaspora">Diaspora</a>
             <a href="#locale">Locale Config</a>
+            <a href="#pq">PROB & SOLUT</a>
+            <a href="#imp">Importants</a>
             <a href="debian packaging.html">Back</a>
         </div>
         <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; Debian Packaging
@@ -149,20 +151,20 @@
                                 <div class="p-trans">
                                     repacksuffix=+dfsg,\ <br>
                                     repack,compression=xz,\ <br></div>
-                              <br>
+                                <br>
 
-                
+
                                 <p><i class="cyan none"># Step2</i> <br /></p>
 
                                 <p class="yellow"> Edit debian/copyright file ( add this)
 
-                                   
+
                                 </p>
                                 <div class="p-trans">
                                     Files-Excluded:<br>
                                     folder_name<br>
                                     docs/file_name</div><br>
-                              
+
 
                                 <p><i class="cyan none"># Step3 </i> <br /></p>
 
@@ -201,7 +203,7 @@
                                 <p><i class="cyan none"># Step6 </i> <br /></p>
                                 <p class="yellow">Remove that files before next build</p>
                                 <p class="yellow">Add the files in this directory debian/clean</p>
-                                <div class="p-trans">  rm dist/chance.min.js<br>
+                                <div class="p-trans"> rm dist/chance.min.js<br>
                                     rm dist/chance.min.js.map<br>
                                     rm docs/chance.min.js<br>
                                     rm docs/chance.min.js.map<br> </div><br>
@@ -227,22 +229,22 @@
                         <div class="transparant">
                             <h5 class="text-center">Locale Configuration</h5>
                             <dl class="listclass">
-                              <p> 
-                                locale<br>
-                                ...........................................<br>
-                                apt-get update<br>
-                                apt-get install -y locales<br>
-                                sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen<br>
-                                locale-gen<br>
-                                echo "export LC_ALL=en_US.UTF-8" >> ~/.bashrc<br>
-                                echo "export LANG=en_US.UTF-8" >> ~/.bashrc<br>
-                                echo "export LANGUAGE=en_US.UTF-8" >> ~/.bashrc<br>
-                                .....................................<br>
-                                apt-get clean && apt-get update<br>
-                                apt-get install locales<br>
-                                locale-gen en_US.UTF-8<br>
-                                
-                              </p>
+                                <p>
+                                    locale<br>
+                                    ...........................................<br>
+                                    apt-get update<br>
+                                    apt-get install -y locales<br>
+                                    sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen<br>
+                                    locale-gen<br>
+                                    echo "export LC_ALL=en_US.UTF-8" >> ~/.bashrc<br>
+                                    echo "export LANG=en_US.UTF-8" >> ~/.bashrc<br>
+                                    echo "export LANGUAGE=en_US.UTF-8" >> ~/.bashrc<br>
+                                    .....................................<br>
+                                    apt-get clean && apt-get update<br>
+                                    apt-get install locales<br>
+                                    locale-gen en_US.UTF-8<br>
+
+                                </p>
                             </dl>
                         </div>
                     </div>
@@ -367,6 +369,77 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="row boxin-debian" id="pq">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">Problems & Solutions</h5>
+                            <dl class="listclass">
+                                <dt class="white">Q: Skipping acquire of configured file 'main/binary-i386/Packages' as
+                                    repository 'http://apt.postgresql.org/pub/repos/apt focal-pgdg InRelease' doesn't
+                                    support architecture 'i386' </dt><br>
+                                <dd class="cyan"> You must change the line of /etc/apt/sources.list.d/pgdg.list to
+
+                                    deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main</dd>
+                                <br><br>
+
+
+
+
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row boxin-debian" id="imp">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">Important</h5>
+                            <dl class="listclass">
+                                <p class="red">Repacking </p>
+                                <p class="cyan">Copyright file <br>.....................</p>
+                                <dt class="white">
+                                    Files-Excluded:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; dist<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; docs/analytics.js<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; docs/chance.min.js.map<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; docs/chance.min.js<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; test/helpers/phoneNumber.min.js
+                                </dt><br><br>
+
+                                <p class="cyan">Clean file <br>.....................</p>
+                                <dt class="white">
+                                    rm dist/chance.min.js<br>
+                                    rm dist/chance.min.js.map<br>
+                                    rm docs/chance.min.js<br>
+                                    rm docs/chance.min.js.map<br>
+                                    rm -rf dist/<br>
+
+                                </dt><br><br>
+
+                                <p class="cyan">debian/nodejs/build <br>.....................</p>
+                                <dt class="white">
+                                    mkdir dist<br>
+                                    uglifyjs.terser chance.js --source-map -o dist/chance.min.js<br>
+                                    uglifyjs.terser chance.js --source-map -o docs/chance.min.js<br>
+
+                                </dt><br><br>
+
+
+
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
 
