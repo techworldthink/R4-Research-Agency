@@ -220,3 +220,8 @@ p{
   padding: 1em;
   border: 1px solid white;
 }
+.sql-box{
+  border-left: 2px solid green;
+  padding-left:1em;
+  font-family: 'Karma', serif;
+}

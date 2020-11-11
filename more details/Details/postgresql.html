@@ -7,7 +7,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <link href="library/debian-style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Karma&display=swap" rel="stylesheet">
     <title>PostgreSQL</title>
 </head>
 
@@ -23,6 +23,9 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="../../index.html">Main </a>
             <a href="#home">Home </a>
+            <a href="#install">Install </a>
+            <a href="#config">Configuration </a>
+            <a href="#query">Query </a>
 
         </div>
         <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; PostgreSQL
@@ -63,7 +66,8 @@
         </section>
 
         <div class="container">
-            <div class="row boxin-debian" id="wiki">
+
+            <div class="row boxin-debian" id="install">
                 <div class="col-lg-12">
                     <div class="inner-debian">
                         <div class="transparant">
@@ -72,25 +76,29 @@
                                 <dt class="white">Q:Installing PostgreSQL </dt><br>
                                 <dd class="red">sudo apt update</dd><br><br>
                                 <dd class="red">sudo apt install postgresql postgresql-contrib</dd><br>
-                                <dt class="white">Q:One way is to switch over to the postgres account on your server by typing: </dt><br><br>
+                                <dt class="white">Q:One way is to switch over to the postgres account on your server by
+                                    typing: </dt><br><br>
                                 <dd class="red">sudo -i -u postgres</dd><br><br>
                                 <dt class="white">Q:Then you can access the Postgres prompt by typing: </dt><br>
                                 <dd class="red">psql</dd><br><br>
 
                                 <dt class="white">Q:To exit out of the PostgreSQL prompt, run the following: </dt><br>
                                 <dd class="red">\q</dd><br><br>
-                                <dt class="white">Q:Another way to connect to the Postgres prompt is to run the psql command as the postgres account directly with sudo: </dt><br>
+                                <dt class="white">Q:Another way to connect to the Postgres prompt is to run the psql
+                                    command as the postgres account directly with sudo: </dt><br>
                                 <dd class="red">sudo -u postgres psql</dd><br><br>
                                 <dt class="white">Q:Creating a New Role </dt><br>
                                 <dd class="red">createuser --interactive</dd><br>
-                                
+
                                 <dd class="red">sudo -u postgres createuser --interactive</dd><br><br>
                                 <dt class="white">Q:Change USER Password </dt><br>
                                 <dd class="red">ALTER USER postgres PASSWORD 'newPassword';</dd><br><br>
-                     
+
 
                                 <b class="yellow">......................................................</b><br>
-                                <a href="https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart">For more info click here
+                                <a
+                                    href="https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart">For
+                                    more info click here
                                 </a><br />
                                 <b class="yellow">......................................................</b><br>
                             </dl>
@@ -98,12 +106,67 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="row boxin-debian" id="config">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">DB Configuration Python </h5>
+                            <dl class="listclass">
+                                <div class="white sql-box"><br>
+                                    CONNECTION <br> ........................ <br><br>
+                                    def db_connect():<br>
+                                    &nbsp;&nbsp; try:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; conn = psycopg2.connect(database="wahni",<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; user="postgres",<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; password="jobin",<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; host="127.0.0.1",<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; port="5432")<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; cur = conn.cursor()<br>
+                                    &nbsp;&nbsp; except (Exception, psycopg2.DatabaseError) as error:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; print("Error while connecting to PostgreSQL table",
+                                    error)<br>
+                                    &nbsp;&nbsp;return conn, cur<br>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row boxin-debian" id="query">
+                <div class="col-lg-12">
+                    <div class="inner-debian">
+                        <div class="transparant">
+                            <h5 class="text-center">DB Query Python </h5>
+                            <dl class="listclass">
+                                <div class="white sql-box"><br>
+                                    QUERY <br> ........................ <br> <br>
+                                    def db_query():<br>
+                                    &nbsp;&nbsp;conn, cur = db_connect()<br>
+                                    &nbsp;&nbsp;try:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;cur.execute('SELECT * FROM tharif1')<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;records = cur.fetchall()<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;for row in records:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(row[0]<br>
+                                    &nbsp;&nbsp;except Exception as e:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;print('error', e)<br>
+                                    &nbsp;&nbsp;finally:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;conn.commit()<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;cur.close()<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;conn.close()<br>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
-
-
-
-
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
