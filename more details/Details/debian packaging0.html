@@ -377,15 +377,39 @@
                         <div class="transparant">
                             <h5 class="text-center">Problems & Solutions</h5>
                             <dl class="listclass">
-                                <dt class="white">Q: Skipping acquire of configured file 'main/binary-i386/Packages' as
+                                <dt class="red none-b"><mark> Q: Skipping acquire of configured file 'main/binary-i386/Packages' as
                                     repository 'http://apt.postgresql.org/pub/repos/apt focal-pgdg InRelease' doesn't
-                                    support architecture 'i386' </dt><br>
-                                <dd class="cyan"> You must change the line of /etc/apt/sources.list.d/pgdg.list to
+                                    support architecture 'i386'</mark>
+                                </dt><br><br>
+                                <dd class="cyan none-b"> You must change the line of /etc/apt/sources.list.d/pgdg.list to
 
-                                    deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main</dd>
-                                <br><br>
+                                    deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main
+                                </dd><br><br>
 
+                                <dt class="yellow none-b"><mark>Q: Fix a Git detached head?</mark>
+                                </dt><br><br>
+                                <dd class="cyan none-b">
+                                    1. If you want to delete your changes associated with the detached HEAD<br>..............................................<br><br>
 
+                                    You only need to checkout the branch you were on, e.g.<br>
+
+                                    git checkout master<br>
+
+                                    Next time you have changed a file and want to restore it to the state it is in the
+                                    index, don't delete the file first, just do<br>
+
+                                    git checkout -- path/to/foo<br>
+
+                                    This will restore the file foo to the state it is in the index.<br><br>
+                                    If you want to keep your changes associated with the detached HEAD<br>..............................................<br><br>
+
+                                    Run git branch tmp - this will save your changes in a new branch called tmp.<br>
+                                    Run git checkout master<br>
+                                    If you would like to incorporate the changes you made into master, run git merge tmp
+                                    from the master branch. You should be on the master branch after running git
+                                    checkout master.
+
+                                </dd><br><br>
 
 
                             </dl>
@@ -401,7 +425,7 @@
                         <div class="transparant">
                             <h5 class="text-center">Important</h5>
                             <dl class="listclass">
-                                <p class="red">Repacking </p>
+                                <p class="red"><mark>Repacking </mark></p>
                                 <p class="cyan">Copyright file <br>.....................</p>
                                 <dt class="white">
                                     Files-Excluded:<br>
