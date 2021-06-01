@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Gathering</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: monospace;
+        }
+
+        .banner-img {
+            width: 100%;
+        }
+
+        footer {
+            padding: 10px;
+            background-color: black;
+            position: fixed;
+            bottom: 0%;
+            width: 100%;
+        }
+
+        section {
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+            padding-left: 1em;
+        }
+
+        h2 {
+            color: gray;
+            border-bottom: 1px solid gray;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 20px;
+            color: gray;
+            ;
+        }
+
+        .usage {
+            font-size: 16px;
+        }
+
+        .usage li {
+            padding: 5px;
+        }
+        p{
+            padding:20px;
+            border: 1px solid red;
+            font-size: 16px;
+            text-align: justify;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="library/images/info_gathering.jpg" class="banner-img">
+    </header>
+
+    <section name="nmap">
+        <h2>NMAP</h2>
+        <h3>Usage</h3>
+        <ul class="usage">
+            <li>Nmap can provide further information on targets, including reverse DNS names, device types, and MAC
+                addresses. </li>
+            <li>Host discovery – Identifying hosts on a network. For example, listing the hosts that respond to TCP
+                and/or ICMP requests or have a particular port open </li>
+            <li>Port scanning – Enumerating the open ports on target hosts </li>
+            <li>OS detection – Determining the operating system and hardware characteristics of network devices </li>
+            <li>Version detection – Interrogating network services on remote devices to determine the application name
+                and version number. </li>
+            <li>Scriptable interaction with the target support using the Nmap Scripting Engine (NSE). </li>
+            <li>Auditing the security of a device or firewall by identifying the network connections which can be made
+                to, or through it. </li>
+            <li>Identifying open ports on a target host in preparation for auditing. </li>
+            <li>Network inventory, network mapping, and maintenance and asset management. </li>
+            <li>Auditing the security of a network by identifying new servers. </li>
+            <li>Generating traffic to hosts on a network, response analysis and response time measurement. </li>
+            <li>Finding and exploiting vulnerabilities in a network. </li>
+            <li>DNS queries and subdomain search </li>
+        </ul>
+
+        <p> <b>Note:</b> <br> 
+            A "subnet mask" or "prefix length" is just a convenient shorthand for specifying a range of IPaddresses. An
+            IP address can be represented as a 32-bit binary number. To define a range ofaddresses, we divide these
+            32-bits into a network part and a host part. The subnet mask orprefix length tells us where the split
+            occurs. If our router is assigned a local address of192.168.0.1 and we want to indicate that this is from a
+            range of 256 addresses, we can writethis as <b>192.168.0.1/24 where the "/24" is the prefix length and
+            indicates that the first 24-bitsare the network number and the last 8-bits are the host number.</b>
+            Alternatively, we canspecify a subnet mask of 255.255.255.0 which effectively says the same thing
+        </p>
+
+    </section>
+
+    <div style="overflow-x:auto;">
+
+    </div>
+    <br><br><br>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
