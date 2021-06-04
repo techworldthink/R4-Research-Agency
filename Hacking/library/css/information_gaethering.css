@@ -1,0 +1,163 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: monospace;
+  transition: background-color 0.5s;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+footer {
+  padding: 10px;
+  background-color: black;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}
+
+section {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-left: 1em;
+}
+
+h2 {
+  color: black;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Zen Dots', cursive;
+  background: -webkit-linear-gradient(#101010, #bf0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: gray;
+  
+}
+
+.usage {
+  font-size: 16px;
+}
+
+.usage li {
+  padding: 5px;
+}
+p {
+  padding: 20px;
+  border: 1px solid red;
+  font-size: 16px;
+  text-align: justify;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* ...............navbar .....................*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color:rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  overflow: hidden;
+}
+
+.sidenav a {
+  /*padding: 8px 8px 8px 32px;*/
+  padding: 8px 8px 0px 0px;
+  text-decoration: none;
+  font-size: 20px;
+  color:white;
+  display: block;
+  font-family: 'Zen Dots', cursive;
+}
+.sidenav a:hover{
+  font-size: 22px;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.admin-items{
+  /*border-bottom: 2px solid white;*/
+  font-family:monospace;
+  text-transform: uppercase;
+  text-align: center;
+  font-size:23px;
+
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right,hsl(218deg 86% 58%),#4bd9ff);
+  border-image-slice: 1;
+ }
+ 
+ 
+ .one-top{
+  margin-top: 15px;
+ }
+
+/*................button............*/
+
+#nav-bar-btn {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 0.5;
+  animation: mymove 2s infinite;
+}
+
+#nav-bar-btn:hover {
+  color: black; /* Add a dark-grey background on hover */
+  animation: none;
+}
+
+@keyframes mymove {
+  50% {
+    color: black;
+  }
+}

@@ -5,71 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information Gathering</title>
-    <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: monospace;
-        }
-
-        .banner-img {
-            width: 100%;
-        }
-
-        footer {
-            padding: 10px;
-            background-color: black;
-            position: fixed;
-            bottom: 0%;
-            width: 100%;
-        }
-
-        section {
-            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-            padding-left: 1em;
-        }
-
-        h2 {
-            color: gray;
-            border-bottom: 1px solid gray;
-            text-align: center;
-            font-size: 25px;
-        }
-
-        h3 {
-            text-transform: uppercase;
-            font-size: 20px;
-            color: gray;
-            ;
-        }
-
-        .usage {
-            font-size: 16px;
-        }
-
-        .usage li {
-            padding: 5px;
-        }
-        p{
-            padding:20px;
-            border: 1px solid red;
-            font-size: 16px;
-            text-align: justify;
-            font-family: 'Courier New', Courier, monospace;
-        }
-    </style>
+    <link href="library/css/information_gaethering.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- side navbar-->
+    <div id="mySidenav" class="sidenav">
+        <a class="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="admin-items one-top" href="">Main </a>
+        <a class="admin-items one-top" href="#nmap">Nmap </a>
+    </div>
+    <span id="nav-bar-btn" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;
+    </span>
+    <!--END    navbar -->
+
     <header>
         <img src="library/images/info_gathering.jpg" class="banner-img">
     </header>
 
-    <section name="nmap">
+    <section name="nmap" id="nmap">
         <h2>NMAP</h2>
         <h3>Usage</h3>
         <ul class="usage">
@@ -92,13 +51,13 @@
             <li>DNS queries and subdomain search </li>
         </ul>
 
-        <p> <b>Note:</b> <br> 
+        <p> <b>Note:</b> <br>
             A "subnet mask" or "prefix length" is just a convenient shorthand for specifying a range of IPaddresses. An
             IP address can be represented as a 32-bit binary number. To define a range ofaddresses, we divide these
             32-bits into a network part and a host part. The subnet mask orprefix length tells us where the split
             occurs. If our router is assigned a local address of192.168.0.1 and we want to indicate that this is from a
             range of 256 addresses, we can writethis as <b>192.168.0.1/24 where the "/24" is the prefix length and
-            indicates that the first 24-bitsare the network number and the last 8-bits are the host number.</b>
+                indicates that the first 24-bitsare the network number and the last 8-bits are the host number.</b>
             Alternatively, we canspecify a subnet mask of 255.255.255.0 which effectively says the same thing
         </p>
 
@@ -111,6 +70,10 @@
     <footer>
 
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="library/js/information_gathering.js"></script>
 </body>
 
 </html>
