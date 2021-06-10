@@ -161,3 +161,34 @@ p {
     color: black;
   }
 }
+
+pre{
+  color:orange;
+  background-color: #101010;
+  overflow: scroll;
+  font-size: 15px;
+}
+.terminal{
+  font-size: 15px;
+  color:white;
+  font-weight: 100;
+}
+.c_img{
+  width: 80%;
+ 
+}
+.img_div{
+  text-align: center;
+}
+.comment{
+  font-size: 15px;
+  color:white;
+  font-weight: 100;
+  font-style: italic;
+}
+a{
+  text-decoration: none;
+}
+.red{
+  color:red;
+}

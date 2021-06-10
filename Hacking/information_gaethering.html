@@ -59,10 +59,36 @@
             occurs. If our router is assigned a local address of192.168.0.1 and we want to indicate that this is from a
             range of 256 addresses, we can writethis as <b>192.168.0.1/24 where the "/24" is the prefix length and
                 indicates that the first 24-bitsare the network number and the last 8-bits are the host number.</b>
-            Alternatively, we canspecify a subnet mask of 255.255.255.0 which effectively says the same thing
+            Alternatively, we canspecify a subnet mask of 255.255.255.0 which effectively says the same thing<br><br>
+            <b>Note:- <b class='red'>CIDR (Classless Inter-Domain Routing)</b></b> <br>
+            Classless Inter Domain Routing (CIDR) is a method for assigning IP addresses without using the standard IP
+            address classes like Class A, Class B or Class C. CIDR is a newer addressing scheme for IP Networks which
+            allows for a more efficient allocation of IP addresses than the older method which was by assigning
+            organizations a class of IPs. CIDR was a result of running out of IPv4 addresses as well as addressing the
+            issue with routing tables increasing in size. <a href="library/Downloads/CIDR.pdf">For more Reading</a>
         </p>
 
         <br>
+        <h3>My-IP Show Commands</h3>
+        <pre><code>
+            <b class='terminal'>$</b> ip addr show
+            <b class='terminal'>$</b> ifconfig
+        </code></pre>
+        <h3>Scanning Commands</h3>
+        <pre><code>
+            <b class='terminal'>$</b> nmap 192.168.12.2                  <b class='comment'># Single target</b>
+            <b class='terminal'>$</b> nmap 192.168.0.1 192.168.0.2       <b class='comment'># Multiple target</b>
+            <b class='terminal'>$</b> nmap 192.168.0.1-10                <b class='comment'># Range of target</b>
+            <b class='terminal'>$</b> nmap 192.168.0.1/24                <b class='comment'># Scan an Entire (Subnet nmap [ip address/cdir])</b>
+            <b class='terminal'>$</b> nmap -iR 0                         <b class='comment'># Scan Random Hosts</b><br>
+            <b class='terminal'>$</b> nmap 192.168.0.1/24 –exclude 192.168.0.100, 192.168.0.200       <b class='comment'># Excluding Targets from a Scan</b>
+            <b class='terminal'>$</b> nmap 192.168.0.1/24 –excludefile notargets.txt                  <b class='comment'># Excluding Targets Using a List</b>
+            <b class='terminal'>$</b> nmap -A 192.168.0.1                                             <b class='comment'># Perform an Aggressive Scan</b>
+            <b class='terminal'>$</b> nmap -6 1aff:3c21:47b1:0000:0000:0000:0000:2afe                 <b class='comment'># Scan an IPv6 Target</b>
+ </code></pre>
+        <div class="img_div">
+            <img src="library/images/INFO/nmap 1.png" class="c_img">
+        </div>
     </section>
 
     <div style="overflow-x:auto;">
