@@ -46,6 +46,7 @@ h3 {
 
 .usage {
   font-size: 16px;
+
 }
 
 .usage li {
@@ -191,4 +192,10 @@ a{
 }
 .red{
   color:red;
+}
+.overflow{
+  overflow-x:auto;
+}
+.usage{
+  overflow-x:auto;
 }
