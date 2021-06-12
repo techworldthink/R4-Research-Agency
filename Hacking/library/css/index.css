@@ -1,0 +1,48 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: monospace;
+  transition: background-color 0.5s;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.img-card {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0.5em;
+background-color: black;
+color: white;
+}
+.img-card img{
+  width: 100%;
+}
+.img-card a{
+
+  display: block;
+  text-align: center;
+  padding:10px;
+ 
+ color: white;
+  text-decoration: none;
+}
+.head {
+  /*box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);*/
+  margin: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+footer{
+  margin-top: 5em;
+  background-color: black;
+  background: url("../images/index.jpg");
+ 
+}
