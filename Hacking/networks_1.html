@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payloads</title>
+    <link href="library/css/networks_1.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- side navbar-->
+    <div id="mySidenav" class="sidenav">
+        <a class="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="admin-items one-top" href="">Main </a>
+        <a class="admin-items one-top" href="#nmap"> </a>
+    </div>
+    <span id="nav-bar-btn" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;
+    </span>
+    <!--END    navbar -->
+
+    <header>
+        <img src="library/images/network.png" class="banner-img">
+        <h1>Network</h1>
+    </header>
+
+    <!-- Rounded switch -->
+    <div id="dark-btn">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round" onclick="change_bg()"></span>
+        </label>
+    </div>
+
+    <section name="nmap" id="nmap">
+<h2>What is Bluetooth? Explain the various layers of Bluetooth with a neat diagram</h2>
+<p>
+    Overview of Computer Networks and the Internet. History.  Protocols, Review of last mile technologies used for internet access.  Packet switching.  Basic ideas about delay queuing throughput. Concept of Quality of Service, Protocol layering . OSI model and TCP model Application layer protocols - Client-server  architecture   Network layer 7 application architecture, Web, HTTP, FTP, SMTP, POP3, and DNS, Peer-to-peer file sharing network
+</p>
+    </section>
+
+    <br><br></br>
+
+    <footer>
+        <br><bR><br>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="library/js/information_gathering.js"></script>
+    <script>
+        function change_bg() {
+            if (document.body.style.color == "white") {
+                document.body.style.color = "black";
+                document.body.style.backgroundColor = "white";
+
+            }
+            else {
+                document.body.style.color = "white";
+                document.body.style.backgroundColor = "black";
+            }
+        }
+    </script>
+</body>
+
+</html>
