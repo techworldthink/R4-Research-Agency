@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burp Suite</title>
+    <link href="library/css/payloads.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- side navbar-->
+    <div id="mySidenav" class="sidenav">
+        <a class="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="admin-items one-top" href="">Main </a>
+        <a class="admin-items one-top" href="#nmap"> </a>
+    </div>
+    <span id="nav-bar-btn" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;
+    </span>
+    <!--END    navbar -->
+
+    <header>
+        <img src="library/images/burp_suit.jpg" class="banner-img">
+    </header>
+
+    <section name="nmap" id="nmap">
+        <br>
+        <h2>Burp Suite</h2>
+        <h3>About</h3>
+        <p>Burp or Burp Suite is a set of tools used for penetration testing of web applications. It is developed by the
+            company named Portswigger, which is also the alias of its founder Dafydd Stuttard. BurpSuite aims to be an
+            all in one set of tools and its capabilities can be enhanced by installing add-ons that are called BApps.
+        </p>
+        <h3>Configuration</h3>
+        <div class='overflow'>
+            <ul class="usage">
+                <li>Download and Install burpsuite community in KALi (Pre insatlled)</li>
+                <li>Open Burp Suite </li>
+                <li>Open FireFox browser goto settings , search for proxy then set manual proxy URL(127.0.0.1) P(8080)</li>
+                <li>In browser type http://burf download certificates</li>
+                <li>Again goto settings in browser search certificates , then goto authorities tab then  import downloaded certificates.</li>
+            </ul>
+        </div>
+
+
+
+    </section>
+
+
+    <br><br><br>
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="library/js/information_gathering.js"></script>
+</body>
+
+</html>
