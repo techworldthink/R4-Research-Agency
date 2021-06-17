@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networks</title>
+    <link href="library/css/networks_1.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <!-- side navbar-->
+        <div id="mySidenav" class="sidenav">
+            <a class="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="admin-items one-top" href="">Main </a>
+            <a class="admin-items one-top" href="#">Network 1 </a>
+            <a class="admin-items one-top" href="networks_1.html">Network 2 </a>
+        </div>
+        <span id="nav-bar-btn" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;
+        </span>
+        <!--END    navbar -->
+
+        <header>
+            <img src="library/images/network.png" class="banner-img">
+            <h1>Network</h1>
+        </header>
+
+        <!-- Rounded switch -->
+        <div id="dark-btn">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round" onclick="change_bg()"></span>
+            </label>
+        </div>
+
+        <section name="net2" id="nmap">
+            <h2>Computer Network Models</h2>
+            <p>
+                A communication subsystem is a complex piece of Hardware and software. Early attempts for implementing
+                the software for such subsystems were based on a single, complex, unstructured program with many
+                interacting components. The resultant software was very difficult to test and modify. To overcome such
+                problem, the ISO has developed a layered approach. In a layered approach, networking concept is divided
+                into several layers, and each layer is assigned a particular task. Therefore, we can say that networking
+                tasks depend upon the layers.
+            </p>
+        </section>
+
+        <br><br></br>
+
+        <footer>
+            <br><bR><br>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="library/js/network.js"></script>
+    <script>
+        function change_bg() {
+            if (document.body.style.color == "white") {
+                document.body.style.color = "black";
+                document.body.style.backgroundColor = "white";
+
+            }
+            else {
+                document.body.style.color = "white";
+                document.body.style.backgroundColor = "black";
+            }
+        }
+    </script>
+</body>
+
+</html>

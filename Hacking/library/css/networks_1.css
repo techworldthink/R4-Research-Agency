@@ -3,7 +3,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: monospace;
   transition: background-color 0.5s;
@@ -220,15 +222,18 @@ p{
   font-style: normal;
   font-size: 20px;
   line-height: 1.58;
+
+  font: 14px/1.5 Verdana,Arial,Sans-Serif;
+  line-height: 25px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   section {
     margin-left:10px;
     margin-right:10px;
   }
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 769px) {
   section {
     margin-left:3em;
     margin-right:3em;

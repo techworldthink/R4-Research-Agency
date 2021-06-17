@@ -11,324 +11,769 @@
 </head>
 
 <body>
-    <!-- side navbar-->
-    <div id="mySidenav" class="sidenav">
-        <a class="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="admin-items one-top" href="">Main </a>
-        <a class="admin-items one-top" href="#nmap"> </a>
-    </div>
-    <span id="nav-bar-btn" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;
-    </span>
-    <!--END    navbar -->
+    <div id="main">
+        <!-- side navbar-->
+        <div id="mySidenav" class="sidenav">
+            <a class="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="admin-items one-top" href="">Main </a>
+            <a class="admin-items one-top" href="#">Network 1</a>
+            <a class="admin-items one-top" href="networks_2.html">Network 2</a>
+        </div>
+        <span id="nav-bar-btn" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;
+        </span>
+        <!--END    navbar -->
 
-    <header>
-        <img src="library/images/network.png" class="banner-img">
-        <h1>Network</h1>
-    </header>
+        <header>
+            <img src="library/images/network.png" class="banner-img">
+            <h1>Network</h1>
+        </header>
 
-    <!-- Rounded switch -->
-    <div id="dark-btn">
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round" onclick="change_bg()"></span>
-        </label>
-    </div>
+        <!-- Rounded switch -->
+        <div id="dark-btn">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round" onclick="change_bg()"></span>
+            </label>
+        </div>
 
-    <section name="nmap" id="nmap">
-        <h2>Computer Network</h2>
-        <p>
-            An interconnection of multiple devices, also known as hosts, that are connected using multiple paths for the
-            purpose of sending/receiving data or media. Computer networks can also include multiple devices/mediums
-            which help in the communication between two different devices; these are known as Network devices and
-            include things such as routers, switches, hubs, and bridges.
+        <section name="nmap" id="nmap">
+            <h2>Computer Network</h2>
+            <p>
+                An interconnection of multiple devices, also known as hosts, that are connected using multiple paths for
+                the
+                purpose of sending/receiving data or media. Computer networks can also include multiple devices/mediums
+                which help in the communication between two different devices; these are known as Network devices and
+                include things such as routers, switches, hubs, and bridges.
+                <br><br>
+                A computer network is a set of devices connected through links. A node can be computer, printer, or any
+                other device capable of sending or receiving the data. The links connecting the nodes are known as
+                communication channels.
+                <br><bR>
+                Computer Network is a group of computers connected with each other through wires, optical fibres or
+                optical
+                links so that various devices can interact with each other through a network.
+                The aim of the computer network is the sharing of resources among various devices.
+                In the case of computer network technology, there are several types of networks that vary from simple to
+                complex level.
+                <br><bR>
+                Computer Network uses distributed processing in which task is divided among several computers. Instead,
+                a
+                single computer handles an entire task, each separate computer handles a subset<br><bR>
+            </p>
+            <h2>Advantages of Distributed processing</h2>
+            <p>
+                Security <br>
+                Faster problem solving<br>
+                Security through redundancy<br><br>
+            </p>
+            <h2>Components Of Computer Network</h2>
+            <h3>NIC(National interface card)</h3>
+            <p>
+                A network interface card (NIC) is a hardware component without which a computer cannot be connected over
+                a
+                network. It is a circuit board installed in a computer that provides a dedicated network connection to
+                the
+                computer. It is also called network interface controller, network adapter or LAN adapter.
+                <br><bR>
+                NIC is a device that helps the computer to communicate with another device. The network interface card
+                contains the hardware addresses, the data-link layer protocol use this address to identify the system on
+                the
+                network so that it transfers the data to the correct destination.
+                <br><bR>
+                NIC allows both wired and wireless communications.<br><bR>
+
+                NIC allows communications between computers connected via local area network (LAN) as well as
+                communications
+                over large-scale network through Internet Protocol (IP).<br><bR>
+
+                NIC is both a physical layer and a data link layer device, i.e. it provides the necessary hardware
+                circuitry
+                so that the physical layer processes and some data link layer processes can run on it.<br><bR>
+                NIC cards are of two types − Internal & External
+                <br><bR>
+                Every computer on a network, both clients and servers, requires a network interface card (or NIC) in
+                order
+                to access the network. A NIC is usually a separate adapter card that slides into one of the server’s
+                motherboard expansion slots. However, most newer computers have the NIC built into the motherboard, so a
+                separate card isn’t needed
+            </p>
+            <h3>Internal Network Cards</h3>
+            <p>
+                In internal networks cards, motherboard has a slot for the network card where it can be inserted. It
+                requires network cables to provide network access. Internal network cards are of two types. The first
+                type
+                uses Peripheral Component Interconnect (PCI) connection, while the second type uses Industry Standard
+                Architecture (ISA).<br>PCI NICs fit into a PCI slot on a motherboard. ISA NICs fit into an ISA slot.<br>
+
+            </p>
+            <h4>ISA and PCI Compared</h4>
+            <p>
+                For many years, ISA and PCI were equivalents. Because PCI was introduced as a complement to, rather than
+                a
+                direct competitor to ISA, it is not uncommon for motherboards to have both ISA and PCI ports. ISA, at
+                least
+                for a time, was concurrent with the PCI standard. ISA would give better performance in some areas, while
+                PCI
+                yielded better performance in other areas.<br><bR>
+
+                In physical appearance the ISA and PCI ports are vastly different. The ISA is longer (by about two
+                inches),
+                and thus the I/O cards that connect via ISA tend to be bulkier as well. Their differences do not stop
+                there.
+                PCI is a significantly faster (in theory) bus. PCI has double (or in rare instances, quadruple) the
+                bit-width, resulting in faster data transfer.<br><bR>
+
+                When placed head-to-head, PCI is definitely the better and faster option. Which is to be expected,
+                considering PCI is a full ten years newer. While, in 2010, ISA is practically obsolete and PCI is well
+                on
+                its way to extinction as PCI-E and Mini-PCI-E gain steam, they are still in use by many consumers and
+                industries. ISA and PCI made a significant impact on the computer industry.
+            </p>
+            <h3>External Network Cards</h3>
+            <p>
+                In desktops and laptops that do not have an internal NIC, external NICs are used. External network cards
+                are
+                of two types: Wireless and USB based. Wireless network card needs to be inserted into the motherboard,
+                however no network cable is required to connect to the network. They are useful while traveling or
+                accessing
+                a wireless signal.
+            </p>
+            <h3>Hub</h3>
+            <p>
+                Hub is a central device that splits the network connection into multiple devices. When computer requests
+                for
+                information from a computer, it sends the request to the Hub. Hub distributes this request to all the
+                interconnected computers<br><Br>
+                A hub is a physical layer networking device which is used to connect multiple devices in a network. They
+                are
+                generally used to connect computers in a LAN.<br><Br>
+
+                A hub has many ports in it. A computer which intends to be connected to the network is plugged in to one
+                of
+                these ports. When a data frame arrives at a port, it is broadcast to every other port, without
+                considering
+                whether it is destined for a particular destination or not.<br><Br>
+                They operate in the physical layer of the OSI model.<br>
+                It is a non-intelligent network device that sends message to all ports.<br>
+                It primarily broadcasts messages.<br>
+                Transmission mode is half duplex.<br>
+                Collisions may occurs during setup of transmission when more than one computers place data
+                simultaneously in
+                the corresponding ports.<br>
+                They are passive devices, they don’t have any software associated with it.<br>
+                They generally have fewer ports of 4/12.
+            </p>
+            <h3>switches</h3>
+            <p>
+                Switch is a networking device that groups all the devices over the network to transfer the data to
+                another
+                device. A switch is better than Hub as it does not broadcast the message over the network, i.e., it
+                sends
+                the message to the device for which it belongs to. Therefore, we can say that switch sends the message
+                directly from source to the destination.<br><br>
+                A switch is a data link layer networking device which connects devices in a network and uses packet
+                switching to send and receive data over the network.<br><br>
+
+                Like a hub, a switch also has many ports, to which computers are plugged in. However, when a data frame
+                arrives at any port of a network switch, it examines the destination address and sends the frame to the
+                corresponding device(s). Thus, it supports both unicast and multicast communications.<br><br>
+                They operate in the data link layer of the OSI model.<br>
+                It is an intelligent network device that sends message to selected destination ports.<br>
+                Transmission mode is full duplex.<br>
+                Collisions do not occur since the communication is full duplex.<br>
+                They are active devices, equipped with network software.<br>
+                The number of ports is higher – 24/48.
+            </p>
+            <h3>Cables and connectors</h3>
+            <p>Cable is a transmission media that transmits the communication signals. There are three types of cables:
+            </p>
+            <h4>Twisted pair cable:</h4>
+            <p>It is a high-speed cable that transmits the data over 1Gbps or more.
+                One of the earliest guided transmission media is twisted pair cables. A twisted pair cable comprises of
+                two
+                separate insulated copper wires, which are twisted together and run in parallel. The copper wires are
+                typically 1mm in diameter. One of the wires is used to transmit data and the other is the ground
+                reference.<br><br>
+                Reason for Twisting -
+                All transmissions are prone to noise, interferences, and crosstalks. When the wires are twisted, some
+                part
+                of the noise signals is in the direction of data signals while the other parts are in the opposite
+                directions. Thus the external waves cancel out due to the different twists. The receiver calculates the
+                difference in the voltages of the two wires for retrieving data. Thus a much better immunity against
+                noise
+                is obtained.<br><br>
+                Applications of Twisted-Pair Cables -
+                In telephone lines,
+                In DSL lines,
+                In LANs.<br><bR>
+                There are two types of twisted pair cables −<bR>
+
+                Unshielded Twisted Pair ( UTP ): These generally comprise of wires and insulators.<bR>
+                Shielded Twisted Pair ( STP ): They have a braided wired mesh that encases each pair of insulated
+                wires.<br><br>
+                EIA has classified twisted pair cables into seven categories
+            </p>
+
+            <h4>Coaxial cable:</h4>
+            <p>Coaxial cable resembles like a TV installation cable. Coaxial cable is more expensive than
+                twisted pair cable, but it provides the high data transmission speed.
+                <br><bR>
+                Coaxial cables, commonly called coax, are copper cables with metal shielding designed to provide
+                immunity
+                against noise and greater bandwidth. Coax can transmit signals over larger distances at a higher speed
+                as
+                compared to twisted pair cables.<br><br>
+                Coax has a central core of stiff copper conductor for transmitting signals. This is covered by an
+                insulating
+                material. The insulator is encased by a closely woven braided metal outer conductor that acts as a
+                shield
+                against noise. The outer conductor is again enclosed by a plastic insulating cover.
+                <br><bR>
+                Coaxial cables are categorized into three types as per radio government (RG) ratings - RG – 59, RG – 58,
+                RG
+                – 11
+                <br><br>
+                Applications of Coaxial Cables -<br>
+                In analog telephone networks: A single coaxial network can carry about 10,000 voice signals.<br>
+                In digital telephone networks: A coax has a data rate of 600 Mbps.<br>
+                In cable TV networks<br>
+                In traditional Ethernet LANs<br>
+                In MANs
+            </p>
+
+            <h4>Fibre optic cable:</h4>
+            <p>Fibre optic cable is a high-speed cable that transmits the data using light beams. It
+                provides high data transmission speed as compared to other cables. It is more expensive as compared to
+                other
+                cables, so it is installed at the government level.<br><bR>
+                Optical fiber cables are transparent, flexible fibers made up of glass or plastic through which light
+                waves
+                can pass<br><bR>
+                Structure of a Fiber – Optic Cable<bR><bR>
+                A cross section of a fiber optic cable reveals three parts −<bR><bR>
+
+                Core − It is the innermost portion of an optical fiber through which light propagates. It is cylindrical
+                in
+                shape and it made up of a flexible glass of high refractive index. The diameter of the core of a single
+                mode
+                fiber is 8 – 10 μm while multimode fibers are 50 μm in diameter. It is also called the optical waveguide
+                since it is the main channel through which light signals are transmitted.<bR><bR>
+
+                Cladding − The core is surrounded by a glass cladding. The glass of cladding has a lower refractive
+                index
+                than the core. This enables total internal reflection of light waves in the core, and eventually
+                propagation
+                of light waves within the core.<bR><bR>
+
+                Outer Coating or Jacket − The outer jacket is a thin plastic sheath or coating that is opaque to light.
+                It
+                prevents light rays from outside to enter the optical fiber. Fibers are typically bundles together,
+                where
+                each bundle is covered by a protective outer sheath that prevents the fibers from physical damage.
+                <bR><bR>
+
+                There are two types of fibers −<bR><bR>
+
+                Step-index fiber : In these, the refractive index of the core is constant and undergoes an abrupt change
+                at
+                the interface with the cladding.<bR><bR>
+
+                Graded-index fiber: The refractive index of the core varies in a radial manner from the center. The
+                fiber is
+                densest at the core and becomes rarer towards the edge of the core.<bR><bR>
+
+                Both of these are further divided into two categories depending upon propagation modes of the fibers −
+                <bR><bR>
+                Single-mode fiber<br>
+                Multi-mode fiber
+            </p>
+            <h3>Router </h3>
+            <p>
+                Router is a device that connects the LAN to the internet. The router is mainly used to connect the
+                distinct
+                networks or connect the internet to multiple computers.<br><bR>
+                Routers are networking devices operating at layer 3 or a network layer of the OSI model. They are
+                responsible for receiving, analysing, and forwarding data packets among the connected computer networks.
+                When a data packet arrives, the router inspects the destination address, consults its routing tables to
+                decide the optimal route and then transfers the packet along this route.<br><br>
+                Features of Routers<br><br>
+                A router is a layer 3 or network layer device.<br>
+
+                It connects different networks together and sends data packets from one network to another.<br>
+
+                A router can be used both in LANs (Local Area Networks) and WANs (Wide Area Networks).<br>
+
+                It transfers data in the form of IP packets. In order to transmit data, it uses IP address mentioned in
+                the
+                destination field of the IP packet.<br>
+
+                Routers have a routing table in it that is refreshed periodically according to the changes in the
+                network.
+                In order to transmit data packets, it consults the table and uses a routing protocol.<br>
+
+                In order to prepare or refresh the routing table, routers share information among each other.<br>
+
+                Routers provide protection against broadcast storms.<br>
+
+                Routers are more expensive than other networking devices like hubs,bridges and switches.<br><br>
+
+                Routers are manufactured by some popular companies like −<br>
+
+                Cisco<br>
+                D-Link<br>
+                HP<br>
+                3Com<br>
+                Juniper<br>
+                Nortel<br><br>
+                Routing Table<br><br>
+                The functioning of a router depends largely upon the routing table stored in it. The routing table
+                stores
+                the available routes for all destinations. The router consults the routing table to determine the
+                optimal
+                route through which the data packets can be sent.<br><br>
+
+                A routing table typically contains the following entities −<br><br>
+
+                IP addresses and subnet mask of the nodes in the network<br>
+                IP addresses of the routers in the network<br>
+                Interface information among the network devices and channels<br><br>
+                Routing tables are of two types −<br><br>
+
+                Static Routing Table − Here, the routes are fed manually and are not refreshed automatically. It is
+                suitable
+                for small networks containing 2-3 routers.<br><br>
+
+                Dynamic Routing Table − Here, the router communicates with other routers using routing protocols to
+                determine the available routes. It is suited for larger networks having large number of routers.<br><br>
+                Types of Routers<br>
+                A variety of routers are available depending upon their usages. The main types of routers are −<br><br>
+
+                Wireless Router − They provide WiFi connection WiFi devices like laptops, smartphones etc. They can also
+                provide standard Ethernet routing. For indoor connections, the range is 150 feet while its 300 feet for
+                outdoor connections.<br><br>
+
+                Broadband Routers − They are used to connect to the Internet through telephone and to use voice over
+                Internet Protocol (VoIP) technology for providing high-speed Internet access. They are configured and
+                provided by the Internet Service Provider (ISP).<br><br>
+
+                Core Routers − They can route data packets within a given network, but cannot route the packets between
+                the
+                networks. They helps to link all devices within a network thus forming the backbone of network. It is
+                used
+                by ISP and communication interfaces.<br><br>
+
+                Edge Routers − They are low-capacity routers placed at the periphery of the networks. They connect the
+                internal network to the external networks, and are suitable for transferring data packets across
+                networks.
+                They use Border Gateway Protocol (BGP) for connectivity. There are two types of edge routers, subscriber
+                edge routers and label edge routers.<br><br>
+
+                Brouters − Brouters are specialised routers that can provide the functionalities of bridges as well.
+                Like a
+                bridge, brouters help to transfer data between networks. And like a router, they route the data within
+                the
+                devices of a network.<br><br>
+            </p>
+            <h3>Modem </h3>
+            <p>
+                Modem connects the computer to the internet over the existing telephone line. A modem is not integrated
+                with the computer motherboard. A modem is a separate part on the PC slot found on the motherboard.
+                <br>
+                The data stored on the computer is digital whereas a telephone line or cable wire can transmit only
+                analog data.
+                <br><br>
+                The main function of the modem is to convert digital signal into analog and vice versa. Modem is a
+                combination of two devices − modulator and demodulator. The modulator converts digital data into analog
+                data when the data is being sent by the computer. The demodulator converts analog data signals into
+                digital data when it is being received by the computer.
+                <br><br>
+                Depending on direction of data transmission, modem can be of these types −<br><br>
+
+                Simplex − A simplex modem can transfer data in only one direction, from digital device to network
+                (modulator) or network to digital device (demodulator).
+                <br><br>
+                Half duplex − A half-duplex modem has the capacity to transfer data in both the directions but only one
+                at a time.
+                <br><br>
+                Full duplex − A full duplex modem can transmit data in both the directions simultaneously.
+                <br><bR>
+                Modem is abbreviation for Modulator – De-modulator. Modems are used for data transfer from one computer
+                network to another computer network through telephone lines. The computer network works in digital mode,
+                while analog technology is used for carrying massages across phone lines.
+                <br><bR>
+                Modulator converts information from digital mode to analog mode at the transmitting end and de-modulator
+                converts the same from analog to digital at receiving end. The process of converting analog signals of
+                one computer network into digital signals of another computer network so they can be processed by a
+                receiving computer is referred to as digitizing.
+                <br><bR>
+                When an analog facility is used for data communication between two digital devices called Data Terminal
+                Equipment (DTE), modems are used at each end. DTE can be a terminal or a computer.
+                <br><bR>
+                The modem at the transmitting end converts the digital signal generated by DTE into an analog signal by
+                modulating a carrier. This modem at the receiving end demodulates the carrier and hand over the
+                demodulated digital signal to the DTE.
+                <br><bR>
+                The transmission medium between the two modems can be dedicated circuit or a switched telephone circuit.
+                If a switched telephone circuit is used, then the modems are connected to the local telephone exchanges.
+                Whenever data transmission is required connection between the modems is established through telephone
+                exchanges.
+            </p>
+
+            <h2>Computer Network Architecture </h2>
+            <p>
+                Computer Network Architecture is defined as the physical and logical design of the software, hardware,
+                protocols, and media of the transmission of data. Simply we can say that how computers are organized and
+                how
+                tasks are allocated to the computer.
+                <br><br>
+                The two types of network architectures are used:<br>
+                Peer-To-Peer network<br>
+                Client/Server Network
+            </p>
+            <h3>Peer-To-Peer network</h3>
+            <p>
+                Peer-To-Peer network is a network in which all the computers are linked together with equal privilege
+                and
+                responsibilities for processing the data.<br>
+                Peer-To-Peer network is useful for small environments, usually up to 10 computers.<br>
+                Peer-To-Peer network has no dedicated server.<br>
+                Special permissions are assigned to each computer for sharing the resources, but this can lead to a
+                problem
+                if the computer with the resource is down.<br><br>
+                Advantages Of Peer-To-Peer Network:<br><br>
+                It is less costly as it does not contain any dedicated server.<br>
+                If one computer stops working but, other computers will not stop working.<br>
+                It is easy to set up and maintain as each computer manages itself.<br><br>
+                Disadvantages Of Peer-To-Peer Network:<br><br>
+                In the case of Peer-To-Peer network, it does not contain the centralized system . Therefore, it
+                cannot<br>
+                back up the data as the data is different in different locations.<br>
+                It has a security issue as the device is managed itself.
+
+            </p>
+            <h4>Client/Server Network</h4>
+            <p>
+                Client/Server network is a network model designed for the end users called clients, to access the
+                resources
+                such as songs, video, etc. from a central computer known as Server.<br>
+                The central controller is known as a server while all other computers in the network are called
+                clients.<br>
+                A server performs all the major operations such as security and network management.<br>
+                A server is responsible for managing all the resources such as files, directories, printer, etc.<br>
+                All the clients communicate with each other through a server. For example, if client1 wants to send some
+                data to client 2, then it first sends the request to the server for the permission. The server sends the
+                response to the client 1 to initiate its communication with the client 2.<br><br>
+                Advantages Of Client/Server network:<br><br>
+                A Client/Server network contains the centralized system. Therefore we can back up the data easily.<br>
+                A Client/Server network has a dedicated server that improves the overall performance of the whole
+                system.<br>
+                Security is better in Client/Server network as a single server administers the shared resources.<br>
+                It also increases the speed of the sharing resources.<br><br>
+                Disadvantages Of Client/Server network:<br><br>
+                Client/Server network is expensive as it requires the server with large memory.<br>
+                A server has a Network Operating System(NOS) to provide the resources to the clients, but the cost of
+                NOS is very high.<br>
+                It requires a dedicated network administrator to manage all the resources.
+
+            </p>
+            <h3>Topology</h3>
+            <ul>
+                <li>Bus </li>
+                <li>Ring </li>
+                <li>Tree </li>
+                <li>Star </li>
+                <li>Mesh </li>
+                <li>Hybrid </li>
+            </ul>
+            <img src="images/networks/topology.jpg" style ="width:50%;text-align:center;margin:auto;display: block;">
             <br><br>
-            A computer network is a set of devices connected through links. A node can be computer, printer, or any
-            other device capable of sending or receiving the data. The links connecting the nodes are known as
-            communication channels.
-            <br><bR>
-            Computer Network is a group of computers connected with each other through wires, optical fibres or optical
-            links so that various devices can interact with each other through a network.
-            The aim of the computer network is the sharing of resources among various devices.
-            In the case of computer network technology, there are several types of networks that vary from simple to
-            complex level.
-            <br><bR>
-            Computer Network uses distributed processing in which task is divided among several computers. Instead, a
-            single computer handles an entire task, each separate computer handles a subset<br><bR>
-        </p>
-        <h2>Advantages of Distributed processing</h2>
-        <p>
-            Security <br>
-            Faster problem solving<br>
-            Security through redundancy<br><br>
-        </p>
-        <h2>Components Of Computer Network</h2>
-        <h3>NIC(National interface card)</h3>
-        <p>
-            A network interface card (NIC) is a hardware component without which a computer cannot be connected over a
-            network. It is a circuit board installed in a computer that provides a dedicated network connection to the
-            computer. It is also called network interface controller, network adapter or LAN adapter.
-            <br><bR>
-            NIC is a device that helps the computer to communicate with another device. The network interface card
-            contains the hardware addresses, the data-link layer protocol use this address to identify the system on the
-            network so that it transfers the data to the correct destination.
-            <br><bR>
-            NIC allows both wired and wireless communications.<br><bR>
+            <h4>Bus Topology</h4>
+            <p>
+                The bus topology is designed in such a way that all the stations are connected through a single cable
+                known as a backbone cable.<br><br>
+                Each node is either connected to the backbone cable by drop cable or directly connected to the backbone
+                cable.<br><br>
+                When a node wants to send a message over the network, it puts a message over the network. All the
+                stations available in the network will receive the message whether it has been addressed or not.<br><br>
+                The bus topology is mainly used in 802.3 (ethernet) and 802.4 standard networks.<br><br>
+                The configuration of a bus topology is quite simpler as compared to other topologies.<br><br>
+                The backbone cable is considered as a "single lane" through which the message is broadcast to all the
+                stations.<br><br>
+                The most common access method of the bus topologies is CSMA (Carrier Sense Multiple Access).
+            </p>
+            <p style="border:1px solid red;padding:5px;">
+                <b>CSMA:</b> It is a media access control used to control the data flow so that data integrity is
+                maintained,
+                i.e., the packets do not get lost. There are two alternative ways of handling the problems that occur
+                when two nodes send the messages simultaneously.<br><br>
 
-            NIC allows communications between computers connected via local area network (LAN) as well as communications
-            over large-scale network through Internet Protocol (IP).<br><bR>
+                <b>CSMA CD:</b> CSMA CD (Collision detection) is an access method used to detect the collision. Once the
+                collision is detected, the sender will stop transmitting the data. Therefore, it works on "recovery
+                after the collision".<br><br>
+                <b>CSMA CA:</b> CSMA CA (Collision Avoidance) is an access method used to avoid the collision by
+                checking
+                whether the transmission media is busy or not. If busy, then the sender waits until the media becomes
+                idle. This technique effectively reduces the possibility of the collision. It does not work on "recovery
+                after the collision".
+            </p>
+            <p>
+                Advantages of Bus topology:<br><br>
+                Low-cost cable: In bus topology, nodes are directly connected to the cable without passing through a
+                hub. Therefore, the initial cost of installation is low.<br>
+                Moderate data speeds: Coaxial or twisted pair cables are mainly used in bus-based networks that support
+                upto 10 Mbps.<br>
+                Familiar technology: Bus topology is a familiar technology as the installation and troubleshooting
+                techniques are well known, and hardware components are easily available.<br>
+                Limited failure: A failure in one node will not have any effect on other nodes.<br><br>
+                Disadvantages of Bus topology:<br><br>
+                Extensive cabling: A bus topology is quite simpler, but still it requires a lot of cabling.<br>
+                Difficult troubleshooting: It requires specialized test equipment to determine the cable faults. If any
+                fault occurs in the cable, then it would disrupt the communication for all the nodes.<br>
+                Signal interference: If two nodes send the messages simultaneously, then the signals of both the nodes
+                collide with each other.<br>
+                Reconfiguration difficult: Adding new devices to the network would slow down the network.<br>
+                Attenuation: Attenuation is a loss of signal leads to communication issues. Repeaters are used to
+                regenerate the signal.
+            </p>
+            <h4>Ring Topology </h4>
+            <p>
+                Ring topology is like a bus topology, but with connected ends.
+                The node that receives the message from the previous computer will retransmit to the next node.
+                The data flows in one direction, i.e., it is unidirectional.
+                The data flows in a single loop continuously known as an endless loop.
+                It has no terminated ends, i.e., each node is connected to other node and having no termination point.
+                The data in a ring topology flow in a clockwise direction.
+                The most common access method of the ring topology is token passing.
+                Token passing: It is a network access method in which token is passed from one node to another node.
+                <br><br>
+                Token: It is a frame that circulates around the network.
+                Working of Token passing
+                A token moves around the network, and it is passed from computer to computer until it reaches the
+                destination.
+                The sender modifies the token by putting the address along with the data.
+                The data is passed from one device to another device until the destination address matches. Once the
+                token received by the destination device, then it sends the acknowledgment to the sender.
+                In a ring topology, a token is used as a carrier.
+                <br><br>
+                Advantages of Ring topology:<br><br>
+                Network Management: Faulty devices can be removed from the network without bringing the network
+                down.<br>
+                Product availability: Many hardware and software tools for network operation and monitoring are
+                available.<br>
+                Cost: Twisted pair cabling is inexpensive and easily available. Therefore, the installation cost is very
+                low.<br>
+                Reliable: It is a more reliable network because the communication system is not dependent on the single
+                host computer.<br><br>
+                Disadvantages of Ring topology:<br><br>
+                Difficult troubleshooting: It requires specialized test equipment to determine the cable faults. If any
+                fault occurs in the cable, then it would disrupt the communication for all the nodes.<br>
+                Failure: The breakdown in one station leads to the failure of the overall network.<br>
+                Reconfiguration difficult: Adding new devices to the network would slow down the network.<br>
+                Delay: Communication delay is directly proportional to the number of nodes. Adding new devices increases
+                the communication delay.
+            </p>
+            <h4>Star Topology </h4>
+            <p>
+                Star topology is an arrangement of the network in which every node is connected to the central hub,
+                switch or a central computer.
+                The central computer is known as a server, and the peripheral devices attached to the server are known
+                as clients.
+                Coaxial cable or RJ-45 cables are used to connect the computers.
+                Hubs or Switches are mainly used as connection devices in a physical star topology.
+                Star topology is the most popular topology in network implementation.<br><br>
+                Advantages of Star topology<br><br>
+                Efficient troubleshooting: Troubleshooting is quite efficient in a star topology as compared to bus
+                topology. In a bus topology, the manager has to inspect the kilometers of cable. In a star topology, all
+                the stations are connected to the centralized network. Therefore, the network administrator has to go to
+                the single station to troubleshoot the problem.<br>
+                Network control: Complex network control features can be easily implemented in the star topology. Any
+                changes made in the star topology are automatically accommodated.<br>
+                Limited failure: As each station is connected to the central hub with its own cable, therefore failure
+                in one cable will not affect the entire network.<br>
+                Familiar technology: Star topology is a familiar technology as its tools are cost-effective.<br>
+                Easily expandable: It is easily expandable as new stations can be added to the open ports on the
+                hub.<br>
+                Cost effective: Star topology networks are cost-effective as it uses inexpensive coaxial cable.<br>
+                High data speeds: It supports a bandwidth of approx 100Mbps. Ethernet 100BaseT is one of the most
+                popular Star topology networks.<br><br>
+                Disadvantages of Star topology<br><br>
+                A Central point of failure: If the central hub or switch goes down, then all the connected nodes will
+                not be able to communicate with each other.<br>
+                Cable: Sometimes cable routing becomes difficult when a significant amount of routing is required.
+            </p>
 
-            NIC is both a physical layer and a data link layer device, i.e. it provides the necessary hardware circuitry
-            so that the physical layer processes and some data link layer processes can run on it.<br><bR>
-            NIC cards are of two types − Internal & External
-            <br><bR>
-            Every computer on a network, both clients and servers, requires a network interface card (or NIC) in order
-            to access the network. A NIC is usually a separate adapter card that slides into one of the server’s
-            motherboard expansion slots. However, most newer computers have the NIC built into the motherboard, so a
-            separate card isn’t needed
-        </p>
-        <h3>Internal Network Cards</h3>
-        <p>
-            In internal networks cards, motherboard has a slot for the network card where it can be inserted. It
-            requires network cables to provide network access. Internal network cards are of two types. The first type
-            uses Peripheral Component Interconnect (PCI) connection, while the second type uses Industry Standard
-            Architecture (ISA).<br>PCI NICs fit into a PCI slot on a motherboard. ISA NICs fit into an ISA slot.<br>
+            <h4>Tree topology </h4>
+            <p>
+                Tree topology combines the characteristics of bus topology and star topology.
+                A tree topology is a type of structure in which all the computers are connected with each other in
+                hierarchical fashion.
+                The top-most node in tree topology is known as a root node, and all other nodes are the descendants of
+                the root node.
+                There is only one path exists between two nodes for the data transmission. Thus, it forms a parent-child
+                hierarchy.<br><br>
+                Advantages of Tree topology<br><br>
+                Support for broadband transmission: Tree topology is mainly used to provide broadband transmission,
+                i.e., signals are sent over long distances without being attenuated.<br>
+                Easily expandable: We can add the new device to the existing network. Therefore, we can say that tree
+                topology is easily expandable.<br>
+                Easily manageable: In tree topology, the whole network is divided into segments known as star networks
+                which can be easily managed and maintained.<br>
+                Error detection: Error detection and error correction are very easy in a tree topology.<br>
+                Limited failure: The breakdown in one station does not affect the entire network.<br>
+                Point-to-point wiring: It has point-to-point wiring for individual segments.<br><br>
+                Disadvantages of Tree topology<br><br>
+                Difficult troubleshooting: If any fault occurs in the node, then it becomes difficult to troubleshoot
+                the problem.<br>
+                High cost: Devices required for broadband transmission are very costly.<br>
+                Failure: A tree topology mainly relies on main bus cable and failure in main bus cable will damage the
+                overall network.<br>
+                Reconfiguration difficult: If new devices are added, then it becomes difficult to reconfigure.
+            </p>
+            <h4>Mesh topology</h4>
+            <p>
+                Mesh technology is an arrangement of the network in which computers are interconnected with each other
+                through various redundant connections.
+                There are multiple paths from one computer to another computer.
+                It does not contain the switch, hub or any central computer which acts as a central point of
+                communication.
+                The Internet is an example of the mesh topology.
+                Mesh topology is mainly used for WAN implementations where communication failures are a critical
+                concern.
+                Mesh topology is mainly used for wireless networks.
+                Mesh topology can be formed by using the formula:
+                Number of cables = (n*(n-1))/2;
+                Where n is the number of nodes that represents the network.<br><br>
 
-        </p>
-        <h4>ISA and PCI Compared</h4>
-        <p>
-            For many years, ISA and PCI were equivalents. Because PCI was introduced as a complement to, rather than a
-            direct competitor to ISA, it is not uncommon for motherboards to have both ISA and PCI ports. ISA, at least
-            for a time, was concurrent with the PCI standard. ISA would give better performance in some areas, while PCI
-            yielded better performance in other areas.<br><bR>
+                Mesh topology is divided into two categories:<br><br>
 
-            In physical appearance the ISA and PCI ports are vastly different. The ISA is longer (by about two inches),
-            and thus the I/O cards that connect via ISA tend to be bulkier as well. Their differences do not stop there.
-            PCI is a significantly faster (in theory) bus. PCI has double (or in rare instances, quadruple) the
-            bit-width, resulting in faster data transfer.<br><bR>
+                Fully connected mesh topology<br>
+                Partially connected mesh topology
+            </p>
+            <p>
+                Full Mesh Topology: In a full mesh topology, each computer is connected to all the computers available
+                in the network.<br><br>
+                Partial Mesh Topology: In a partial mesh topology, not all but certain computers are connected to those
+                computers with which they communicate frequently.<br><br>
+                Advantages of Mesh topology:<br><br>
+                Reliable: The mesh topology networks are very reliable as if any link breakdown will not affect the
+                communication between connected computers.<br>
 
-            When placed head-to-head, PCI is definitely the better and faster option. Which is to be expected,
-            considering PCI is a full ten years newer. While, in 2010, ISA is practically obsolete and PCI is well on
-            its way to extinction as PCI-E and Mini-PCI-E gain steam, they are still in use by many consumers and
-            industries. ISA and PCI made a significant impact on the computer industry.
-        </p>
-        <h3>External Network Cards</h3>
-        <p>
-            In desktops and laptops that do not have an internal NIC, external NICs are used. External network cards are
-            of two types: Wireless and USB based. Wireless network card needs to be inserted into the motherboard,
-            however no network cable is required to connect to the network. They are useful while traveling or accessing
-            a wireless signal.
-        </p>
-        <h3>Hub</h3>
-        <p>
-            Hub is a central device that splits the network connection into multiple devices. When computer requests for
-            information from a computer, it sends the request to the Hub. Hub distributes this request to all the
-            interconnected computers<br><Br>
-            A hub is a physical layer networking device which is used to connect multiple devices in a network. They are
-            generally used to connect computers in a LAN.<br><Br>
+                Fast Communication: Communication is very fast between the nodes.<br>
 
-            A hub has many ports in it. A computer which intends to be connected to the network is plugged in to one of
-            these ports. When a data frame arrives at a port, it is broadcast to every other port, without considering
-            whether it is destined for a particular destination or not.<br><Br>
-            They operate in the physical layer of the OSI model.<br>
-            It is a non-intelligent network device that sends message to all ports.<br>
-            It primarily broadcasts messages.<br>
-            Transmission mode is half duplex.<br>
-            Collisions may occurs during setup of transmission when more than one computers place data simultaneously in
-            the corresponding ports.<br>
-            They are passive devices, they don’t have any software associated with it.<br>
-            They generally have fewer ports of 4/12.
-        </p>
-        <h3>switches</h3>
-        <p>
-            Switch is a networking device that groups all the devices over the network to transfer the data to another
-            device. A switch is better than Hub as it does not broadcast the message over the network, i.e., it sends
-            the message to the device for which it belongs to. Therefore, we can say that switch sends the message
-            directly from source to the destination.<br><br>
-            A switch is a data link layer networking device which connects devices in a network and uses packet
-            switching to send and receive data over the network.<br><br>
+                Easier Reconfiguration: Adding new devices would not disrupt the communication between other devices.
+                <br><br>
+                Disadvantages of Mesh topology<br><br>
+                Cost: A mesh topology contains a large number of connected devices such as a router and more
+                transmission media than other topologies.<br>
+                Management: Mesh topology networks are very large and very difficult to maintain and manage. If the
+                network is not monitored carefully, then the communication link failure goes undetected.<br>
+                Efficiency: In this topology, redundant connections are high that reduces the efficiency of the network.
+            </p>
+            <h4>Hybrid Topology </h4>
+            <p>
+                The combination of various different topologies is known as Hybrid topology.
+                A Hybrid topology is a connection between different links and nodes to transfer the data.
+                When two or more different topologies are combined together is termed as Hybrid topology and if similar
+                topologies are connected with each other will not result in Hybrid topology. For example, if there exist
+                a ring topology in one branch of ICICI bank and bus topology in another branch of ICICI bank, connecting
+                these two topologies will result in Hybrid topology.<br><br>
+                Advantages of Hybrid Topology<br><br>
+                Reliable: If a fault occurs in any part of the network will not affect the functioning of the rest of
+                the network.<br>
+                Scalable: Size of the network can be easily expanded by adding new devices without affecting the
+                functionality of the existing network.<br>
+                Flexible: This topology is very flexible as it can be designed according to the requirements of the
+                organization.<br>
+                Effective: Hybrid topology is very effective as it can be designed in such a way that the strength of
+                the network is maximized and weakness of the network is minimized.<br><br>
+                Disadvantages of Hybrid topology<br><br>
+                Complex design: The major drawback of the Hybrid topology is the design of the Hybrid network. It is
+                very difficult to design the architecture of the Hybrid network.<br>
+                Costly Hub: The Hubs used in the Hybrid topology are very expensive as these hubs are different from
+                usual Hubs used in other topologies.<br>
+                Costly infrastructure: The infrastructure cost is very high as a hybrid network requires a lot of
+                cabling, network devices, etc.
+            </p>
 
-            Like a hub, a switch also has many ports, to which computers are plugged in. However, when a data frame
-            arrives at any port of a network switch, it examines the destination address and sends the frame to the
-            corresponding device(s). Thus, it supports both unicast and multicast communications.<br><br>
-            They operate in the data link layer of the OSI model.<br>
-            It is an intelligent network device that sends message to selected destination ports.<br>
-            Transmission mode is full duplex.<br>
-            Collisions do not occur since the communication is full duplex.<br>
-            They are active devices, equipped with network software.<br>
-            The number of ports is higher – 24/48.
-        </p>
-        <h3>Cables and connectors</h3>
-        <p>Cable is a transmission media that transmits the communication signals. There are three types of cables:</p>
-        <h4>Twisted pair cable:</h4>
-        <p>It is a high-speed cable that transmits the data over 1Gbps or more.
-            One of the earliest guided transmission media is twisted pair cables. A twisted pair cable comprises of two
-            separate insulated copper wires, which are twisted together and run in parallel. The copper wires are
-            typically 1mm in diameter. One of the wires is used to transmit data and the other is the ground
-            reference.<br><br>
-            Reason for Twisting -
-            All transmissions are prone to noise, interferences, and crosstalks. When the wires are twisted, some part
-            of the noise signals is in the direction of data signals while the other parts are in the opposite
-            directions. Thus the external waves cancel out due to the different twists. The receiver calculates the
-            difference in the voltages of the two wires for retrieving data. Thus a much better immunity against noise
-            is obtained.<br><br>
-            Applications of Twisted-Pair Cables -
-            In telephone lines,
-            In DSL lines,
-            In LANs.<br><bR>
-            There are two types of twisted pair cables −<bR>
+            <h3>Transmission modes </h3>
+            <p>
+                The way in which data is transmitted from one device to another device is known as transmission
+                mode.<br>
+                The transmission mode is also known as the communication mode.<br>
+                Each communication channel has a direction associated with it, and transmission media provide the
+                direction. Therefore, the transmission mode is also known as a directional mode.<br>
+                The transmission mode is defined in the physical layer.
+            </p>
+            <p>
+                The Transmission mode is divided into three categories:<br><Br>
+                Simplex mode <br>
+                Half-duplex mode<br>
+                Full-duplex mode
+            </p>
+            <h4>Simplex mode </h4>
+            <p>
+                In Simplex mode, the communication is unidirectional, i.e., the data flow in one direction.<br>
+                A device can only send the data but cannot receive it or it can receive the data but cannot send the
+                data.<br>
+                This transmission mode is not very popular as mainly communications require the two-way exchange of
+                data.<br> The simplex mode is used in the business field as in sales that do not require any
+                corresponding
+                reply.<br>
+                The radio station is a simplex channel as it transmits the signal to the listeners but never allows them
+                to transmit back.<br>
+                Keyboard and Monitor are the examples of the simplex mode as a keyboard can only accept the data from
+                the user and monitor can only be used to display the data on the screen.<br>
+                The main advantage of the simplex mode is that the full capacity of the communication channel can be
+                utilized during transmission.<br>
+                In simplex mode, the station can utilize the entire bandwidth of the communication channel, so that more
+                data can be transmitted at a time.
+                <br>Communication is unidirectional, so it has no inter-communication between devices.
 
-            Unshielded Twisted Pair ( UTP ): These generally comprise of wires and insulators.<bR>
-            Shielded Twisted Pair ( STP ): They have a braided wired mesh that encases each pair of insulated
-            wires.<br><br>
-            EIA has classified twisted pair cables into seven categories
-        </p>
+            </p>
+            <h4>Half-Duplex mode</h4>
+            <p>
+                In a Half-duplex channel, direction can be reversed, i.e., the station can transmit and receive the data
+                as well.<br>
+                Messages flow in both the directions, but not at the same time.<br>
+                The entire bandwidth of the communication channel is utilized in one direction at a time.<br>
+                In half-duplex mode, it is possible to perform the error detection, and if any error occurs, then the
+                receiver requests the sender to retransmit the data.<br>
+                A Walkie-talkie is an example of the Half-duplex mode. In Walkie-talkie, one party speaks, and another
+                party listens. After a pause, the other speaks and first party listens. Speaking simultaneously will
+                create the distorted sound which cannot be understood.<br>
+                In half-duplex mode, both the devices can send and receive the data and also can utilize the entire
+                bandwidth of the communication channel during the transmission of data.
+                <br>In half-duplex mode, when one device is sending the data, then another has to wait, this causes the
+                delay in sending the data at the right time.
 
-        <h4>Coaxial cable:</h4>
-        <p>Coaxial cable resembles like a TV installation cable. Coaxial cable is more expensive than
-            twisted pair cable, but it provides the high data transmission speed.
-            <br><bR>
-            Coaxial cables, commonly called coax, are copper cables with metal shielding designed to provide immunity
-            against noise and greater bandwidth. Coax can transmit signals over larger distances at a higher speed as
-            compared to twisted pair cables.<br><br>
-            Coax has a central core of stiff copper conductor for transmitting signals. This is covered by an insulating
-            material. The insulator is encased by a closely woven braided metal outer conductor that acts as a shield
-            against noise. The outer conductor is again enclosed by a plastic insulating cover.
-            <br><bR>
-            Coaxial cables are categorized into three types as per radio government (RG) ratings - RG – 59, RG – 58, RG
-            – 11
-            <br><br>
-            Applications of Coaxial Cables -<br>
-            In analog telephone networks: A single coaxial network can carry about 10,000 voice signals.<br>
-            In digital telephone networks: A coax has a data rate of 600 Mbps.<br>
-            In cable TV networks<br>
-            In traditional Ethernet LANs<br>
-            In MANs
-        </p>
 
-        <h4>Fibre optic cable:</h4>
-        <p>Fibre optic cable is a high-speed cable that transmits the data using light beams. It
-            provides high data transmission speed as compared to other cables. It is more expensive as compared to other
-            cables, so it is installed at the government level.<br><bR>
-            Optical fiber cables are transparent, flexible fibers made up of glass or plastic through which light waves
-            can pass<br><bR>
-            Structure of a Fiber – Optic Cable<bR><bR>
-            A cross section of a fiber optic cable reveals three parts −<bR><bR>
+            </p>
+            <h4>Full-duplex mode</h4>
+            <p>
+                In Full duplex mode, the communication is bi-directional, i.e., the data flow in both the directions.
+                Both the stations can send and receive the message simultaneously.<br>
+                Full-duplex mode has two simplex channels. One channel has traffic moving in one direction, and another
+                channel has traffic flowing in the opposite direction.<br>
+                The Full-duplex mode is the fastest mode of communication between devices.<br>
+                The most common example of the full-duplex mode is a telephone network. When two people are
+                communicating with each other by a telephone line, both can talk and listen at the same time.<br>
+                Both the stations can send and receive the data at the same time.<br>
+                If there is no dedicated path exists between the devices, then the capacity of the communication channel
+                is divided into two parts.
+            </p>
 
-            Core − It is the innermost portion of an optical fiber through which light propagates. It is cylindrical in
-            shape and it made up of a flexible glass of high refractive index. The diameter of the core of a single mode
-            fiber is 8 – 10 μm while multimode fibers are 50 μm in diameter. It is also called the optical waveguide
-            since it is the main channel through which light signals are transmitted.<bR><bR>
+        </section>
 
-            Cladding − The core is surrounded by a glass cladding. The glass of cladding has a lower refractive index
-            than the core. This enables total internal reflection of light waves in the core, and eventually propagation
-            of light waves within the core.<bR><bR>
+        <br><br></br>
 
-            Outer Coating or Jacket − The outer jacket is a thin plastic sheath or coating that is opaque to light. It
-            prevents light rays from outside to enter the optical fiber. Fibers are typically bundles together, where
-            each bundle is covered by a protective outer sheath that prevents the fibers from physical damage.
-            <bR><bR>
-
-            There are two types of fibers −<bR><bR>
-
-            Step-index fiber : In these, the refractive index of the core is constant and undergoes an abrupt change at
-            the interface with the cladding.<bR><bR>
-
-            Graded-index fiber: The refractive index of the core varies in a radial manner from the center. The fiber is
-            densest at the core and becomes rarer towards the edge of the core.<bR><bR>
-
-            Both of these are further divided into two categories depending upon propagation modes of the fibers −
-            <bR><bR>
-            Single-mode fiber<br>
-            Multi-mode fiber
-        </p>
-        <h3>Router </h3>
-        <p>
-            Router is a device that connects the LAN to the internet. The router is mainly used to connect the distinct
-            networks or connect the internet to multiple computers.<br><bR>
-            Routers are networking devices operating at layer 3 or a network layer of the OSI model. They are
-            responsible for receiving, analysing, and forwarding data packets among the connected computer networks.
-            When a data packet arrives, the router inspects the destination address, consults its routing tables to
-            decide the optimal route and then transfers the packet along this route.<br><br>
-            Features of Routers<br><br>
-            A router is a layer 3 or network layer device.<br>
-
-            It connects different networks together and sends data packets from one network to another.<br>
-
-            A router can be used both in LANs (Local Area Networks) and WANs (Wide Area Networks).<br>
-
-            It transfers data in the form of IP packets. In order to transmit data, it uses IP address mentioned in the
-            destination field of the IP packet.<br>
-
-            Routers have a routing table in it that is refreshed periodically according to the changes in the network.
-            In order to transmit data packets, it consults the table and uses a routing protocol.<br>
-
-            In order to prepare or refresh the routing table, routers share information among each other.<br>
-
-            Routers provide protection against broadcast storms.<br>
-
-            Routers are more expensive than other networking devices like hubs,bridges and switches.<br><br>
-
-            Routers are manufactured by some popular companies like −<br>
-
-            Cisco<br>
-            D-Link<br>
-            HP<br>
-            3Com<br>
-            Juniper<br>
-            Nortel<br><br>
-            Routing Table<br><br>
-            The functioning of a router depends largely upon the routing table stored in it. The routing table stores
-            the available routes for all destinations. The router consults the routing table to determine the optimal
-            route through which the data packets can be sent.<br><br>
-
-            A routing table typically contains the following entities −<br><br>
-
-            IP addresses and subnet mask of the nodes in the network<br>
-            IP addresses of the routers in the network<br>
-            Interface information among the network devices and channels<br><br>
-            Routing tables are of two types −<br><br>
-
-            Static Routing Table − Here, the routes are fed manually and are not refreshed automatically. It is suitable
-            for small networks containing 2-3 routers.<br><br>
-
-            Dynamic Routing Table − Here, the router communicates with other routers using routing protocols to
-            determine the available routes. It is suited for larger networks having large number of routers.<br><br>
-            Types of Routers<br>
-            A variety of routers are available depending upon their usages. The main types of routers are −<br><br>
-
-            Wireless Router − They provide WiFi connection WiFi devices like laptops, smartphones etc. They can also
-            provide standard Ethernet routing. For indoor connections, the range is 150 feet while its 300 feet for
-            outdoor connections.<br><br>
-
-            Broadband Routers − They are used to connect to the Internet through telephone and to use voice over
-            Internet Protocol (VoIP) technology for providing high-speed Internet access. They are configured and
-            provided by the Internet Service Provider (ISP).<br><br>
-
-            Core Routers − They can route data packets within a given network, but cannot route the packets between the
-            networks. They helps to link all devices within a network thus forming the backbone of network. It is used
-            by ISP and communication interfaces.<br><br>
-
-            Edge Routers − They are low-capacity routers placed at the periphery of the networks. They connect the
-            internal network to the external networks, and are suitable for transferring data packets across networks.
-            They use Border Gateway Protocol (BGP) for connectivity. There are two types of edge routers, subscriber
-            edge routers and label edge routers.<br><br>
-
-            Brouters − Brouters are specialised routers that can provide the functionalities of bridges as well. Like a
-            bridge, brouters help to transfer data between networks. And like a router, they route the data within the
-            devices of a network.<br><br>
-        </p>
-
-    </section>
-
-    <br><br></br>
-
-    <footer>
-        <br><bR><br>
-    </footer>
+        <footer>
+            <br><bR><br>
+        </footer>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script src="library/js/information_gathering.js"></script>
+    <script src="library/js/network.js"></script>
     <script>
         function change_bg() {
             if (document.body.style.color == "white") {
