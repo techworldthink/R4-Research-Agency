@@ -1,0 +1,174 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Gathering</title>
+    <link href="library/css/Learn_0.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- side navbar-->
+    <div id="mySidenav" class="sidenav">
+        <a class="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="admin-items one-top" href="">Main </a>
+        <a class="admin-items one-top" href="#labsetup">Lab Setup </a>
+        <a class="admin-items one-top" href="#nhack">Network Hacking - Wi-Fi </a>
+        <a class="admin-items one-top" href="#mac_change">MAC Change </a>
+        <a class="admin-items one-top" href="#wifi_mode_change">Wi-FI mode </a>
+    </div>
+    <span id="nav-bar-btn" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;
+    </span>
+    <!--END    navbar -->
+
+    <header>
+        <img src="library/images/kali.jpg" class="banner-img">
+    </header>
+
+    <section name="labsetup" id="labsetup">
+        <br>
+        <h2>LAB SETUP</h2>
+        <h3>Steps</h3>
+        <ul class="usage">
+            <li>Enable virtualization in win 10/11</li>
+            <li> Task Manager -&gt; Performance -&gt; check whether virtualization enable or not</li>
+            <li>If not enabled, goto BIOS and check any of these options (VT-x,AMD-V,SVM,Vanderpool) available or not
+                and if found
+                enable it
+            </li>
+            <li>VirtualBox and KALI Linux Install</li>
+            <li>Install terminator</li>
+            <pre><code>
+    <b class='terminal'>#</b> apt-get install terminator
+
+</code></pre>
+        </ul>
+    </section>
+
+    <section name="nhack" id="nhack">
+        <br>
+        <h2>Network Hacking - Wi-Fi </h2>
+
+        <h3>Steps</h3>
+        <ul class="usage">
+            <li>Pre-connections attacks</li>
+            <li>Gaining access</li>
+            <li>Post connection attacks</li>
+        </ul>
+        <h3>Cracking types</h3>
+        <ul class="usage">
+            <li>Gaining Access -&gt; WEP Cracking</li>
+            <li>Gaining access -&gt; WPA2 Cracking</li>
+        </ul>
+        <h3>Wi-Fi adapter requirements</h3>
+        <ul class="usage">
+            <li>Monitor mode</li>
+            <li>AP mode</li>
+            <li>Packet Injection</li>
+        </ul>
+        <h3>Wi-Fi adapter - recommended</h3>
+        <ul class="usage">
+            <li>Realtake RTL8812AU , Atheros AR9271 </li>
+            <li>AP mode</li>
+        </ul>
+        <h3>Wi-Fi adapter - setup in virtualBox</h3>
+        <ul class="usage">
+            <li>Enable USB 1.1</li>
+            <li>Check with this command for <strong>wlan0</strong> interface</li>
+            <pre><code>
+    <b class='terminal'>#</b> ifconfig
+
+</code></pre>
+        </ul>
+    </section>
+
+    <section name="mac_change" id="mac_change">
+        <br>
+        <h2>MAC change </h2>
+
+        <h3>What it is?</h3>
+        <ul class="usage">
+            <li>Media Access Control Address</li>
+            <li>Permenant , Physical , Unique</li>
+            <li>Format : XX:XX:XX:XX:XX:XX</li>
+        </ul>
+        <h3>Why change?</h3>
+        <ul class="usage">
+            <li>Increase anonymity</li>
+            <li>Impersonate other device</li>
+            <li>Bypass Filter</li>
+        </ul>
+        <h3>How to change?</h3>
+        <ul class="usage">
+            <li><strong>ether</strong> is the MAC id</li>
+            <pre><code>
+    <b class='terminal'>#</b> ifconfig
+    <b class='terminal'>#</b> ifconfig wlan0 down
+    <b class='terminal'>#</b> ifconfig wlan0 hw ether 00::11::22::33::44::55
+    <b class='terminal'>#</b> ifconfig wlan0 up
+    <b class='terminal'>#</b> ifconfig 
+
+</code></pre>
+            <li>Changes only done in the current machine.Not in Physical device</li>
+        </ul>
+
+
+
+    </section>
+
+
+    <section name="wifi_mode_change" id="wifi_mode_change">
+        <br>
+        <h2>Wi-Fi mode change </h2>
+
+        <h3>Modes</h3>
+        <ul class="usage">
+            <li>Managed - Capture packets that destination MAC is same as device</li>
+            <li>Monitor - Capture all packets</li>
+        </ul>
+
+        <h3>How to change?</h3>
+        <ul class="usage">
+            <li>It ispossible if ond only if the adapter support the monitor mode</li>
+            <pre><code>
+    <b class='terminal'>#</b> ifconfig
+    <b class='terminal'>#</b> ifconfig wlan0 down
+    <i class="comment">// Kill currently running processes that using wlan0 interface</i>
+    <b class='terminal'>#</b> airmon-ng check kill
+    <b class='terminal'>#</b> iwconfig wlan0 mode monitor
+
+
+</code></pre>
+
+        </ul>
+
+        <h3>is this adapter support monitor mode?</h3>
+        <ul class="usage">
+            <li>Check the chipset model</li>
+            <pre><code>
+    <b class='terminal'>#</b> lsusb -vv
+    <b class='terminal'>#</b> airmon-ng start wlan0
+
+</code></pre>
+
+        </ul>
+
+
+    </section>
+
+    <div style="overflow-x:auto;">
+    </div>
+    <br><br><br>
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="library/js/information_gathering.js"></script>
+</body>
+
+</html>
