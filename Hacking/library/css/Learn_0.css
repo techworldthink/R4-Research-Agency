@@ -30,11 +30,12 @@ h2 {
   color: black;
   border-bottom: 1px solid gray;
   text-align: center;
-  font-size: 25px;
+  font-size: 22px;
   font-family: "Zen Dots", cursive;
   background: -webkit-linear-gradient(#101010, #bf0000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 2em;
 }
 
 h3 {

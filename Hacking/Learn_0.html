@@ -159,6 +159,60 @@
 
     </section>
 
+
+    <section name="packet_sniff" id="packet_sniff">
+        <br>
+        <h2>Packet Sniffing </h2>
+
+        <h3>Wi-Fi BANDS</h3>
+        <ul class="usage">
+            <li>Data can be sniffed from a certain band if the wireless adapter used supports that band.</li>
+            <li>Clients need to support band used by router to communiate with it.</li>
+            <li>a -  5GHZ</li>
+            <li>b,g - 2.4GHz</li>
+            <li>n - 5 and 2.4 GHz</li>
+            <li>ac - &lt; 6 Ghz</li>
+        </ul>
+
+        <h3>In Windows - Microsoft Network Monitor</h3>
+        <ul class="usage">
+            <li><a href="https://www.microsoft.com/en-in/download/details.aspx?id=4865">Download Microsoft Network Monitor</a></li>
+            <li>Install & Run as Administrator</li>
+            <li>New capture</li>
+            <li>Capture settings - wi-fi</li>
+            <li>Start</li>
+        </ul>
+
+        <h3>use AIRODUMP-NG</h3>
+        <ul class="usage">
+            <li>Part of aircrack-ng suit</li>
+            <li>Capture all packets within range</li>
+            <li>Detailed info about network around us</li>
+            <li>Connected clients</li>
+        </ul>
+<pre><code>
+    <b class='terminal'>#</b> iwcofig
+
+    <i class="comment">// mon0 - The name of the interface that is in monitor mode.</i>
+    <b class='terminal'>#</b> airodump-ng mon0
+
+    <i class="comment">// Get 5GHz also</i>
+    <b class='terminal'>#</b> airodump-ng --band a mon0
+
+    <i class="comment">// Get 2.4 and 5 GHz also</i>
+    <b class='terminal'>#</b> airodump-ng --band abg mon0
+
+    <i class="comment">// pass - (BSSID & CH) ,  write to file</i>
+    <b class='terminal'>#</b> airodump-ng --bssid 00::11::22::33::44::55 --channel 2 --write test mon0
+    
+    <i class="comment">// Run wireshark and open the test-01.cap file and check the data.</i>
+    <b class='terminal'>#</b> wireshark
+
+</code></pre>
+
+    </section>
+
+
     <div style="overflow-x:auto;">
     </div>
     <br><br><br>
