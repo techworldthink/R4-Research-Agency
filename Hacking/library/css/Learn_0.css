@@ -169,6 +169,9 @@ pre {
   background-color: #101010;
   overflow: scroll;
   font-size: 15px;
+  width: 90%;
+  box-sizing: border-box;
+  margin: auto;
 }
 .terminal {
   font-size: 15px;
