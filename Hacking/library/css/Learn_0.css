@@ -172,6 +172,7 @@ pre {
   width: 95%;
   box-sizing: border-box;
   margin-left: 0;
+  margin-bottom: 1em;
 }
 .terminal {
   font-size: 15px;
