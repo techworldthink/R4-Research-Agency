@@ -19,6 +19,8 @@
         <a class="admin-items one-top" href="#nhack">Network Hacking - Wi-Fi </a>
         <a class="admin-items one-top" href="#mac_change">MAC Change </a>
         <a class="admin-items one-top" href="#wifi_mode_change">Wi-FI mode </a>
+        <a class="admin-items one-top" href="#packet_sniff">Packet Sniffing </a>
+        <a class="admin-items one-top" href="#deauth_attack">Deauthentication attack</a>
     </div>
     <span id="nav-bar-btn" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;
     </span>
@@ -168,7 +170,7 @@
         <ul class="usage">
             <li>Data can be sniffed from a certain band if the wireless adapter used supports that band.</li>
             <li>Clients need to support band used by router to communiate with it.</li>
-            <li>a -  5GHZ</li>
+            <li>a - 5GHZ</li>
             <li>b,g - 2.4GHz</li>
             <li>n - 5 and 2.4 GHz</li>
             <li>ac - &lt; 6 Ghz</li>
@@ -176,7 +178,8 @@
 
         <h3>In Windows - Microsoft Network Monitor</h3>
         <ul class="usage">
-            <li><a href="https://www.microsoft.com/en-in/download/details.aspx?id=4865">Download Microsoft Network Monitor</a></li>
+            <li><a href="https://www.microsoft.com/en-in/download/details.aspx?id=4865">Download Microsoft Network
+                    Monitor</a></li>
             <li>Install & Run as Administrator</li>
             <li>New capture</li>
             <li>Capture settings - wi-fi</li>
@@ -190,7 +193,7 @@
             <li>Detailed info about network around us</li>
             <li>Connected clients</li>
         </ul>
-<pre><code>
+        <pre><code>
     <b class='terminal'>#</b> iwcofig
 
     <i class="comment">// mon0 - The name of the interface that is in monitor mode.</i>
@@ -212,6 +215,51 @@
 
     </section>
 
+
+    <section name="deauth_attack" id="deauth_attack">
+        <br>
+        <h2>Deauthentication Attack </h2>
+
+        <h3>What?</h3>
+        <ul class="usage">
+            <li>Disonnect any client from any network</li>
+            <li>Works on encrypted network(WEP,WPA&WPA2)</li>
+            <li>No need to know the network key</li>
+            <li>No need to connect to the network</li>
+            <li>Idea - The attacker pretends to be the client by changing the mac address to the client and telling to
+                the router to disconnect.
+                Then again, the attacker pretends to be the router by changing the mac address to the router and telling
+                the client that your disconnect request succeeded.
+            </li>
+        </ul>
+        <h3>USE AIRPLAY-NG</h3>
+        <pre><code>
+    <i class="comment">// a - target / router , c - client , 100000000 - no of packets</i>
+    <b class='terminal'>#</b> aireplay-ng --deauth 100000000 -a F8:23:B2:B9:50:AB -c F9:24:B3:B0:51:AC mon0
+
+    <i class="comment">// In another terminal</i>
+    <b class='terminal'>#</b> airodump-ng --bssid F9:24:B3:B0:51:AC --channel 2 mon0
+        
+</code></pre>
+
+    </section>
+
+
+    <section name="deauth_attack" id="deauth_attack">
+        <br>
+        <h2>WEP Cracking (Gaining Access )</h2>
+
+        <h3>About?</h3>
+        <ul class="usage">
+            <li>Wired Equivalent Privacy</li>
+            <li>Old encryption</li>
+            <li>RC4 - algorithm</li>
+            <li>Still uses in some networks. can be cracked easily </li>
+            <li>client/router -  send/recieve - encrypt/decrypt packets by using a key</li>
+        </ul>
+
+
+    </section>
 
     <div style="overflow-x:auto;">
     </div>
