@@ -1,0 +1,133 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Hacking</title>
+    <link href="library/css/Learn_0.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <style>
+        .usage li {
+            color: #1d2558;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 1em;
+            text-align: left;
+            margin: 0.25em 0;
+            color: #4d5968;
+            line-height: 2;
+            font-family: 'Nunito Sans', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif;
+            font-size: 18px;
+        }
+
+        a {
+            color: red;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- side navbar-->
+    <div id="mySidenav" class="sidenav">
+        <a class="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="admin-items one-top" href="">Main </a>
+        <a class="admin-items one-top" href="#labsetup">Lab Setup </a>
+    </div>
+    <span id="nav-bar-btn" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;
+    </span>
+    <!--END    navbar -->
+
+    <header>
+        <img src="library/images/kali.jpg" class="banner-img">
+    </header>
+
+    <section name="labsetup" id="labsetup">
+        <br>
+        <h2>How to attack a website</h2>
+        <h3>Methods</h3>
+        <ul class="usage">
+            <li>An application installed on a computer - web app penatration</li>
+            <li>Computer uses an OS + other apps - server side attacks</li>
+            <li>Managed by humans - client side attacks</li>
+
+            <!-- <pre><code>
+    <b class='terminal'>#</b> apt-get install terminator
+
+</code></pre> -->
+        </ul>
+    </section>
+
+    <section name="">
+        <br>
+        <h2>Information gathering</h2>
+        <h3>Details</h3>
+        <ul class="usage">
+            <li>Ip address</li>
+            <li>Domain name info</li>
+            <li>Technologies used</li>
+            <li>Other website on the same server</li>
+            <li>DNS records</li>
+            <li>Unlisted files, sub domains, directories</li>
+        </ul>
+        <ul class="usage">
+            <li><a href="https://whois.domaintools.com/">Whois Lookup</a> - Find info about the owner of the target
+            </li>
+            <li><a href="https://sitereport.netcraft.com/">Netcraft Site Report</a> - Shows technologies used on the
+                target
+            </li>
+            <li><a href="https://www.robtex.com/">Robtex DNS Lookup</a> - Shows comprehensive info about the target
+                website
+            </li>
+        </ul>
+        <ul class="usage">
+            <li>Using bing.com, Search for ip:[target ip] - get all website that hosted in same server</li>
+        </ul>
+        <pre><code>
+    <i class="comment">To discover all sub domains</i>
+    <b class='terminal'>#</b> knoxkpy google.com
+
+    <i class="comment">To discover folders based on given wordlist</i>
+    <b class='terminal'>#</b> dirb http://1.1.1.1
+
+</code></pre>
+    </section>
+
+    <section name="">
+        <br>
+        <h2>Exploiting File upload vulnerabilities</h2>
+        <h3>weevly</h3>
+        <ul class="usage">
+            <li>Simple type of vulnerabilities</li>
+            <li>Allow users to upload executable files such as php</li>
+            <li>Upload a php shell or backdoor</li>
+            <ul>
+                <li>Generator backdoor</li>
+                <li>Upload generatedd file</li>
+                <li>Connect to it</li>
+            </ul>
+        </ul>
+        <pre><code>
+    <i class="comment">To generate file</i>
+    <b class='terminal'>#</b> weevly generate [password] [file_name]
+
+    <i class="comment">To connect</i>
+    <b class='terminal'>#</b> weevly [url_to_file] [password]
+
+</code></pre>
+    </section>
+
+    <div style="overflow-x:auto;">
+    </div>
+    <br><br><br>
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="library/js/information_gathering.js"></script>
+</body>
+
+</html>
