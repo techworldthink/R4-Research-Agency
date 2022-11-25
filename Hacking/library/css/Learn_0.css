@@ -30,11 +30,12 @@ h2 {
   color: black;
   border-bottom: 1px solid gray;
   text-align: center;
-  font-size: 25px;
+  font-size: 22px;
   font-family: "Zen Dots", cursive;
   background: -webkit-linear-gradient(#101010, #bf0000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 3em;
 }
 
 h3 {
@@ -42,7 +43,7 @@ h3 {
   font-size: 14px;
   color: #fffefe;
   background-color: black;
-  display: inline;
+  display: inline-block;
   padding: 7px;
 }
 
@@ -169,6 +170,10 @@ pre {
   background-color: #101010;
   overflow: scroll;
   font-size: 15px;
+  width: 95%;
+  display: inline-block;
+  margin-left: 0;
+  margin-bottom: 1em;
 }
 .terminal {
   font-size: 15px;

